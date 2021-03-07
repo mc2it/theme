@@ -1,0 +1,23 @@
+{
+	"classPath": "src/",
+	"contributors": ["mc2it", "cedx"],
+	"dependencies": {
+		"tink_core": "",
+		"tink_semver": ""
+	},
+	"description": "Bootstrap theme used by MC2IT applications.",
+	"license": "MIT",
+	"name": "mc2it_theme",
+	"releasenote": "Initial release.",
+	"tags": [
+		"bootstrap",
+		"components",
+		"css",
+		"font-awesome",
+		"icons",
+		"theme",
+		"ui"
+	],
+	"url": "https://mc2it.github.io/ui-theme",
+	"version": "1.0.0"
+}

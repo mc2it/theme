@@ -1,9 +1,4 @@
-/.*/
-!/.github/
-!/.vscode/
-
 /build/
-/docs/api/
 /node_modules/
 /var/
 /www/
@@ -13,4 +8,4 @@
 /**/.DS_Store
 /npm-debug.log
 /package-lock.json
-/lib/editor.*
+/lib/bundle.*

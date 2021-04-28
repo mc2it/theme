@@ -4,6 +4,7 @@
 	"homepage": "https://docs.sabcomputer.com/ui-theme",
 	"license": "MIT",
 	"name": "@mc2it/ui-theme",
+	"private": true,
 	"repository": "github:mc2it/ui-theme",
 	"type": "commonjs",
 	"version": "1.0.0",
@@ -20,8 +21,8 @@
 		}
 	],
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^5.15.3",
-		"bootstrap": "^5.0.0-beta3"
+		"bootstrap": "^5.0.0-beta3",
+		"bootstrap-icons": "^1.4.1"
 	},
 	"devDependencies": {
 		"sass": "^1.32.11"
@@ -29,16 +30,7 @@
 	"engines": {
 		"node": ">=14.16.0"
 	},
-	"keywords": [
-		"bootstrap",
-		"components",
-		"font-awesome",
-		"icons",
-		"theme",
-		"ui"
-	],
 	"scripts": {
-		"build": "sass --load-path=node_modules --source-map-urls=absolute --style=compressed src:build",
-		"prepack": "pwsh tool/dist.ps1"
+		"build": "sass --load-path=node_modules --source-map-urls=absolute --style=compressed src:build"
 	}
 }

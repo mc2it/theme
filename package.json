@@ -21,14 +21,14 @@
 		}
 	],
 	"dependencies": {
-		"bootstrap": "^5.0.0-beta3",
+		"bootstrap": "^5.0.0",
 		"bootstrap-icons": "^1.4.1"
 	},
 	"devDependencies": {
-		"sass": "^1.32.11"
+		"sass": "^1.32.12"
 	},
 	"engines": {
-		"node": ">=14.16.0"
+		"node": ">=16.0.0"
 	},
 	"scripts": {
 		"build": "sass --load-path=node_modules --source-map-urls=absolute --style=compressed src:build"

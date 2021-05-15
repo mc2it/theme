@@ -21,11 +21,11 @@
 		}
 	],
 	"dependencies": {
-		"bootstrap": "^5.0.0",
-		"bootstrap-icons": "^1.4.1"
+		"bootstrap": "^5.0.1",
+		"bootstrap-icons": "^1.5.0"
 	},
 	"devDependencies": {
-		"sass": "^1.32.12"
+		"sass": "^1.32.13"
 	},
 	"engines": {
 		"node": ">=16.0.0"

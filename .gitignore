@@ -1,6 +1,6 @@
-/css/
 /node_modules/
 /var/
+/www/css/
 
 /*.code-workspace
 /*.iml

@@ -1,11 +1,11 @@
 {
 	"bugs": "https://github.com/mc2it/ui-theme/issues",
 	"description": "Bootstrap theme used by MC2IT applications.",
-	"homepage": "https://docs.sabcomputer.com/ui-theme",
+	"homepage": "https://mc2it.github.io/ui-theme",
 	"license": "MIT",
 	"name": "@mc2it/ui-theme",
 	"private": true,
-	"repository": "github:mc2it/ui-theme",
+	"repository": "mc2it/ui-theme",
 	"type": "commonjs",
 	"version": "1.0.0",
 	"author": {
@@ -31,6 +31,6 @@
 		"node": ">=16.0.0"
 	},
 	"scripts": {
-		"build": "sass --load-path=node_modules --quiet --source-map-urls=absolute --style=compressed src:build"
+		"postinstall": "lix download"
 	}
 }

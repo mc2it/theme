@@ -1,0 +1,69 @@
+@font-face {
+	font-display: block;
+	font-family: "Bootstrap Icons";
+	src: url("../fonts/bootstrap_icons.woff2") format("woff2");
+}
+
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+	display: inline-block;
+	font-family: "Bootstrap Icons";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	text-transform: none;
+	vertical-align: -0.125em;
+
+	button & {
+		vertical-align: -0.2em;
+	}
+}
+
+.bi-archive-fill::before { content: "\f10c"; }
+.bi-archive::before { content: "\f10d"; }
+.bi-arrow-down-up::before { content: "\f127"; }
+.bi-arrow-down::before { content: "\f128"; }
+.bi-arrow-up::before { content: "\f148"; }
+.bi-bank::before { content: "\f62e"; }
+.bi-bank2::before { content: "\f62f"; }
+.bi-check-square-fill::before { content: "\f26c"; }
+.bi-check-square::before { content: "\f26d"; }
+.bi-chevron-left::before { content: "\f284"; }
+.bi-chevron-right::before { content: "\f285"; }
+.bi-cloud-arrow-up-fill::before { content: "\f296"; }
+.bi-cloud-arrow-up::before { content: "\f297"; }
+.bi-cloud-fill::before { content: "\f29e"; }
+.bi-cloud-upload-fill::before { content: "\f2bf"; }
+.bi-cloud-upload::before { content: "\f2c0"; }
+.bi-cloud::before { content: "\f2c1"; }
+.bi-credit-card-fill::before { content: "\f2db"; }
+.bi-credit-card::before { content: "\f2dc"; }
+.bi-dot::before { content: "\f309"; }
+.bi-envelope-fill::before { content: "\f32c"; }
+.bi-envelope::before { content: "\f32f"; }
+.bi-eraser-fill::before { content: "\f330"; }
+.bi-eraser::before { content: "\f331"; }
+.bi-exclamation-circle-fill::before { content: "\f332"; }
+.bi-exclamation-circle::before { content: "\f333"; }
+.bi-exclamation-triangle-fill::before { content: "\f33a"; }
+.bi-exclamation-triangle::before { content: "\f33b"; }
+.bi-file-earmark-arrow-up-fill::before { content: "\f357"; }
+.bi-file-earmark-arrow-up::before { content: "\f358"; }
+.bi-file-earmark-ruled-fill::before { content: "\f384"; }
+.bi-file-earmark-ruled::before { content: "\f385"; }
+.bi-file-earmark-text-fill::before { content: "\f38a"; }
+.bi-file-earmark-text::before { content: "\f38b"; }
+.bi-filter::before { content: "\f3ca"; }
+.bi-funnel-fill::before { content: "\f3e0"; }
+.bi-funnel::before { content: "\f3e1"; }
+.bi-question-circle-fill::before { content: "\f504"; }
+.bi-question-circle::before { content: "\f505"; }
+.bi-sort-down-alt::before { content: "\f574"; }
+.bi-sort-down::before { content: "\f575"; }
+.bi-sort-up-alt::before { content: "\f57a"; }
+.bi-sort-up::before { content: "\f57b"; }
+.bi-square-fill::before { content: "\f582"; }
+.bi-square::before { content: "\f584"; }
+.bi-truck::before { content: "\f5ea"; }
+.bi-upload::before { content: "\f603"; }

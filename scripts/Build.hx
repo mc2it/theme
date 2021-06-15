@@ -7,8 +7,9 @@ import sys.io.Process;
 /** Runs the script. **/
 function main() {
 	final bsDir = captureCommand("lix run bootstrap_bundle libpath");
-	command('npx sass --load-path=$bsDir --quiet-deps --no-source-map --style=compressed src/mc2it_theme:www/css');
 	copy('$bsDir/fonts/bootstrap-icons.woff2', "www/fonts/bootstrap_icons.woff2");
+	for (style => file in ["compressed" => "main.min.css", "expanded" => "main.css"])
+		command('npx sass --load-path=$bsDir --quiet-deps --no-source-map --style=$style src/main.scss:www/css/$file');
 }
 
 /** Captures the output of the specified `command`. **/

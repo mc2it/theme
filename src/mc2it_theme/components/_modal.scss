@@ -1,0 +1,11 @@
+@use "../core" as *;
+
+.modal-header {
+	background-color: $gray-100;
+}
+
+.modal-footer {
+	background-color: $gray-100;
+	padding: 0.5rem 1rem;
+	.btn { min-width: 75px; }
+}

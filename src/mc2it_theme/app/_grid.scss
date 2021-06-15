@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "../core" as *;
+
+main {
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: absolute;
+	right: 0;
+	top: $navbar-height;
+
+	@media print {
+		overflow: visible;
+	}
+
+	@if $enable-smooth-scroll {
+		@media (prefers-reduced-motion: no-preference) {
+			scroll-behavior: smooth;
+		}
+	}
+}
+
+article {
+	@include make-container;
+	max-width: map.get($container-max-widths, "xl");
+	padding-bottom: map.get($spacers, 4);
+	padding-top: map.get($spacers, 3);
+}
+
+aside {
+	@include make-container;
+	background-color: $gray-200;
+	border-bottom: 1px solid $border-color;
+	left: 0;
+	padding: $navbar-padding-y $navbar-padding-x;
+	position: fixed;
+	right: 0;
+	top: $navbar-height;
+	z-index: 100;
+}

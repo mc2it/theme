@@ -21,7 +21,7 @@
 		}
 	],
 	"dependencies": {
-		"sass": "^1.35.0"
+		"sass": "^1.35.1"
 	},
 	"engines": {
 		"node": ">=16.0.0"

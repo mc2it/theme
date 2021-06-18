@@ -1,8 +1,9 @@
-//! --library bootstrap_bundle
 import Sys.*;
 import haxe.Exception;
 import sys.io.File.*;
 import sys.io.Process;
+
+using StringTools;
 
 /** Runs the script. **/
 function main() {
@@ -15,7 +16,8 @@ function main() {
 /** Captures the output of the specified `command`. **/
 private function captureCommand(command: String, ?arguments: Array<String>) {
 	final process = new Process(command, arguments);
-	final output = process.exitCode() == 0 ? process.stdout.readLine() : throw new Exception(process.stderr.readLine());
+	final success = process.exitCode() == 0;
+	final output = (success ? process.stdout.readAll() : process.stderr.readAll()).toString().trim();
 	process.close();
-	return output;
+	return success ? output : throw new Exception(output);
 }

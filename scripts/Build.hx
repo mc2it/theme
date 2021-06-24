@@ -10,7 +10,7 @@ function main() {
 	final bsDir = captureCommand("lix run bootstrap_bundle libpath");
 	copy('$bsDir/fonts/bootstrap-icons.woff2', "www/fonts/bootstrap_icons.woff2");
 	for (style => file in ["compressed" => "main.min.css", "expanded" => "main.css"])
-		command('npx sass --load-path=$bsDir --quiet-deps --no-source-map --style=$style src/main.scss:www/css/$file');
+		command('npx sass --load-path=$bsDir --no-source-map --style=$style src/main.scss:www/css/$file');
 }
 
 /** Captures the output of the specified `command`. **/

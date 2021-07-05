@@ -1,4 +1,4 @@
-package mc2it_theme;
+package mc2it_theme.cli;
 
 #if macro
 import haxe.Json;
@@ -8,7 +8,7 @@ import sys.io.Process;
 #end
 
 /** Provides information about the program version. **/
-@:noDoc abstract class Version {
+abstract class Version {
 
 	/** Gets the hash of the current Git commit. **/
 	macro public static function getGitCommitHash(): ExprOf<String> {

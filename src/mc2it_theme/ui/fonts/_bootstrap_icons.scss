@@ -15,9 +15,10 @@
 	text-transform: none;
 	vertical-align: -0.125em;
 
+	/* TODO ???
 	button & {
 		vertical-align: -0.2em;
-	}
+	} */
 }
 
 .bi-archive-fill::before { content: "\f10c"; }
@@ -27,6 +28,7 @@
 .bi-arrow-up::before { content: "\f148"; }
 .bi-bank::before { content: "\f62e"; }
 .bi-bank2::before { content: "\f62f"; }
+.bi-box-seam::before { content: "\f1c7"; }
 .bi-check-square-fill::before { content: "\f26c"; }
 .bi-check-square::before { content: "\f26d"; }
 .bi-chevron-left::before { content: "\f284"; }
@@ -65,5 +67,9 @@
 .bi-sort-up::before { content: "\f57b"; }
 .bi-square-fill::before { content: "\f582"; }
 .bi-square::before { content: "\f584"; }
+.bi-tag-fill::before { content: "\f5af"; }
+.bi-tag::before { content: "\f5b0"; }
+.bi-tags-fill::before { content: "\f5b1"; }
+.bi-tags::before { content: "\f5b2"; }
 .bi-truck::before { content: "\f5ea"; }
 .bi-upload::before { content: "\f603"; }

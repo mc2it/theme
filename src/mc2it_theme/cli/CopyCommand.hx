@@ -17,9 +17,6 @@ class CopyCommand {
 	/** Output usage information. **/
 	public var help = false;
 
-	/** Copy only image files. **/
-	public var img = false;
-
 	/** Creates a new `copy` command. **/
 	public function new() {}
 
@@ -36,7 +33,7 @@ class CopyCommand {
 		final output = rest[0].isAbsolute() ? rest[0] : Path.join([haxelibRun ? rest[rest.length - 1] : Sys.getCwd(), rest[0]]);
 		FileSystem.createDirectory(output);
 
-		final sources = ["css", "fonts", "img"];
+		final sources = ["css", "fonts"];
 		var directories = sources.filter(source -> Reflect.field(this, source));
 		if (directories.length == 0) directories = sources;
 

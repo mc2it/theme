@@ -3,7 +3,6 @@ package mc2it_theme.cli;
 import sys.FileSystem;
 import sys.io.File;
 
-using Lambda;
 using haxe.io.Path;
 
 /** Copy the library assets to a given directory. **/
@@ -25,15 +24,23 @@ class CopyCommand {
 		if (rest.length < requiredArgs || (haxelibRun && rest.length < requiredArgs + 1))
 			return new Error(BadRequest, "You must provide the path of the output directory.");
 
-		final folders = ["css", "fonts", "img"];
 		final output = rest[0].isAbsolute() ? rest[0] : Path.join([haxelibRun ? rest[rest.length - 1] : Sys.getCwd(), rest[0]]);
-		folders.iter(folder -> FileSystem.createDirectory(Path.join([output, folder])));
+		FileSystem.createDirectory(output);
 
 		final input = Path.join([Sys.getCwd(), "www"]);
-		final files = ["favicon.ico", "favicon.svg"]
-			.concat(folders.map(folder -> FileSystem.readDirectory(Path.join([input, folder])).map(file -> '$folder/$file')).flatten());
-
-		files.iter(file -> File.copy(Path.join([input, file]), Path.join([output, file])));
+		for (directory in ["css", "fonts", "img"]) copyDirectory(Path.join([input, directory]), Path.join([output, directory]));
+		for (file in ["favicon.ico", "favicon.svg"]) File.copy(Path.join([input, file]), Path.join([output, file]));
 		return Noise;
+	}
+
+	/** Recursively copies all files in the specified `source` directory to a given `destination` directory. **/
+	static function copyDirectory(source: String, destination: String) for (entry in FileSystem.readDirectory(source)) {
+		final input = Path.join([source, entry]);
+		final output = Path.join([destination, entry]);
+		if (FileSystem.isDirectory(input)) copyDirectory(input, output);
+		else {
+			FileSystem.createDirectory(output.directory());
+			File.copy(input, output);
+		}
 	}
 }

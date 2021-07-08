@@ -1,12 +1,14 @@
 * text=auto
 .* text
 
+*.css text diff=css
 *.http text
 *.hx text
 *.hxml text
 *.js text
 *.json text
 *.md text
+*.scss text diff=css
 *.txt text
 *.yaml text
 *.yml text

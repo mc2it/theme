@@ -8,8 +8,17 @@ using haxe.io.Path;
 /** Copy the library assets to a given directory. **/
 class CopyCommand {
 
+	/** Copy only CSS files. **/
+	public var css = false;
+
+	/** Copy only font files. **/
+	public var fonts = false;
+
 	/** Output usage information. **/
 	public var help = false;
+
+	/** Copy only image files. **/
+	public var img = false;
 
 	/** Creates a new `copy` command. **/
 	public function new() {}
@@ -27,9 +36,12 @@ class CopyCommand {
 		final output = rest[0].isAbsolute() ? rest[0] : Path.join([haxelibRun ? rest[rest.length - 1] : Sys.getCwd(), rest[0]]);
 		FileSystem.createDirectory(output);
 
+		final sources = ["css", "fonts", "img"];
+		var directories = sources.filter(source -> Reflect.field(this, source));
+		if (directories.length == 0) directories = sources;
+
 		final input = Path.join([Sys.getCwd(), "www"]);
-		for (directory in ["css", "fonts", "img"]) copyDirectory(Path.join([input, directory]), Path.join([output, directory]));
-		for (file in ["favicon.ico", "favicon.svg"]) File.copy(Path.join([input, file]), Path.join([output, file]));
+		for (directory in directories) copyDirectory(Path.join([input, directory]), directories.length == 1 ? output : Path.join([output, directory]));
 		return Noise;
 	}
 

@@ -5,7 +5,6 @@ The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://mc2it.fr
 
 ## Documentation
 - [User guide](https://mc2it.github.io/ui-theme)
-- [API reference](https://mc2it.github.io/ui-theme/api)
 
 ## Development
 - [Git repository](https://github.com/mc2it/ui-theme)

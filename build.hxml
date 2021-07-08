@@ -1,6 +1,7 @@
 --class-path src
 --dce full
 --define analyzer-optimize
---define js-es=6
---js var/bundle.js
---library bootstrap_bundle
+--define no-deprecation-warnings
+--library tink_cli
+--main mc2it_theme.cli.Program
+--neko run.n

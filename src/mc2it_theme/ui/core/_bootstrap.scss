@@ -1,3 +1,5 @@
+// Configuration.
+@forward "variables";
 @use "variables" as *;
 
 @import "scss/functions";
@@ -5,6 +7,7 @@
 @import "scss/mixins";
 @import "scss/utilities";
 
+// Layout and components.
 @import "scss/root";
 @import "scss/reboot";
 @import "scss/type";
@@ -26,5 +29,8 @@
 @import "scss/modal";
 @import "scss/spinners";
 
+// Helpers.
 @import "scss/helpers";
+
+// Utilities.
 @import "scss/utilities/api";

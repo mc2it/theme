@@ -1,8 +1,20 @@
+// Fonts
+@use "fonts/segoe_ui";
+@use "fonts/bootstrap_icons";
+
 // Core.
-@use "core";
-@use "fonts";
-@use "utilities";
+@use "core/variables";
+@use "core/bootstrap";
+
+// Utilities.
+@use "utilities/background";
 
 // Application.
-@use "app";
-@use "components";
+@use "app/root";
+@use "app/grid";
+
+// Components.
+@use "components/loader";
+@use "components/modal";
+@use "components/navbar";
+@use "components/tables";

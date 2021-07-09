@@ -1,5 +1,5 @@
 @use "sass:math";
-@use "../core" as *;
+@use "../core/bootstrap" as *;
 
 .modal-header {
 	background-color: $gray-100;

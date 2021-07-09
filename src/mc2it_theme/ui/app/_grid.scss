@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../core" as *;
+@use "../core/bootstrap" as *;
 
 main {
 	bottom: 0;
@@ -23,8 +23,8 @@ main {
 article {
 	@include make-container;
 	max-width: map.get($container-max-widths, "xl");
-	padding-bottom: map.get($spacers, 4);
-	padding-top: map.get($spacers, 3);
+	padding-bottom: $spacer;
+	padding-top: $spacer;
 }
 
 aside {

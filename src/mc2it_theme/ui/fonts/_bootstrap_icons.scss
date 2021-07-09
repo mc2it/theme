@@ -14,10 +14,16 @@
 	line-height: 1;
 	text-transform: none;
 	vertical-align: -0.125em;
+
+	button & {
+		vertical-align: -0.175em;
+	}
 }
 
 .bi-archive-fill::before { content: "\f10c"; }
 .bi-archive::before { content: "\f10d"; }
+.bi-arrow-clockwise::before { content: "\f116"; }
+.bi-arrow-counterclockwise::before { content: "\f117"; }
 .bi-arrow-down-up::before { content: "\f127"; }
 .bi-arrow-down::before { content: "\f128"; }
 .bi-arrow-up::before { content: "\f148"; }

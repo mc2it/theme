@@ -1,4 +1,10 @@
-@use "../core" as *;
+@use "../core/bootstrap" as *;
+
+.table-sm {
+	.btn-sm {
+		font-size: $btn-font-size-sm * 0.85;
+	}
+}
 
 .table-sticky {
 	border-collapse: separate;

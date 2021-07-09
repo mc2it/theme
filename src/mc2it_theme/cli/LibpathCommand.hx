@@ -21,7 +21,7 @@ class LibpathCommand {
 	// Runs this command.
 	@:defaultCommand
 	public function run() {
-		final path = Path.join([Sys.getCwd(), less || scss ? "src/ui" : "www"]);
+		final path = Path.join([Sys.getCwd(), less || scss ? "src/mc2it_theme/ui" : "www"]);
 		Sys.println(help ? Cli.getDoc(this) : path.replace("/", Sys.systemName() == "Windows" ? "\\" : "/"));
 		return Promise.NOISE;
 	}

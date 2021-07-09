@@ -7,7 +7,7 @@ main {
 	overflow: auto;
 	position: absolute;
 	right: 0;
-	top: $navbar-height;
+	top: var(--navbar-height);
 
 	@media print {
 		overflow: visible;
@@ -35,6 +35,6 @@ aside {
 	padding: $navbar-padding-y $navbar-padding-x;
 	position: fixed;
 	right: 0;
-	top: $navbar-height;
+	top: var(--navbar-height);
 	z-index: 100;
 }

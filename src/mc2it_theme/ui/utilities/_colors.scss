@@ -1,0 +1,7 @@
+@use "../core" as *;
+
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background-color: $value;
+	}
+}

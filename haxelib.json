@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Added some Less variables corresponding to Sass ones.",
+	"releasenote": "Added more Bootstrap icons, added some Less variables corresponding to Sass ones.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/ui-theme",
 	"version": "0.2.0"

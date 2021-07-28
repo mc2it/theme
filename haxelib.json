@@ -8,5 +8,5 @@
 	"releasenote": "Added new Bootstrap icons, added new Less variables.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/ui-theme",
-	"version": "0.3.0"
+	"version": "0.3.1"
 }

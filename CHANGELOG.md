@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [0.3.1](https://github.com/mc2it/ui-theme/compare/v0.3.0...v0.3.1)
+- Fixed the font size of small buttons in tables.
+
 ## Version [0.3.0](https://github.com/mc2it/ui-theme/compare/v0.2.0...v0.3.0)
 - Added new [Bootstrap](https://icons.getbootstrap.com) icons.
 - Added new [Less](https://lesscss.org) variables.

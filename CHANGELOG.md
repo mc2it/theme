@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [0.4.0](https://github.com/mc2it/ui-theme/compare/v0.3.1...v0.4.0)
+- Enabled the [Bootstrap](https://icons.getbootstrap.com) tooltips.
+- Updated the package dependencies.
+
 ## Version [0.3.1](https://github.com/mc2it/ui-theme/compare/v0.3.0...v0.3.1)
 - Fixed the font size of small buttons in tables.
 

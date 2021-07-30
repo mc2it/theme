@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Fixed the font size of small buttons in tables.",
+	"releasenote": "Enabled the Bootstrap tooltips.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/ui-theme",
 	"version": "0.3.1"

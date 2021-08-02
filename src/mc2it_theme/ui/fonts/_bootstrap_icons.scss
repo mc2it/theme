@@ -4,8 +4,7 @@
 	src: url("../fonts/bootstrap_icons.woff2") format("woff2");
 }
 
-[class^="bi-"]::before,
-[class*=" bi-"]::before {
+.bi::before {
 	display: inline-block;
 	font-family: "Bootstrap Icons";
 	font-style: normal;

@@ -1,5 +1,10 @@
 # Changelog
 
+## Version [0.5.0](https://github.com/mc2it/ui-theme/compare/v0.4.0...v0.5.0)
+- Breaking change: the icon classes are no longer included in the stylesheet.
+- Breaking change: the icon tags require the `.bi` class.
+- Updated the package dependencies.
+
 ## Version [0.4.0](https://github.com/mc2it/ui-theme/compare/v0.3.1...v0.4.0)
 - Enabled the [Bootstrap](https://icons.getbootstrap.com) tooltips.
 - Updated the package dependencies.

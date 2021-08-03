@@ -8,5 +8,5 @@
 	"releasenote": "Breaking change: the icon classes are no longer included in the stylesheet, the icon tags require the `.bi` class.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/ui-theme",
-	"version": "0.5.0"
+	"version": "0.5.1"
 }

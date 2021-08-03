@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [0.5.1](https://github.com/mc2it/ui-theme/compare/v0.5.0...v0.5.1)
+- Added the `.text-capitalize-first` class.
+
 ## Version [0.5.0](https://github.com/mc2it/ui-theme/compare/v0.4.0...v0.5.0)
 - Breaking change: the icon classes are no longer included in the stylesheet.
 - Breaking change: the icon tags require the `.bi` class.

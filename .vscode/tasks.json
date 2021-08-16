@@ -4,6 +4,7 @@
 		{
 			"label": "Build",
 			"group": {"kind": "build", "isDefault": true},
+			"problemMatcher": ["$haxe", "$haxe-absolute", "$haxe-error", "$haxe-trace"],
 			"presentation": {"close": true},
 			"type": "shell", "command": "lix", "args": ["Build"]
 		},

@@ -29,7 +29,7 @@
 		{
 			"label": "Lint",
 			"group": "build",
-			"presentation": {"close": true},
+			"presentation": {"close": false},
 			"type": "shell", "command": "lix", "args": ["Lint"]
 		},
 		{

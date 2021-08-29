@@ -23,7 +23,7 @@
 	"dependencies": {
 		"clean-css-cli": "^5.3.3",
 		"less": "^4.1.1",
-		"sass": "^1.38.1"
+		"sass": "^1.38.2"
 	},
 	"engines": {
 		"node": ">=16.0.0"

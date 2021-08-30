@@ -30,14 +30,12 @@ class CopyCommand {
 		if (rest.length < requiredArgs || (haxelibRun && rest.length < requiredArgs + 1))
 			return new Error(BadRequest, "You must provide the path of the output directory.");
 
-		final output = rest[0].isAbsolute() ? rest[0] : Path.join([haxelibRun ? rest[rest.length - 1] : Sys.getCwd(), rest[0]]);
-		FileSystem.createDirectory(output);
-
 		final sources = ["css", "fonts"];
 		var directories = sources.filter(source -> Reflect.field(this, source));
 		if (directories.length == 0) directories = sources;
 
 		final input = Path.join([Sys.programPath().directory(), "www"]);
+		final output = rest[0].isAbsolute() ? rest[0] : Path.join([haxelibRun ? rest[rest.length - 1] : Sys.getCwd(), rest[0]]);
 		for (directory in directories) copyDirectory(Path.join([input, directory]), directories.length == 1 ? output : Path.join([output, directory]));
 		return Noise;
 	}

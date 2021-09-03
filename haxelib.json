@@ -8,5 +8,5 @@
 	"releasenote": "Fixed the generated stylesheet.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/ui-theme",
-	"version": "0.6.0"
+	"version": "1.0.0"
 }

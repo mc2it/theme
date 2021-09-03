@@ -8,5 +8,5 @@
 	"releasenote": "Added new Less variables, updated the package dependencies.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/ui-theme",
-	"version": "1.0.0"
+	"version": "1.0.1"
 }

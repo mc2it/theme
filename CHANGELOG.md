@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [1.0.0](https://github.com/mc2it/ui-theme/compare/v0.6.0...v1.0.0)
+- Added new [Less](https://lesscss.org) variables.
+- Updated the package dependencies.
+
 ## Version [0.6.0](https://github.com/mc2it/ui-theme/compare/v0.5.2...v0.6.0)
 - Enabled the [Bootstrap](https://getbootstrap.com) accordions.
 

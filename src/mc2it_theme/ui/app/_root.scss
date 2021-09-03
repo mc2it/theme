@@ -1,5 +1,6 @@
 :root {
 	--navbar-height: 50px;
+	font-size: var(--root-font-size); // Fixes: https://github.com/twbs/bootstrap/issues/34789
 }
 
 body {

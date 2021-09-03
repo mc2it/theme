@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.0.1](https://github.com/mc2it/ui-theme/compare/v1.0.0...v1.0.1)
+- Fixed the issue [twbs/bootstrap#34789](https://github.com/twbs/bootstrap/issues/34789).
+
 ## Version [1.0.0](https://github.com/mc2it/ui-theme/compare/v0.6.0...v1.0.0)
 - Added new [Less](https://lesscss.org) variables.
 - Updated the package dependencies.

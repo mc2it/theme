@@ -1,6 +1,7 @@
 # Changelog
 
-## Version [1.0.2](https://github.com/mc2it/ui-theme/compare/v1.0.1...v1.0.2)
+## Version [1.1.0](https://github.com/mc2it/ui-theme/compare/v1.0.1...v1.1.0)
+- Enabled the [Bootstrap](https://getbootstrap.com) progress bars.
 - Upgraded [Bootstrap](https://getbootstrap.com) to version 5.1.1.
 
 ## Version [1.0.1](https://github.com/mc2it/ui-theme/compare/v1.0.0...v1.0.1)

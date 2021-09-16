@@ -5,8 +5,8 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Upgraded Bootstrap to version 5.1.1.",
+	"releasenote": "Upgraded Bootstrap to version 5.1.1, enabled the progress bars.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/ui-theme",
-	"version": "1.0.2"
+	"version": "1.1.0"
 }

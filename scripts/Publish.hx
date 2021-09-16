@@ -8,5 +8,7 @@ function main() {
 	command("lix Dist");
 	compress(["CHANGELOG.md", "LICENSE.md", "README.md", "haxelib.json", "run.n", "src", "www"], "var/haxelib.zip");
 	command("haxelib submit var/haxelib.zip");
-	for (action in ["tag", "push origin"]) command('git $action v${getPackageVersion()}');
+
+	final version = getPackageVersion();
+	for (action in ["tag", "push origin"]) command('git $action v$version');
 }

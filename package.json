@@ -9,9 +9,9 @@
 	"type": "commonjs",
 	"version": "1.1.0",
 	"author": {
-		"email": "contact@mc2it.fr",
+		"email": "contact@mc2it.com",
 		"name": "MC2IT",
-		"url": "https://mc2it.fr"
+		"url": "https://mc2it.com"
 	},
 	"contributors": [
 		{
@@ -23,7 +23,7 @@
 	"dependencies": {
 		"clean-css-cli": "^5.3.3",
 		"less": "^4.1.1",
-		"sass": "^1.42.0"
+		"sass": "^1.42.1"
 	},
 	"engines": {
 		"node": ">=16.0.0"

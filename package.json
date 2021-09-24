@@ -1,11 +1,11 @@
 {
-	"bugs": "https://github.com/mc2it/ui-theme/issues",
+	"bugs": "https://github.com/mc2it/theme/issues",
 	"description": "Bootstrap theme used by MC2IT applications.",
-	"homepage": "https://mc2it.github.io/ui-theme",
+	"homepage": "https://mc2it.github.io/theme",
 	"license": "MIT",
-	"name": "@mc2it/ui-theme",
+	"name": "@mc2it/theme",
 	"private": true,
-	"repository": "mc2it/ui-theme",
+	"repository": "mc2it/theme",
 	"type": "commonjs",
 	"version": "1.1.0",
 	"author": {

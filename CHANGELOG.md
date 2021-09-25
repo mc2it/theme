@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [1.2.0](https://github.com/mc2it/theme/compare/v1.1.0...v1.2.0)
+- Enabled the [Bootstrap](https://getbootstrap.com) offcanvas.
+- Enabled the [Bootstrap](https://getbootstrap.com) toasts.
+
 ## Version [1.1.0](https://github.com/mc2it/theme/compare/v1.0.1...v1.1.0)
 - Enabled the [Bootstrap](https://getbootstrap.com) progress bars.
 - Upgraded [Bootstrap](https://getbootstrap.com) to version 5.1.1.

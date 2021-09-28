@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [1.2.1](https://github.com/mc2it/theme/compare/v1.2.0...v1.2.1)
+- Added a mixin for scrollbars customization.
+- Customized the selection color.
+
 ## Version [1.2.0](https://github.com/mc2it/theme/compare/v1.1.0...v1.2.0)
 - Enabled the [Bootstrap](https://getbootstrap.com) offcanvas.
 - Enabled the [Bootstrap](https://getbootstrap.com) toasts.

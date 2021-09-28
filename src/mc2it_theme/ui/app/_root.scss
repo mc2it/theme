@@ -1,6 +1,5 @@
 :root {
 	--navbar-height: 50px;
-	accent-color: var(--primary);
 }
 
 ::selection {
@@ -9,5 +8,6 @@
 }
 
 body {
+	accent-color: var(--primary);
 	overflow: hidden;
 }

@@ -1,5 +1,11 @@
 :root {
 	--navbar-height: 50px;
+	accent-color: var(--primary);
+}
+
+::selection {
+	background-color: var(--primary);
+	color: var(--white);
 }
 
 body {

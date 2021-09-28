@@ -1,0 +1,153 @@
+// Color system.
+@black: black;
+@white: var(--white);
+
+@gray-100: var(--gray-100);
+@gray-200: var(--gray-200);
+@gray-300: var(--gray-300);
+@gray-400: var(--gray-400);
+@gray-500: var(--gray-500);
+@gray-600: var(--gray-600);
+@gray-700: var(--gray-700);
+@gray-800: var(--gray-800);
+@gray-900: var(--gray-900);
+
+@grays: {
+	100: @gray-100;
+	200: @gray-200;
+	300: @gray-300;
+	400: @gray-400;
+	500: @gray-500;
+	600: @gray-600;
+	700: @gray-700;
+	800: @gray-800;
+	900: @gray-900;
+}
+
+@blue: var(--blue);
+@cyan: var(--cyan);
+@green: var(--green);
+@indigo: var(--indigo);
+@orange: var(--orange);
+@pink: var(--pink);
+@purple: var(--purple);
+@red: var(--red);
+@teal: var(--teal);
+@yellow: var(--yellow);
+
+@colors: {
+	blue: @blue;
+	cyan: @cyan;
+	gray: @gray-600;
+	gray-dark: @gray-800;
+	green: @green;
+	indigo: @indigo;
+	orange: @orange;
+	pink: @pink;
+	purple: @purple;
+	red: @red;
+	teal: @teal;
+	white: @white;
+	yellow: @yellow;
+}
+
+@danger: var(--red);
+@dark: var(--dark);
+@info: var(--cyan);
+@light: var(--light);
+@primary: var(--primary);
+@secondary: var(--gray);
+@success: var(--green);
+@warning: var(--yellow);
+
+@theme-colors: {
+	danger: @danger;
+	dark: @dark;
+	info: @info;
+	light: @light;
+	primary: @primary;
+	secondary: @secondary;
+	success: @success;
+	warning: @warning;
+}
+
+// Options.
+@enable-gradients: false;
+@enable-reduced-motion: true;
+@enable-rounded: false;
+@enable-shadows: true;
+@enable-smooth-scroll: true;
+@enable-transitions: true;
+
+// Gradient.
+@gradient: var(--gradient);
+
+// Spacing.
+@spacer: 1rem;
+@spacers: {
+	0: 0;
+	1: @spacer * 0.25;
+	2: @spacer * 0.5;
+	3: @spacer;
+	4: @spacer * 1.5;
+	5: @spacer * 3;
+}
+
+// Body.
+@body-bg: var(--body-bg);
+@body-color: var(--body-color);
+@body-text-align: var(--body-text-align);
+
+// Grid breakpoints.
+@grid-breakpoints: {
+	xs: 0;
+	sm: 576px;
+	md: 768px;
+	lg: 992px;
+	xl: 1200px;
+	xxl: 1400px;
+}
+
+// Grid containers.
+@container-max-widths: {
+	sm: 540px;
+	md: 720px;
+	lg: 960px;
+	xl: 1140px;
+	xxl: 1320px;
+}
+
+// Components.
+@border-width: 1px;
+@border-widths: {
+	1: 1px;
+	2: 2px;
+	3: 3px;
+	4: 4px;
+	5: 5px;
+}
+
+@border-radius: .25rem;
+@border-radius-lg: .3rem;
+@border-radius-pill: 50rem;
+@border-radius-sm: .2rem;
+
+@box-shadow: 0 .5rem 1rem rgba(@black, .15);
+@box-shadow-inset: inset 0 1px 2px rgba(@black, .075);
+@box-shadow-lg: 0 1rem 3rem rgba(@black, .175);
+@box-shadow-sm: 0 .125rem .25rem rgba(@black, .075);
+
+@transition-base: all .2s ease-in-out;
+@transition-collapse-width: width .35s ease;
+@transition-collapse: height .35s ease;
+@transition-fade: opacity .15s linear;
+
+// Typography.
+@font-family-base: var(--body-font-family);
+@font-family-code: var(--font-monospace);
+@font-family-monospace: var(--font-monospace);
+@font-family-sans-serif: var(--font-sans-serif);
+@font-size-base: var(--body-font-size);
+@font-size-root: var(--root-font-size);
+@font-weight-base: var(--body-font-weight);
+@line-height-base: var(--body-line-height);

@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [1.3.0](https://github.com/mc2it/theme/compare/v1.2.0...v1.3.0)
+- Upgraded [Bootstrap](https://getbootstrap.com) to version 5.1.3.
+- Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.6.0.
+
 ## Version [1.2.1](https://github.com/mc2it/theme/compare/v1.2.0...v1.2.1)
 - Added a mixin for scrollbars customization.
 - Customized the selection color.

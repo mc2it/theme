@@ -5,8 +5,8 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Added a mixin for scrollbars customization, customized the selection color.",
+	"releasenote": "Upgraded Bootstrap to version 5.1.3, upgraded Bootstrap Icons to version 1.6.0.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
-	"version": "1.2.1"
+	"version": "1.3.0"
 }

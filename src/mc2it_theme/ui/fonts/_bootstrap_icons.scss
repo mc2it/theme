@@ -6,10 +6,10 @@
 
 .bi::before {
 	display: inline-block;
-	font-family: "Bootstrap Icons";
+	font-family: "Bootstrap Icons" !important;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: normal;
+	font-weight: normal !important;
 	line-height: 1;
 	text-transform: none;
 	vertical-align: -0.125em;

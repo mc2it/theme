@@ -1,5 +1,5 @@
 @use "../core/bootstrap" as *;
 
 .nav-tabs .nav-link:not(.active):hover {
-	background-color: $gray-100;
+	background-color: var(--gray-100);
 }

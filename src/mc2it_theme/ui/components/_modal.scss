@@ -1,11 +1,11 @@
 @use "../core/bootstrap" as *;
 
 .modal-header {
-	background-color: $gray-100;
+	background-color: var(--gray-100);
 }
 
 .modal-footer {
-	background-color: $gray-100;
+	background-color: var(--gray-100);
 	padding: ($modal-inner-padding * 0.5) $modal-inner-padding;
 
 	.btn {

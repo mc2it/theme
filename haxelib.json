@@ -5,8 +5,8 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Upgraded Bootstrap to version 5.1.3, upgraded Bootstrap Icons to version 1.6.0.",
+	"releasenote": "Updated the project URL.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
-	"url": "https://mc2it.github.io/theme",
-	"version": "1.3.0"
+	"url": "https://bitbucket.org/mc2it/theme",
+	"version": "1.3.1"
 }

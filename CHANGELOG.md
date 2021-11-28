@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [1.5.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.5.0..v1.4.0)
+- Enabled the rounded borders.
+- Updated the package dependencies.
+
 ## Version [1.4.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.4.0..v1.3.0)
 - Enabled the [Bootstrap](https://getbootstrap.com) popovers.
 

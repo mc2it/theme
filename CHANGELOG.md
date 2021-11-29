@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.5.1](https://bitbucket.org/mc2it/theme/branches/compare/v1.5.1..v1.5.0)
+- Fixed the `.table-sticky` class.
+
 ## Version [1.5.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.5.0..v1.4.0)
 - Enabled the rounded borders.
 - Updated the package dependencies.

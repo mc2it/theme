@@ -21,7 +21,7 @@
 		}
 	],
 	"dependencies": {
-		"clean-css-cli": "^5.4.2",
+		"clean-css-cli": "^5.5.0",
 		"less": "^4.1.2",
 		"sass": "^1.44.0"
 	},

@@ -32,9 +32,5 @@ abstract class Version {
 
 	/** Gets the package version of this program. **/
 	macro public static function getPackageVersion()
-		#if display
-			return macro $v{"0.0.0"};
-		#else
-			return macro $v{Json.parse(File.getContent("haxelib.json")).version};
-		#end
+		return macro $v{#if display "0.0.0" #else Json.parse(File.getContent("haxelib.json")).version #end};
 }

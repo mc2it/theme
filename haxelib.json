@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Fixed the `.table-sticky` class.",
+	"releasenote": "Enabled the responsive images and thumbnails.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://bitbucket.org/mc2it/theme",
 	"version": "1.6.0"

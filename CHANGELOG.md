@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.6.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.6.0..v1.5.1)
+- Enabled the responsive images and thumbnails.
+
 ## Version [1.5.1](https://bitbucket.org/mc2it/theme/branches/compare/v1.5.1..v1.5.0)
 - Fixed the `.table-sticky` class.
 

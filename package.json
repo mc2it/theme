@@ -7,7 +7,7 @@
 	"private": true,
 	"repository": "bitbucket:mc2it/theme",
 	"type": "commonjs",
-	"version": "1.5.1",
+	"version": "1.6.0",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",

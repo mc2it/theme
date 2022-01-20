@@ -1,5 +1,5 @@
 import Sys.*;
-import Tools.captureCommand;
+import Tools;
 import sys.io.File.*;
 
 /** Runs the script. **/

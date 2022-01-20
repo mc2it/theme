@@ -1,5 +1,5 @@
 //! --class-path src --library tink_cli
-import Tools.replaceInFile;
+import Tools;
 import mc2it_theme.cli.Version.*;
 
 /** Runs the script. **/

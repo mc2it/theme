@@ -6,7 +6,6 @@ import haxe.zip.Writer;
 import sys.FileSystem.*;
 import sys.io.File.*;
 import sys.io.Process;
-
 using Lambda;
 using StringTools;
 using haxe.zip.Tools;

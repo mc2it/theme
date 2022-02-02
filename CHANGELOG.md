@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.7.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.0..v1.6.1)
+- Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.8.0.
+
 ## Version [1.6.1](https://bitbucket.org/mc2it/theme/branches/compare/v1.6.1..v1.6.0)
 - Fixed the [Less](https://lesscss.org) stylesheet.
 

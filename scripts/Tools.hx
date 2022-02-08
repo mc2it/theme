@@ -1,23 +1,30 @@
-import haxe.Exception;
 import haxe.crypto.Crc32;
 import haxe.zip.Entry;
 import haxe.zip.Writer;
 import sys.FileSystem;
 import sys.io.File;
-import sys.io.Process;
 using Lambda;
 using StringTools;
 using haxe.io.Path;
 using haxe.zip.Tools;
 
+#if tink_core
+import sys.io.Process;
+using tink.CoreApi;
+#end
+
+#if tink_core
 /** Captures the output of the specified `command`. **/
 function captureCommand(command: String, ?arguments: Array<String>) {
 	final process = new Process(command, arguments);
-	final success = process.exitCode() == 0;
-	final output = (success ? process.stdout.readAll() : process.stderr.readAll()).toString().trim();
+	final outcome = process.exitCode() == 0
+		? Success(process.stdout.readAll().toString().trim())
+		: Failure(new Error(process.stderr.readAll().toString()));
+
 	process.close();
-	return success ? output : throw new Exception(output);
+	return outcome;
 }
+#end
 
 /** Recursively deletes all file system entities in the specified `directory`. **/
 function cleanDirectory(directory: String) for (entry in FileSystem.readDirectory(directory).filter(entry -> entry != ".gitkeep")) {

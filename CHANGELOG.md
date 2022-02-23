@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [1.7.1](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.1..v1.7.0)
+- Removed the extra padding from modal buttons.
+- Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.8.1.
+
 ## Version [1.7.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.0..v1.6.1)
 - Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.8.0.
 

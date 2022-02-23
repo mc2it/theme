@@ -7,8 +7,4 @@
 .modal-footer {
 	background-color: var(--gray-100);
 	padding: ($modal-inner-padding * 0.5) $modal-inner-padding;
-
-	.btn {
-		min-width: 75px;
-	}
 }

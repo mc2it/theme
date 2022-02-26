@@ -8,5 +8,5 @@
 	"releasenote": "Upgraded Bootstrap Icons to version 1.8.1, removed the extra padding from modal buttons.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://bitbucket.org/mc2it/theme",
-	"version": "1.7.1"
+	"version": "1.7.2"
 }

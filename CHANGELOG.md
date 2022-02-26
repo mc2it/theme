@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.7.2](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.2..v1.7.1)
+- Adjusted the font weight of the dropdown headers.
+
 ## Version [1.7.1](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.1..v1.7.0)
 - Removed the extra padding from modal buttons.
 - Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.8.1.

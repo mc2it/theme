@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.7.5](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.5..v1.7.4)
+- Adjusted the padding of the offcanvas component.
+
 ## Version [1.7.4](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.4..v1.7.3)
 - Adjusted the width of the offcanvas component.
 

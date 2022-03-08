@@ -8,5 +8,5 @@
 	"releasenote": "Added the `.fw-100`, `.fw-300`, `.fw-400`, `.fw-600` and `.fw-700` classes.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://bitbucket.org/mc2it/theme",
-	"version": "1.7.3"
+	"version": "1.7.4"
 }

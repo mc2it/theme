@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.7.3](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.3..v1.7.2)
+- Added the `.fw-100`, `.fw-300`, `.fw-400`, `.fw-600` and `.fw-700` classes.
+
 ## Version [1.7.2](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.2..v1.7.1)
 - Adjusted the font weight of the dropdown headers.
 

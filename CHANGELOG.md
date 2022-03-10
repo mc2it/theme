@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.7.6](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.6..v1.7.5)
+- Adjusted the font weight of the form labels.
+
 ## Version [1.7.5](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.5..v1.7.4)
 - Adjusted the padding of the offcanvas component.
 

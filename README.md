@@ -1,5 +1,5 @@
 # MC2IT Theme
-![Haxe](https://flat.badgen.net/badge/haxe/%3E%3D4.2.0/green) ![Haxelib](https://flat.badgen.net/haxelib/v/mc2it_theme) ![License](https://flat.badgen.net/badge/license/MIT/blue) ![Downloads](https://flat.badgen.net/haxelib/d/mc2it_theme)
+![Haxe](https://badgen.net/badge/haxe/%3E%3D4.2.0/green) ![Haxelib](https://badgen.net/haxelib/v/mc2it_theme) ![License](https://badgen.net/badge/license/MIT/blue) ![Downloads](https://badgen.net/haxelib/d/mc2it_theme)
 
 The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://mc2it.com) applications.
 

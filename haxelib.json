@@ -8,5 +8,5 @@
 	"releasenote": "Adjusted the vertical position of the brand logo, disabled the popover component, removed the box shadow of the offcanvas component.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://bitbucket.org/mc2it/theme",
-	"version": "1.8.0"
+	"version": "1.9.0"
 }

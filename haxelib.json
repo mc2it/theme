@@ -8,5 +8,5 @@
 	"releasenote": "Adjusted the font weight of the form labels.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://bitbucket.org/mc2it/theme",
-	"version": "1.7.6"
+	"version": "1.8.0"
 }

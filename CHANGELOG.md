@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.9.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.9.0..v1.8.0)
+- Added background colors for the toast header.
+
 ## Version [1.8.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.8.0..v1.7.6)
 - Adjusted the vertical position of the brand logo.
 - Disabled the popover component.

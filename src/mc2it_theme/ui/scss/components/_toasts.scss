@@ -9,7 +9,7 @@
 	}
 
 	.toast-header-#{$color} {
-		background-color: rgba($toast-background, 85%);
+		background-color: $toast-background;
 		color: $toast-color;
 	}
 }

@@ -1,0 +1,15 @@
+@use "../core/bootstrap" as *;
+
+@each $color, $value in $theme-colors {
+	$toast-background: shift-color($value, $alert-bg-scale);
+	$toast-color: shift-color($value, $alert-color-scale);
+
+	@if (contrast-ratio($toast-background, $toast-color) < $min-contrast-ratio) {
+		$toast-color: mix($value, color-contrast($toast-background), abs($alert-color-scale));
+	}
+
+	.toast-header-#{$color} {
+		background-color: rgba($toast-background, 85%);
+		color: $toast-color;
+	}
+}

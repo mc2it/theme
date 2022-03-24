@@ -1,5 +1,10 @@
 # Changelog
 
+## Version [1.8.0](https://bitbucket.org/mc2it/theme/branches/compare/v1.8.0..v1.7.6)
+- Adjusted the vertical position of the brand logo.
+- Disabled the popover component.
+- Removed the box shadow of the offcanvas component.
+
 ## Version [1.7.6](https://bitbucket.org/mc2it/theme/branches/compare/v1.7.6..v1.7.5)
 - Adjusted the font weight of the form labels.
 

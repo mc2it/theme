@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.9.2](https://bitbucket.org/mc2it/theme/branches/compare/v1.9.2..v1.9.1)
+- Adjusted the color of the toast borders.
+
 ## Version [1.9.1](https://bitbucket.org/mc2it/theme/branches/compare/v1.9.1..v1.9.0)
 - Removed the transparency from the toast backgrounds.
 

@@ -4,12 +4,12 @@
 The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://mc2it.com) applications.
 
 ## Documentation
-- [User guide](https://bitbucket.org/mc2it/theme/wiki)
+- [User guide](https://github.com/mc2it/theme/wiki)
 
 ## Development
-- [Git repository](https://bitbucket.org/mc2it/theme)
+- [Git repository](https://github.com/mc2it/theme)
 - [Haxelib package](https://lib.haxe.org/p/mc2it_theme)
-- [Submit an issue](https://bitbucket.org/mc2it/theme/issues)
+- [Submit an issue](https://github.com/mc2it/theme/issues)
 
 ## License
-[MC2IT Theme](https://bitbucket.org/mc2it/theme) is distributed under the MIT License.
+[MC2IT Theme](https://github.com/mc2it/theme) is distributed under the MIT License.

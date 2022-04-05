@@ -7,6 +7,6 @@
 	"name": "mc2it_theme",
 	"releasenote": "Adjusted the color of the toast borders.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
-	"url": "https://bitbucket.org/mc2it/theme",
+	"url": "https://github.com/mc2it/theme",
 	"version": "1.9.1"
 }

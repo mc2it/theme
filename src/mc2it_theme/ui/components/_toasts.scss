@@ -1,4 +1,4 @@
-@use "../core/bootstrap" as *;
+@use "../theme" as *;
 
 @each $color, $value in $theme-colors {
 	$toast-background: shift-color($value, $alert-bg-scale);

@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Adjusted the color of the toast borders.",
+	"releasenote": "Adjusted the color of the toast borders, dropped support for the Less stylesheet.",
 	"tags": ["bootstrap", "css", "scss", "theme", "ui"],
 	"url": "https://github.com/mc2it/theme",
 	"version": "2.0.0"

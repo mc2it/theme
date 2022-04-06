@@ -3,6 +3,7 @@
 ## Version [2.0.0](https://github.com/mc2it/theme/compare/v1.9.1...v2.0.0)
 - Breaking change: dropped support for the [Less](https://lesscss.org) stylesheet.
 - Adjusted the color of the toast borders.
+- Exposed the core to be consumed by external [Sass](https://sass-lang.com) stylesheets.
 
 ## Version [1.9.1](https://github.com/mc2it/theme/compare/v1.9.0...v1.9.1)
 - Removed the transparency from the toast backgrounds.

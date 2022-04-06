@@ -1,0 +1,6 @@
+@use "sass:map";
+@use "../core/bootstrap" as *;
+
+@each $key, $value in map.remove($colors, "white") {
+	.bg-#{$key} { background-color: $value; }
+}

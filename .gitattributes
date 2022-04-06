@@ -7,7 +7,6 @@
 *.hxml text
 *.js text
 *.json text
-*.less text diff=css
 *.md text
 *.ps1 text
 *.scss text diff=css

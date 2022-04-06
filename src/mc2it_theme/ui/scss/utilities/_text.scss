@@ -1,9 +1,0 @@
-@each $value in (100, 200, 300, 400, 500, 600, 700, 800, 900) {
-	.fw-#{$value} {
-		font-weight: $value;
-	}
-}
-
-.text-capitalize-first::first-letter {
-	text-transform: uppercase;
-}

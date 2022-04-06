@@ -9,9 +9,6 @@ class LibpathCommand {
 	/** Output usage information. **/
 	public var help = false;
 
-	/** Print the specific path to the Less files. **/
-	public var less = false;
-
 	/** Print the specific path to the Sass files. **/
 	public var scss = false;
 
@@ -21,7 +18,7 @@ class LibpathCommand {
 	// Runs this command.
 	@:defaultCommand
 	public function run() {
-		final path = Path.join([Sys.programPath().directory(), less || scss ? "src/mc2it_theme/ui" : "www"]);
+		final path = Path.join([Sys.programPath().directory(), scss ? "src/mc2it_theme/ui" : "www"]);
 		Sys.println(help ? Cli.getDoc(this) : path.replace("/", Sys.systemName() == "Windows" ? "\\" : "/"));
 		return Promise.NOISE;
 	}

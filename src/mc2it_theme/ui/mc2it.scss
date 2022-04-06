@@ -1,26 +1,26 @@
 // Fonts
-@use "scss/fonts/bootstrap_icons";
-@use "scss/fonts/segoe_ui";
+@use "fonts/bootstrap_icons";
+@use "fonts/segoe_ui";
 
 // Core.
-@use "scss/core/variables";
-@use "scss/core/mixins";
-@use "scss/core/bootstrap";
+@use "core/variables";
+@use "core/mixins";
+@use "core/bootstrap";
 
 // Utilities.
-@use "scss/utilities/background";
-@use "scss/utilities/text";
+@use "utilities/background";
+@use "utilities/text";
 
 // Application.
-@use "scss/app/root";
-@use "scss/app/grid";
+@use "app/root";
+@use "app/grid";
 
 // Components.
-@use "scss/components/dropdown";
-@use "scss/components/loader";
-@use "scss/components/modal";
-@use "scss/components/nav";
-@use "scss/components/navbar";
-@use "scss/components/offcanvas";
-@use "scss/components/tables";
-@use "scss/components/toasts";
+@use "components/dropdown";
+@use "components/loader";
+@use "components/modal";
+@use "components/nav";
+@use "components/navbar";
+@use "components/offcanvas";
+@use "components/tables";
+@use "components/toasts";

@@ -1,12 +1,14 @@
 {
+	"bin": "./bin/mc2it_theme.js",
 	"bugs": "https://github.com/mc2it/theme/issues",
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"homepage": "https://github.com/mc2it/theme",
 	"license": "MIT",
+	"main": "./lib/index.js",
 	"name": "@mc2it/theme",
-	"private": true,
 	"repository": "github:mc2it/theme",
-	"type": "commonjs",
+	"type": "module",
+	"types": "./lib/index.d.ts",
 	"version": "2.0.0",
 	"author": {
 		"email": "dev@mc2it.com",
@@ -21,10 +23,30 @@
 		}
 	],
 	"dependencies": {
+		"commander": "^9.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.25",
 		"clean-css-cli": "^5.6.0",
-		"sass": "^1.50.1"
+		"del": "^6.0.0",
+		"eslint": "^8.13.0",
+		"gulp": "^4.0.2",
+		"jsdoc": "^3.6.10",
+		"sass": "^1.50.1",
+		"tidy-jsdoc": "^1.4.1",
+		"typescript": "^4.6.3"
 	},
 	"engines": {
 		"node": ">=16.0.0"
+	},
+	"keywords": [
+		"bootstrap",
+		"mc2it",
+		"theme",
+		"ui"
+	],
+	"scripts": {
+		"prepack": "tsc",
+		"start": "node bin/mc2it_theme.js"
 	}
 }

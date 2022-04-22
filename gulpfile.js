@@ -12,7 +12,7 @@ export default function build() {
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
-	return del("var/**/*");
+	return del(["var/**/*", "www/css", "www/fonts/bootstrap_icons.woff2"]);
 }
 
 /** Builds the documentation. */

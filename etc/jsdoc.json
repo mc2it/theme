@@ -1,12 +1,11 @@
 {
 	"metadata": {
 		"logo": "favicon.svg",
-		"title": "MC2IT Card"
+		"title": "MC2IT Theme"
 	},
 	"opts": {
 		"destination": "docs",
 		"readme": "README.md",
-		"recurse": true,
 		"template": "node_modules/tidy-jsdoc"
 	},
 	"plugins": ["plugins/markdown"],
@@ -19,7 +18,7 @@
 	"templates": {
 		"default": {
 			"includeDate": false,
-			"staticFiles": {"include": ["www"]}
+			"staticFiles": {"include": ["www/favicon.ico", "www/favicon.svg"]}
 		}
 	}
 }

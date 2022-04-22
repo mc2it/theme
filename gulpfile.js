@@ -7,6 +7,7 @@ const sources = ["*.js", "bin/*.js", "lib/**/*.js"];
 
 /** Builds the project. */
 export default async function build() {
+	await clean();
 	await Promise.all([
 		cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2"),
 		exec("npx", ["sass", "--load-path=node_modules/bootstrap", "--no-source-map", "lib/ui:www/css"]),

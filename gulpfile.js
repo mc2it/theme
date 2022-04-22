@@ -19,7 +19,7 @@ export default async function build() {
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
-	return del(["lib/**/*.{ts,ts.map}", "var/**/*", "www/css", "www/fonts/bootstrap_icons.woff2"]);
+	return del(["share", "var/**/*", "www/css"]);
 }
 
 /** Builds the documentation. */

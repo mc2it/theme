@@ -48,7 +48,7 @@
 		"ui"
 	],
 	"scripts": {
-		"prepack": "tsc",
+		"prepack": "gulp",
 		"start": "node bin/mc2it_theme.js"
 	}
 }

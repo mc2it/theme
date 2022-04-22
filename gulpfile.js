@@ -1,18 +1,24 @@
 import {spawn} from "node:child_process";
-import {readFile} from "node:fs/promises";
+import {cp, readFile} from "node:fs/promises";
 import del from "del";
 
 // The file patterns providing the list of source files.
 const sources = ["*.js", "bin/*.js", "lib/**/*.js"];
 
 /** Builds the project. */
-export default function build() {
-	return exec("npx", ["tsc"]);
+export default async function build() {
+	await Promise.all([
+		cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2"),
+		exec("npx", ["sass", "--load-path=node_modules/bootstrap", "--no-source-map", "lib/ui:www/css"]),
+		exec("npx", ["tsc"])
+	]);
+
+	return exec("npx", ["cleancss", "-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
 }
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
-	return del(["var/**/*", "www/css", "www/fonts/bootstrap_icons.woff2"]);
+	return del(["lib/**/*.{ts,ts.map}", "var/**/*", "www/css", "www/fonts/bootstrap_icons.woff2"]);
 }
 
 /** Builds the documentation. */
@@ -51,5 +57,5 @@ export function watch() {
  */
 function exec(command, args = []) {
 	return new Promise((resolve, reject) => spawn(command, args, {shell: true, stdio: "inherit"})
-		.on("close", code => code ? reject(new Error(`${command} => ${code}`)) : resolve()));
+		.on("close", code => code ? reject(new Error(args.length ? `${command} ${args.join(" ")}` : command)) : resolve()));
 }

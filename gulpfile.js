@@ -1,20 +1,29 @@
 import {spawn} from "node:child_process";
 import {cp, readFile} from "node:fs/promises";
 import del from "del";
+import log from "fancy-log";
+import gulp from "gulp";
 
 // The file patterns providing the list of source files.
 const sources = ["*.js", "bin/*.js", "lib/**/*.js"];
 
-/** Builds the project. */
-export default async function build() {
-	await clean();
-	await Promise.all([
-		cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2"),
-		exec("npx", ["sass", "--load-path=node_modules/bootstrap", "--no-source-map", "lib/ui:www/css"]),
-		exec("npx", ["tsc", "--project", "jsconfig.json"])
-	]);
+/** The default task. */
+export default gulp.series(
+	clean,
+	build
+);
 
-	return exec("npx", ["cleancss", "-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
+/** Builds the project. */
+export async function build() {
+	log("Copying the fonts...");
+	await cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2");
+
+	log("Generating the stylesheet...");
+	await exec("npx", ["sass", "--load-path=node_modules/bootstrap", "--no-source-map", "lib/ui:www/css"]);
+	await exec("npx", ["cleancss", "-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
+
+	log("Generating the typings...");
+	return exec("npx", ["tsc", "--project", "lib/jsconfig.json"]);
 }
 
 /** Deletes all generated files and reset any saved state. */
@@ -47,7 +56,7 @@ export async function publish() {
 
 /** Watches for file changes. */
 export function watch() {
-	return exec("npx", ["tsc", "--project", "jsconfig.json", "--watch"]);
+	return exec("npx", ["sass", "--load-path=node_modules/bootstrap", "--no-source-map", "--watch", "lib/ui:www/css"]);
 }
 
 /**

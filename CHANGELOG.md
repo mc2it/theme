@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [2.0.0](https://github.com/mc2it/theme/compare/v2.0.0...v2.0.1)
+- Fixed the packaging.
+
 ## Version [2.0.0](https://github.com/mc2it/theme/compare/v1.9.1...v2.0.0)
 - Breaking change: dropped support for the [Less](https://lesscss.org) stylesheet.
 - Breaking change: ported the command line interface to [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).

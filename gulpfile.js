@@ -11,7 +11,7 @@ export default async function build() {
 	await Promise.all([
 		cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2"),
 		exec("npx", ["sass", "--load-path=node_modules/bootstrap", "--no-source-map", "lib/ui:www/css"]),
-		exec("npx", ["tsc"])
+		exec("npx", ["tsc", "--project", "jsconfig.json"])
 	]);
 
 	return exec("npx", ["cleancss", "-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
@@ -47,7 +47,7 @@ export async function publish() {
 
 /** Watches for file changes. */
 export function watch() {
-	return exec("npx", ["tsc", "--watch"]);
+	return exec("npx", ["tsc", "--project", "jsconfig.json", "--watch"]);
 }
 
 /**

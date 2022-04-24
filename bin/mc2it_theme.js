@@ -1,10 +1,14 @@
 #!/usr/bin/env node
+import {readFileSync} from "node:fs";
 import process from "node:process";
-import {main} from "../lib/index.js";
+import {program} from "commander";
+import {copy, libpath} from "../lib/cli.js";
 
 // Start the application.
-try { await main(); }
-catch (error) {
-	process.exitCode = 1;
-	console.error(error);
-}
+const {version} = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
+program.name("mc2it_theme")
+	.description("Command line interface of MC2IT Theme.")
+	.version(version, "-v, --version")
+	.addCommand(copy)
+	.addCommand(libpath)
+	.parse(process.argv);

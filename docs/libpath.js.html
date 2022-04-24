@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>MC2IT Theme: </title>
+    <title>MC2IT Theme: libpath.js</title>
     
       <link type="text/css" rel="stylesheet" href="styles/vendor/prism-tomorrow-night.css">
     
@@ -31,52 +31,44 @@
 </header>
 
 
-<main class="layout-main ">
+<main class="layout-main  layout-content--source">
   <div class="container">
-    <p class="page-kind"></p>
-    <h1 class="page-title"></h1>
+    <p class="page-kind">source</p>
+    <h1 class="page-title">libpath.js</h1>
     
 
 
 
     
 
+<section>
+    <article>
+        <pre id="source" class="source-page line-numbers"><code class="language-js">import console from "node:console";
+import {join} from "node:path";
+import {fileURLToPath} from "node:url";
+import {Command} from "commander";
 
-    <h3> </h3>
+/**
+ * Returns the path to the library assets.
+ * @param {Object} [options] The command line options.
+ * @param {boolean} [options.scss=false] Value indicating whether to print the specific path to the Sass files.
+ * @returns {string} The path to the library assets.
+ */
+export function getAssetPath(options = {}) {
+	return join(fileURLToPath(new URL("../..", import.meta.url)), options.scss ? "lib/ui" : "www");
+}
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    <section class="readme">
-        <article><h1>MC2IT Theme</h1>
-<p><img src="https://badgen.net/npm/node/@mc2it/theme" alt="Runtime"> <img src="https://badgen.net/npm/v/@mc2it/theme" alt="Release"> <img src="https://badgen.net/npm/license/@mc2it/theme" alt="License"> <img src="https://badgen.net/npm/dt/@mc2it/theme" alt="Downloads"></p>
-<p>The <a href="https://getbootstrap.com">Bootstrap</a> theme used by <a href="https://mc2it.com">MC2IT</a> applications.</p>
-<h2>Documentation</h2>
-<ul>
-<li><a href="https://github.com/mc2it/theme/wiki">User guide</a></li>
-</ul>
-<h2>Development</h2>
-<ul>
-<li><a href="https://github.com/mc2it/theme">Git repository</a></li>
-<li><a href="https://www.npmjs.com/package/@mc2it/theme">npm package</a></li>
-<li><a href="https://github.com/mc2it/theme/issues">Submit an issue</a></li>
-</ul>
-<h2>License</h2>
-<p><a href="https://github.com/mc2it/theme">MC2IT Theme</a> is distributed under the MIT License.</p></article>
-    </section>
-
-
+/**
+ * Command printing the path to the library assets.
+ * @type {Command}
+ */
+export default new Command("libpath")
+	.description("Print the path to the library assets.")
+	.option("-s, --scss", "print the specific path to the Sass files")
+	.action(options => console.log(getAssetPath(options)));
+</code></pre>
+    </article>
+</section>
 
 
 

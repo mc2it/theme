@@ -44,7 +44,6 @@
 <section>
     <article>
         <pre id="source" class="source-page line-numbers"><code class="language-js">import console from "node:console";
-import {join} from "node:path";
 import {fileURLToPath} from "node:url";
 import {Command} from "commander";
 
@@ -55,7 +54,7 @@ import {Command} from "commander";
  * @returns {string} The path to the library assets.
  */
 export function getAssetPath(options = {}) {
-	return join(fileURLToPath(new URL("../..", import.meta.url)), options.scss ? "lib/ui" : "www");
+	return fileURLToPath(new URL(options.scss ? "../../lib/ui" : "../../www", import.meta.url));
 }
 
 /**

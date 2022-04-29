@@ -1,8 +1,8 @@
 import {spawn} from "node:child_process";
 import {cp, readFile} from "node:fs/promises";
 import del from "del";
-import log from "fancy-log";
 import gulp from "gulp";
+import log from "fancy-log";
 
 /** The default task. */
 export default gulp.series(

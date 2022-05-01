@@ -1,5 +1,4 @@
 {
-	"bin": "./bin/mc2it_theme.js",
 	"bugs": "https://github.com/mc2it/theme/issues",
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"exports": "./lib/index.js",
@@ -14,6 +13,9 @@
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",
 		"url": "https://mc2it.com"
+	},
+	"bin": {
+		"mc2it_theme": "./bin/mc2it_theme.js"
 	},
 	"contributors": [
 		{

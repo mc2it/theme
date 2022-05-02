@@ -1,6 +1,9 @@
 # Changelog
 
-## Version [2.0.0](https://github.com/mc2it/theme/compare/v2.0.0...v2.0.1)
+## Version [2.0.2](https://github.com/mc2it/theme/compare/v2.0.1...v2.0.2)
+- Fixed the packaging of the command line interface.
+
+## Version [2.0.1](https://github.com/mc2it/theme/compare/v2.0.0...v2.0.1)
 - Fixed the packaging.
 
 ## Version [2.0.0](https://github.com/mc2it/theme/compare/v1.9.1...v2.0.0)

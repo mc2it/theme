@@ -5,6 +5,7 @@ The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://mc2it.co
 
 ## Documentation
 - [User guide](https://github.com/mc2it/theme/wiki)
+- [API reference](https://mc2it.github.io/theme)
 
 ## Development
 - [Git repository](https://github.com/mc2it/theme)

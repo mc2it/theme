@@ -8,7 +8,7 @@
 	"repository": "github:mc2it/theme",
 	"type": "module",
 	"types": "./share/index.d.ts",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",

@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [2.1.0](https://github.com/mc2it/theme/compare/v2.0.2...v2.1.0)
+- Added support for a [Stylus](https://stylus-lang.com) stylesheet.
+- Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.8.2.
+
 ## Version [2.0.2](https://github.com/mc2it/theme/compare/v2.0.1...v2.0.2)
 - Fixed the packaging of the command line interface.
 

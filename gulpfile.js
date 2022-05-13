@@ -10,7 +10,7 @@ export async function build() {
 	await cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2");
 
 	log("Generating the stylesheet...");
-	await exec("sass", ["--load-path=node_modules/bootstrap", "--no-source-map", "lib/ui:www/css"]);
+	await exec("sass", ["--load-path=node_modules", "--no-source-map", "lib/ui:www/css"]);
 	await exec("cleancss", ["-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
 
 	log("Generating the typings...");
@@ -44,7 +44,7 @@ export async function publish() {
 
 /** Watches for file changes. */
 export function watch() {
-	return exec("sass", ["--load-path=node_modules/bootstrap", "--no-source-map", "--watch", "lib/ui:www/css"]);
+	return exec("sass", ["--load-path=node_modules", "--no-source-map", "--watch", "lib/ui:www/css"]);
 }
 
 /** Runs the default task. */

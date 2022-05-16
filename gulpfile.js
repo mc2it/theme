@@ -2,18 +2,12 @@ import {cp, readFile} from "node:fs/promises";
 import del from "del";
 import {execa} from "execa";
 import gulp from "gulp";
-import log from "fancy-log";
 
 /** Builds the project. */
 export async function build() {
-	log("Copying the fonts...");
 	await cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2");
-
-	log("Generating the stylesheet...");
 	await exec("sass", ["--load-path=node_modules", "--no-source-map", "lib/ui:www/css"]);
 	await exec("cleancss", ["-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
-
-	log("Generating the typings...");
 	return exec("tsc", ["--project", "lib/jsconfig.json"]);
 }
 

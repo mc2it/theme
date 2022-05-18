@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [2.1.1](https://github.com/mc2it/theme/compare/v2.1.0...v2.1.1)
+- Fixed the `z-index` of the `.table-sticky` class.
+- Added the `.input-remove-spin` class.
+
 ## Version [2.1.0](https://github.com/mc2it/theme/compare/v2.0.2...v2.1.0)
 - Added support for a [Stylus](https://stylus-lang.com) stylesheet.
 - Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.8.2.

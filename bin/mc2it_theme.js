@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import {readFileSync} from "node:fs";
-import {argv} from "node:process";
 import {program} from "commander";
 import {copy, libpath} from "../lib/cli.js";
 
@@ -11,4 +10,4 @@ program.name("mc2it_theme")
 	.version(version, "-v, --version")
 	.addCommand(copy)
 	.addCommand(libpath)
-	.parse(argv);
+	.parse();

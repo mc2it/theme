@@ -1,13 +1,12 @@
 #!/usr/bin/env node
-import {readFileSync} from "node:fs";
 import {program} from "commander";
+import pkg from "../package.json" assert {type: "json"};
 import {copy, libpath} from "../lib/cli.js";
 
 // Start the application.
-const {version} = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
 program.name("mc2it_theme")
 	.description("Command line interface of MC2IT Theme.")
-	.version(version, "-v, --version")
+	.version(pkg.version, "-v, --version")
 	.addCommand(copy)
 	.addCommand(libpath)
 	.parse();

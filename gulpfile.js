@@ -15,7 +15,7 @@ export async function build() {
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
-	return del(["src", "var/**/*", "www/css"]);
+	return del(["lib", "var/**/*", "www/css"]);
 }
 
 /** Builds the documentation. */

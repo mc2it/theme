@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {program} from "commander";
 import pkg from "../package.json" assert {type: "json"};
-import {copy, libpath} from "../lib/cli.js";
+import {copy, libpath} from "../src/cli.js";
 
 // Start the application.
 program.name("mc2it_theme")

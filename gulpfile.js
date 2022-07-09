@@ -8,14 +8,14 @@ import pkg from "./package.json" assert {type: "json"};
 /** Builds the project. */
 export async function build() {
 	await cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2");
-	await exec("sass", ["--load-path=node_modules", "--no-source-map", "lib/ui:www/css"]);
+	await exec("sass", ["--load-path=node_modules", "--no-source-map", "src/ui:www/css"]);
 	await exec("cleancss", ["-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
-	return exec("tsc", ["--project", "lib/jsconfig.json"]);
+	return exec("tsc", ["--project", "src/jsconfig.json"]);
 }
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
-	return del(["share", "var/**/*", "www/css"]);
+	return del(["src", "var/**/*", "www/css"]);
 }
 
 /** Builds the documentation. */
@@ -38,7 +38,7 @@ export async function publish() {
 
 /** Watches for file changes. */
 export function watch() {
-	return exec("sass", ["--load-path=node_modules", "--no-source-map", "--watch", "lib/ui:www/css"]);
+	return exec("sass", ["--load-path=node_modules", "--no-source-map", "--watch", "src/ui:www/css"]);
 }
 
 /** Runs the default task. */

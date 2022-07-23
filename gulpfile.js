@@ -1,5 +1,5 @@
 import {cp} from "node:fs/promises";
-import del from "del";
+import {deleteAsync} from "del";
 import {execa} from "execa";
 import gulp from "gulp";
 import config from "./jsconfig.json" assert {type: "json"};
@@ -15,7 +15,7 @@ export async function build() {
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
-	return del(["lib", "var/**/*", "www/css"]);
+	return deleteAsync(["lib", "var/**/*", "www/css"]);
 }
 
 /** Builds the documentation. */

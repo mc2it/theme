@@ -1,0 +1,8 @@
+.input-remove-spin {
+	appearance: textfield;
+}
+
+.input-remove-spin::-webkit-inner-spin-button,
+.input-remove-spin::-webkit-outer-spin-button {
+	appearance: none;
+}

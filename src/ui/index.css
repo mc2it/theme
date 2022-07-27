@@ -1,0 +1,24 @@
+/* Fonts. */
+@import "fonts/bootstrap_icons.css";
+@import "fonts/segoe_ui.css";
+
+/* Core. */
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+/* Application. */
+@import "app/root.css";
+@import "app/grid.css";
+
+/* Utilities. */
+@import "utilities/background.css";
+@import "utilities/text.css";
+
+/* Components. */
+@import "components/dropdown.css";
+@import "components/forms.css";
+@import "components/modal.css";
+@import "components/nav.css";
+@import "components/navbar.css";
+@import "components/offcanvas.css";
+@import "components/tables.css";
+@import "components/toasts.css";

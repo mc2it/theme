@@ -1,0 +1,8 @@
+.modal-header {
+	background-color: var(--bs-gray-100);
+}
+
+.modal-footer {
+	background-color: var(--bs-gray-100);
+	padding: calc(var(--bs-modal-padding) / 2) var(--bs-modal-padding);
+}

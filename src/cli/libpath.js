@@ -4,11 +4,10 @@ import {Command} from "commander";
 
 /**
  * Returns the path to the library assets.
- * @param {{scss?: boolean}} [options] The command line options.
  * @returns {string} The path to the library assets.
  */
-export function getAssetPath(options = {}) {
-	return fileURLToPath(new URL(options.scss ? "../../lib/ui" : "../../www", import.meta.url));
+export function getAssetPath() {
+	return fileURLToPath(new URL("../../www", import.meta.url));
 }
 
 /**
@@ -17,5 +16,4 @@ export function getAssetPath(options = {}) {
  */
 export default new Command("libpath")
 	.description("Print the path to the library assets.")
-	.option("--scss", "print the specific path to the Sass files")
-	.action(options => console.log(getAssetPath(options)));
+	.action(() => console.log(getAssetPath()));

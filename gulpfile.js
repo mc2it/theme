@@ -1,21 +1,29 @@
 import {cp} from "node:fs/promises";
+import {env} from "node:process";
 import {deleteAsync} from "del";
+import {build as esbuild} from "esbuild";
 import {execa} from "execa";
 import gulp from "gulp";
 import config from "./jsconfig.json" assert {type: "json"};
 import pkg from "./package.json" assert {type: "json"};
+import {cssOptions} from "./etc/esbuild.js";
 
 /** Builds the project. */
 export async function build() {
 	await cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2");
-	await exec("sass", ["--load-path=node_modules", "--no-source-map", "src/ui:www/css"]);
-	await exec("cleancss", ["-O2", "--output=www/css/mc2it.css", "www/css/mc2it.css"]);
+	await esbuild(cssOptions());
 	return exec("tsc", ["--project", "src/jsconfig.json"]);
 }
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
 	return deleteAsync(["lib", "var/**/*", "www/css"]);
+}
+
+/** Builds the redistributable package. */
+export function dist() {
+	env.NODE_ENV = "production";
+	return build();
 }
 
 /** Builds the documentation. */
@@ -37,14 +45,16 @@ export async function publish() {
 }
 
 /** Watches for file changes. */
-export function watch() {
-	return exec("sass", ["--load-path=node_modules", "--no-source-map", "--watch", "src/ui:www/css"]);
+export async function watch() {
+	const result = await esbuild(Object.assign(cssOptions(), {incremental: true}));
+	const compile = () => result.rebuild?.();
+	gulp.watch("src/ui/**/*.css", compile);
 }
 
 /** Runs the default task. */
 export default gulp.series(
 	clean,
-	build
+	dist
 );
 
 /**

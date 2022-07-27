@@ -5,7 +5,7 @@
 /* Application. */
 @import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "app/root.css";
-@import "app/grid.css";
+@import "app/layout.css";
 
 /* Utilities. */
 @import "utilities/background.css";

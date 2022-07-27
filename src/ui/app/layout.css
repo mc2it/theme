@@ -1,3 +1,8 @@
+body {
+	accent-color: var(--bs-primary);
+	overflow: hidden;
+}
+
 main {
 	bottom: 0;
 	left: 0;

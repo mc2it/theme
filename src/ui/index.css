@@ -2,10 +2,8 @@
 @import "fonts/bootstrap_icons.css";
 @import "fonts/segoe_ui.css";
 
-/* Core. */
-@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
-
 /* Application. */
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "app/root.css";
 @import "app/grid.css";
 

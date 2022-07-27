@@ -3,12 +3,10 @@ import {fileURLToPath} from "node:url";
 import {Command} from "commander";
 
 /**
- * Returns the path to the library assets.
- * @returns {string} The path to the library assets.
+ * The path to the library assets.
+ * @type {string}
  */
-export function getAssetPath() {
-	return fileURLToPath(new URL("../../www", import.meta.url));
-}
+export const assetPath = fileURLToPath(new URL("../../www", import.meta.url));
 
 /**
  * Command printing the path to the library assets.
@@ -16,4 +14,4 @@ export function getAssetPath() {
  */
 export default new Command("libpath")
 	.description("Print the path to the library assets.")
-	.action(() => console.log(getAssetPath()));
+	.action(() => console.log(assetPath));

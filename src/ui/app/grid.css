@@ -19,8 +19,11 @@ article {
 	background-color: var(--bs-white);
 	margin: 1.5rem auto;
 	max-width: 1140px;
-	padding: 1rem;
 	width: 100%;
+}
+
+article > section {
+	padding: 1rem;
 }
 
 aside {

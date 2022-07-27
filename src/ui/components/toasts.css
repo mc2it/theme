@@ -1,0 +1,39 @@
+.toast-header-danger {
+	background-color: #f8d7da;
+	color: #842029;
+}
+
+.toast-header-dark {
+	background-color: #d3d3d4;
+	color: #141619;
+}
+
+.toast-header-info {
+	background-color: #cff4fc;
+	color: #055160;
+}
+
+.toast-header-light {
+	background-color: #fefefe;
+	color: #636464;
+}
+
+.toast-header-primary {
+	background-color: #d0deea;
+	color: #0d355b;
+}
+
+.toast-header-secondary {
+	background-color: #e1e1e1;
+	color: #3f3f3f;
+}
+
+.toast-header-success {
+	background-color: #d1e7dd;
+	color: #0f5132;
+}
+
+.toast-header-warning {
+	background-color: #fff3cd;
+	color: #664d03;
+}

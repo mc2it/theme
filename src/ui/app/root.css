@@ -1,8 +1,10 @@
 :root {
 	--bs-body-bg: var(--bs-gray-200);
 	--bs-body-text-align: start;
-  --bs-font-monospace: Consolas, monospace;
-  --bs-font-sans-serif: "Segoe UI", sans-serif;
+	--bs-font-monospace: Consolas, monospace;
+	--bs-font-sans-serif: "Segoe UI", sans-serif;
+	--bs-link-color: var(--bs-primary);
+	--bs-link-hover-color: #12467a;
 	--bs-primary: #165898;
 	--bs-primary-rgb: 22, 88, 152;
 	--bs-root-font-size: 14px;

@@ -17,23 +17,30 @@ main {
 
 article {
 	background-color: var(--bs-white);
+	box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 0.075);
 	margin: 1.5rem auto;
 	max-width: 1140px;
 	width: 100%;
 }
 
 article > section {
-	padding: 1rem;
+	padding: 1.5rem;
 }
 
 aside {
-	background-color: var(--bs-gray-200);
+	background-color: var(--bs-gray-100);
 	border-bottom: 1px solid var(--bs-border-color);
+	box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 0.075);
 	left: 0;
-	padding: 0.75rem 1rem;
+	padding: 0.5rem 1rem;
 	position: fixed;
 	right: 0;
 	top: var(--navbar-height);
+	user-select: none;
 	width: 100%;
 	z-index: 100;
+}
+
+@media print {
+	aside { display: none; }
 }

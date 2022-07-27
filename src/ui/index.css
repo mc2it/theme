@@ -20,5 +20,6 @@
 @import "components/nav.css";
 @import "components/navbar.css";
 @import "components/offcanvas.css";
+@import "components/pagination.css";
 @import "components/tables.css";
 @import "components/toasts.css";

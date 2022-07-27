@@ -1,5 +1,10 @@
 # Changelog
 
+## Version [3.0.0](https://github.com/mc2it/theme/compare/v2.2.0...v3.0.0)
+- Breaking change: replaced the [Sass](https://sass-lang.com) stylesheet by plain CSS styles and custom properties.
+- Breaking change: replaced the `getAssetPath()` function by the `assetPath` constant.
+- Upgraded [Bootstrap](https://getbootstrap.com) to version 5.2.0.
+
 ## Version [2.2.0](https://github.com/mc2it/theme/compare/v2.1.1...v2.2.0)
 - Dropped support for the [Stylus](https://stylus-lang.com) stylesheet.
 - Removed the `loader` component.

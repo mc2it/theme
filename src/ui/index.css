@@ -1,9 +1,10 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
 /* Fonts. */
 @import "fonts/bootstrap_icons.css";
 @import "fonts/segoe_ui.css";
 
 /* Application. */
-@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "app/root.css";
 @import "app/layout.css";
 

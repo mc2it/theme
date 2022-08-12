@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [3.0.1](https://github.com/mc2it/theme/compare/v3.0.0...v3.0.1)
+- Adjusted the logo position.
+- Removed the `<article>` margins on small screens.
+
 ## Version [3.0.0](https://github.com/mc2it/theme/compare/v2.2.0...v3.0.0)
 - Breaking change: replaced the [Sass](https://sass-lang.com) stylesheet by plain CSS styles and custom properties.
 - Breaking change: replaced the `getAssetPath()` function by the `assetPath` constant.

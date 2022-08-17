@@ -1,3 +1,7 @@
+.modal-content {
+	box-shadow: var(--bs-modal-box-shadow);
+}
+
 .modal-header {
 	background-color: var(--bs-gray-100);
 }

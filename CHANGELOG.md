@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [3.0.2](https://github.com/mc2it/theme/compare/v3.0.1...v3.0.2)
+- Fixed the colors of the `btn-primary` and `btn-secondary` buttons.
+- Restored the drop shadow of the modals.
+
 ## Version [3.0.1](https://github.com/mc2it/theme/compare/v3.0.0...v3.0.1)
 - Adjusted the logo position.
 - Removed the `<article>` margins on small screens.

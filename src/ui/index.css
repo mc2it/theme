@@ -13,6 +13,7 @@
 @import "utilities/text.css";
 
 /* Components. */
+@import "components/buttons.css";
 @import "components/dropdown.css";
 @import "components/forms.css";
 @import "components/modal.css";

@@ -1,13 +1,11 @@
 {
 	"bugs": "https://github.com/mc2it/theme/issues",
 	"description": "Bootstrap theme used by MC2IT applications.",
-	"exports": "./src/index.js",
 	"homepage": "https://github.com/mc2it/theme",
 	"license": "MIT",
 	"name": "@mc2it/theme",
 	"repository": "github:mc2it/theme",
 	"type": "module",
-	"types": "./lib/index.d.ts",
 	"version": "3.0.2",
 	"author": {
 		"email": "dev@mc2it.com",
@@ -44,6 +42,10 @@
 	},
 	"engines": {
 		"node": ">=18.0.0"
+	},
+	"exports": {
+		"types": "./lib/index.d.ts",
+		"import": "./src/index.js"
 	},
 	"files": [
 		"lib/",

@@ -5,12 +5,13 @@ import {env} from "node:process";
  * @returns {import("esbuild").BuildOptions} The CSS settings.
  */
 export function cssOptions() {
-	return Object.assign(sharedOptions(env.NODE_ENV == "production"), {
+	return {
+		...sharedOptions(env.NODE_ENV == "production"),
 		entryPoints: ["src/ui/index.css"],
 		external: ["*.woff2"],
 		outfile: "www/css/mc2it.css",
 		sourceRoot: new URL("../www/css/", import.meta.url).href
-	});
+	};
 }
 
 /**

@@ -46,7 +46,7 @@ export async function publish() {
 
 /** Watches for file changes. */
 export async function watch() {
-	const result = await esbuild(Object.assign(cssOptions(), {incremental: true}));
+	const result = await esbuild({...cssOptions(), incremental: true});
 	const compile = () => result.rebuild?.();
 	gulp.watch("src/ui/**/*.css", compile);
 }

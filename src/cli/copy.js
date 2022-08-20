@@ -1,7 +1,7 @@
 import {cpSync} from "node:fs";
 import {join} from "node:path";
-import {fileURLToPath} from "node:url";
 import {Command} from "commander";
+import {assetPath} from "./libpath.js";
 
 /**
  * Copies the library assets to a given directory.
@@ -12,12 +12,9 @@ export function copyAssets(output, options = {}) {
 	const sources = ["css", "fonts", "img"];
 
 	// @ts-expect-error TS7053
-	let directories = sources.filter(name => options[name]);
-	if (!directories.length) directories = sources;
-
-	const input = fileURLToPath(new URL("../../www", import.meta.url));
-	for (const directory of directories)
-		cpSync(join(input, directory), directories.length == 1 ? output : join(output, directory), {recursive: true});
+	const directories = sources.filter(name => options[name]);
+	for (const directory of (directories.length ? directories : sources))
+		cpSync(join(assetPath, directory), directories.length == 1 ? output : join(output, directory), {recursive: true});
 }
 
 /**

@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [3.1.0](https://github.com/mc2it/theme/compare/v3.0.2...v3.1.0)
+- Added a minimum width to modal buttons.
+- Removed the unused `.fw-` classes.
+
 ## Version [3.0.2](https://github.com/mc2it/theme/compare/v3.0.1...v3.0.2)
 - Fixed the colors of the `btn-primary` and `btn-secondary` buttons.
 - Restored the drop shadow of the modals.

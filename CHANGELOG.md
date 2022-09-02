@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.1.1](https://github.com/mc2it/theme/compare/v3.1.0...v3.1.1)
+- Dropped the dependency on [Commander.js](https://github.com/tj/commander.js).
+
 ## Version [3.1.0](https://github.com/mc2it/theme/compare/v3.0.2...v3.1.0)
 - Added a minimum width to modal buttons.
 - Removed the unused `.fw-` classes.

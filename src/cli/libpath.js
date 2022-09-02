@@ -1,6 +1,6 @@
 import console from "node:console";
 import {fileURLToPath} from "node:url";
-import {Command} from "commander";
+import {parseArgs} from "node:util";
 
 /**
  * The path to the library assets.
@@ -9,9 +9,27 @@ import {Command} from "commander";
 export const assetPath = fileURLToPath(new URL("../../www", import.meta.url));
 
 /**
- * Command printing the path to the library assets.
- * @type {Command}
+ * The usage information.
+ * @type {string}
  */
-export default new Command("libpath")
-	.description("Print the path to the library assets.")
-	.action(() => console.log(assetPath));
+const usage = `
+Print the path to the library assets.
+
+Usage:
+  mc2it_theme libpath [options]
+
+Options:
+  -h, --help  Display this help.
+`;
+
+/**
+ * Prints the path to the library assets.
+ * @param {string[]} args The command line arguments.
+ */
+export default function(args) {
+	const {values} = parseArgs({args, options: {
+		help: {short: "h", type: "boolean"}
+	}});
+
+	console.log(values.help ? usage.trim() : assetPath);
+}

@@ -1,6 +1,7 @@
+import console from "node:console";
 import {cpSync} from "node:fs";
 import {join} from "node:path";
-import {Command} from "commander";
+import {parseArgs} from "node:util";
 import {assetPath} from "./libpath.js";
 
 /**
@@ -18,13 +19,35 @@ export function copyAssets(output, options = {}) {
 }
 
 /**
- * Command copying the library assets to a given directory.
- * @type {Command}
+ * The usage information.
+ * @type {string}
  */
-export default new Command("copy")
-	.description("Copy the library assets to a given directory.")
-	.argument("<directory>", "the path to the output directory")
-	.option("-c, --css", "copy only the CSS files")
-	.option("-f, --fonts", "copy only the font files")
-	.option("-i, --img", "copy only the image files")
-	.action(copyAssets);
+const usage = `
+Copy the library assets to a given directory.
+
+Usage:
+  mc2it_theme copy [options] <directory>
+
+Options:
+  -c, --css    Copy only the CSS files.
+  -f, --fonts  Copy only the font files.
+  -i, --img    Copy only the image files.
+  -h, --help   Display this help.
+`;
+
+/**
+ * Copies the library assets to a given directory.
+ * @param {string[]} args The command line arguments.
+ */
+export default function(args) {
+	const {positionals, values} = parseArgs({allowPositionals: true, args, options: {
+		css: {short: "c", type: "boolean"},
+		fonts: {short: "f", type: "boolean"},
+		img: {short: "i", type: "boolean"},
+		help: {short: "h", type: "boolean"}
+	}});
+
+	if (values.help) console.log(usage.trim());
+	else if (!positionals.length) throw "Required argument 'directory' is missing.";
+	else copyAssets(positionals[0], values);
+}

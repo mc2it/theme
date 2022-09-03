@@ -14,6 +14,9 @@ Copy the library assets to a given directory.
 Usage:
   mc2it_theme copy [options] <directory>
 
+Arguments:
+  directory    The path to the output directory.
+
 Options:
   -c, --css    Copy only the CSS files.
   -f, --fonts  Copy only the font files.

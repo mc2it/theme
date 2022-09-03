@@ -5,20 +5,6 @@ import {parseArgs} from "node:util";
 import {assetPath} from "./libpath.js";
 
 /**
- * Copies the library assets to a given directory.
- * @param {string} output The path to the output directory.
- * @param {{css?: boolean, fonts?: boolean, img?: boolean}} [options] The command line options.
- */
-export function copyAssets(output, options = {}) {
-	const sources = ["css", "fonts", "img"];
-
-	// @ts-expect-error TS7053
-	const directories = sources.filter(name => options[name]);
-	for (const directory of (directories.length ? directories : sources))
-		cpSync(join(assetPath, directory), directories.length == 1 ? output : join(output, directory), {recursive: true});
-}
-
-/**
  * The usage information.
  * @type {string}
  */
@@ -34,6 +20,20 @@ Options:
   -i, --img    Copy only the image files.
   -h, --help   Display this help.
 `;
+
+/**
+ * Copies the library assets to a given directory.
+ * @param {string} output The path to the output directory.
+ * @param {{css?: boolean, fonts?: boolean, img?: boolean}} [options] The command line options.
+ */
+export function copyAssets(output, options = {}) {
+	const sources = ["css", "fonts", "img"];
+
+	// @ts-expect-error TS7053
+	const directories = sources.filter(name => options[name]);
+	for (const directory of (directories.length ? directories : sources))
+		cpSync(join(assetPath, directory), directories.length == 1 ? output : join(output, directory), {recursive: true});
+}
 
 /**
  * Copies the library assets to a given directory.

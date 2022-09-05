@@ -2,11 +2,6 @@
 	font-weight: 600;
 }
 
-.dropdown-item:hover,
-.dropdown-item:focus {
-	text-decoration: none;
-}
-
 .dropdown-menu {
 	--bs-dropdown-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.15);
 	--bs-dropdown-link-active-bg: var(--bs-primary);

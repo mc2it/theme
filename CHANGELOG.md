@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.1.3](https://github.com/mc2it/theme/compare/v3.1.2...v3.1.3)
+- Fixed the `text-decoration` of the list groups.
+
 ## Version [3.1.2](https://github.com/mc2it/theme/compare/v3.1.1...v3.1.2)
 - Fixed the `text-decoration` of the buttons.
 

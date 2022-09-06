@@ -19,8 +19,8 @@ a {
 	text-decoration: none;
 }
 
-a:not(.btn, .dropdown-item, .nav-link):hover,
-a:not(.btn, .dropdown-item, .nav-link):focus {
+a:not(.btn, .dropdown-item, .list-group-item-action, .nav-link):hover,
+a:not(.btn, .dropdown-item, .list-group-item-action, .nav-link):focus {
 	text-decoration: underline;
 }
 

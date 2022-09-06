@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.1.4](https://github.com/mc2it/theme/compare/v3.1.3...v3.1.4)
+- Fixed the `disabled` state of the `.btn-primary` and .`btn-secondary` buttons.
+
 ## Version [3.1.3](https://github.com/mc2it/theme/compare/v3.1.2...v3.1.3)
 - Fixed the `text-decoration` of the list groups.
 
@@ -14,7 +17,7 @@
 - Removed the unused `.fw-` classes.
 
 ## Version [3.0.2](https://github.com/mc2it/theme/compare/v3.0.1...v3.0.2)
-- Fixed the colors of the `btn-primary` and `btn-secondary` buttons.
+- Fixed the colors of the `.btn-primary` and .`btn-secondary` buttons.
 - Restored the drop shadow of the modals.
 
 ## Version [3.0.1](https://github.com/mc2it/theme/compare/v3.0.0...v3.0.1)

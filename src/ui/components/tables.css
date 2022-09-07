@@ -1,4 +1,4 @@
-.table {
+.table:not(.table-dark) {
 	--bs-table-bg: var(--bs-white);
 }
 

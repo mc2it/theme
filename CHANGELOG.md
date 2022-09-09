@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [3.2.0](https://github.com/mc2it/theme/compare/v3.1.4...v3.2.0)
+- Adjusted the styles of the offcanvas component.
+- Upgraded [Bootstrap](https://getbootstrap.com) to version 5.2.1.
+
 ## Version [3.1.4](https://github.com/mc2it/theme/compare/v3.1.3...v3.1.4)
 - Fixed the `disabled` state of the `.btn-primary` and .`btn-secondary` buttons.
 

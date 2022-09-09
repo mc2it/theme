@@ -35,6 +35,7 @@ export async function doc() {
 /** Performs the static analysis of source code. */
 export async function lint() {
 	await exec("eslint", ["--config=etc/eslint.json", ...config.include]);
+	await exec("stylelint", ["--config=etc/stylelint.json", "src/ui/**/*.css"]);
 	return exec("tsc", ["--project", "jsconfig.json"]);
 }
 

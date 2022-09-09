@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.2.2](https://github.com/mc2it/theme/compare/v3.2.1...v3.2.2)
+- Adjusted the styles of the `.navbar` toggler.
+
 ## Version [3.2.1](https://github.com/mc2it/theme/compare/v3.2.0...v3.2.1)
 - Fixed the vertical alignment of some `.navbar` parts.
 - Fixed the vertical alignment of some `.offcanvas` parts.

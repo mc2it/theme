@@ -1,4 +1,23 @@
+.offcanvas {
+	--bs-offcanvas-bg: var(--bs-primary);
+	--bs-offcanvas-width: 300px;
+}
+
+.offcanvas-header {
+	--bs-offcanvas-padding-y: 0.8rem;
+	background-color: var(--bs-white);
+	border-bottom: 1px solid var(--bs-white);
+}
+
 .offcanvas-title img {
 	position: relative;
 	top: 2px;
+}
+
+.offcanvas-body {
+	--bs-offcanvas-padding-y: 0.5rem;
+}
+
+@media screen and (min-width: 576px) {
+	.offcanvas { --bs-offcanvas-width: 350px; }
 }

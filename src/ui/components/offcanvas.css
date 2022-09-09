@@ -9,6 +9,11 @@
 	border-bottom: 1px solid var(--bs-white);
 }
 
+.offcanvas-title {
+	align-items: center;
+	display: flex;
+}
+
 .offcanvas-title img {
 	position: relative;
 	top: 2px;
@@ -16,6 +21,7 @@
 
 .offcanvas-body {
 	--bs-offcanvas-padding-y: 0.5rem;
+	align-items: center;
 }
 
 @media screen and (min-width: 576px) {

@@ -14,6 +14,11 @@
 	.navbar { display: none; }
 }
 
+.navbar-brand {
+	align-items: center;
+	display: flex;
+}
+
 .navbar-brand img {
 	position: relative;
 	top: -1px;

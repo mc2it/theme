@@ -1,5 +1,8 @@
 .navbar {
 	--bs-navbar-nav-link-padding-x: 0.75rem;
+	--bs-navbar-toggler-border-color: transparent;
+	--bs-navbar-toggler-focus-width: 0;
+	--bs-navbar-toggler-padding-x: 0.25rem;
 	background-color: var(--bs-primary);
 	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 	left: 0;

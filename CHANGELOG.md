@@ -1,8 +1,8 @@
 # Changelog
 
 ## Version [3.2.1](https://github.com/mc2it/theme/compare/v3.2.0...v3.2.1)
-- Fixed the vertical alignment of the `.navbar` components.
-- Fixed the vertical alignment of the `.offcanvas` components.
+- Fixed the vertical alignment of some `.navbar` parts.
+- Fixed the vertical alignment of some `.offcanvas` parts.
 
 ## Version [3.2.0](https://github.com/mc2it/theme/compare/v3.1.4...v3.2.0)
 - Adjusted the styles of the offcanvas component.

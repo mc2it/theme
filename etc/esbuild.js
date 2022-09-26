@@ -8,7 +8,7 @@ export function cssOptions() {
 	return {
 		...sharedOptions(env.NODE_ENV == "production"),
 		entryPoints: ["src/ui/index.css"],
-		external: ["*.woff2"],
+		external: ["*.gif", "*.jpg", "*.png", "*.webp", "*.woff2"],
 		outfile: "www/css/mc2it.css",
 		sourceRoot: new URL("../www/css/", import.meta.url).href
 	};
@@ -24,7 +24,6 @@ function sharedOptions(production) {
 		bundle: true,
 		legalComments: "none",
 		minify: production,
-		sourcemap: !production,
-		sourcesContent: false
+		sourcemap: !production
 	};
 }

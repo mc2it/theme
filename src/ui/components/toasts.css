@@ -3,29 +3,9 @@
 	color: #842029;
 }
 
-.toast-header-dark {
-	background-color: #d3d3d4;
-	color: #141619;
-}
-
 .toast-header-info {
 	background-color: #cff4fc;
 	color: #055160;
-}
-
-.toast-header-light {
-	background-color: #fefefe;
-	color: #636464;
-}
-
-.toast-header-primary {
-	background-color: #d0deea;
-	color: #0d355b;
-}
-
-.toast-header-secondary {
-	background-color: #e1e1e1;
-	color: #3f3f3f;
 }
 
 .toast-header-success {

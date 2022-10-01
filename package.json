@@ -6,7 +6,7 @@
 	"name": "@mc2it/theme",
 	"repository": "github:mc2it/theme",
 	"type": "module",
-	"version": "3.2.2",
+	"version": "3.2.3",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",

@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.2.3](https://github.com/mc2it/theme/compare/v3.2.2...v3.2.3)
+- Adjusted the styles of the toast component.
+
 ## Version [3.2.2](https://github.com/mc2it/theme/compare/v3.2.1...v3.2.2)
 - Adjusted the styles of the `.navbar` toggler.
 

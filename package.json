@@ -23,14 +23,14 @@
 		}
 	],
 	"dependencies": {
-		"bootstrap": "^5.2.1",
+		"bootstrap": "^5.2.2",
 		"bootstrap-icons": "^1.9.1"
 	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.19.1",
 		"@babel/plugin-syntax-import-assertions": "^7.18.6",
 		"@types/gulp": "^4.0.9",
-		"@types/node": "^18.7.23",
+		"@types/node": "^18.8.2",
 		"del": "^7.0.0",
 		"esbuild": "^0.15.10",
 		"eslint": "^8.24.0",

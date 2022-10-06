@@ -50,7 +50,7 @@ export default function(args) {
 		help: {short: "h", type: "boolean"}
 	}});
 
-	if (values.help) console.log(usage.trim());
-	else if (!positionals.length) throw "Required argument 'directory' is missing.";
-	else copyAssets(positionals[0], values);
+	if (values.help) return console.log(usage.trim());
+	if (!positionals.length) throw "Required argument 'directory' is missing.";
+	copyAssets(positionals[0], values);
 }

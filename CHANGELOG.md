@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.3.1](https://github.com/mc2it/theme/compare/v3.3.0...v3.3.1)
+- Fixed the colors of the `.accordion` active buttons.
+
 ## Version [3.3.0](https://github.com/mc2it/theme/compare/v3.2.3...v3.3.0)
 - The [Bootstrap](https://getbootstrap.com) libraries are now peer dependencies.
 - Upgraded [Bootstrap](https://getbootstrap.com) to version 5.2.2.

@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.3.2](https://github.com/mc2it/theme/compare/v3.3.1...v3.3.2)
+- Adjusted the maximum width of the tooltip component.
+
 ## Version [3.3.1](https://github.com/mc2it/theme/compare/v3.3.0...v3.3.1)
 - Fixed the colors of the `.accordion` active buttons.
 

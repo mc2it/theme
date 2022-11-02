@@ -44,9 +44,9 @@ export function copyAssets(output, options = {}) {
  */
 export default function(args) {
 	const {positionals, values} = parseArgs({allowPositionals: true, args, options: {
-		css: {short: "c", type: "boolean"},
-		fonts: {short: "f", type: "boolean"},
-		img: {short: "i", type: "boolean"},
+		css: {short: "c", type: "boolean", default: false},
+		fonts: {short: "f", type: "boolean", default: false},
+		img: {short: "i", type: "boolean", default: false},
 		help: {short: "h", type: "boolean"}
 	}});
 

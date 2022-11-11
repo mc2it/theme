@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.4.0](https://github.com/mc2it/theme/compare/v3.3.2...v3.4.0)
+- Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.10.0.
+
 ## Version [3.3.2](https://github.com/mc2it/theme/compare/v3.3.1...v3.3.2)
 - Adjusted the maximum width of the tooltip component.
 

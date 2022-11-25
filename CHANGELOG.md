@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [3.4.1](https://github.com/mc2it/theme/compare/v3.4.0...v3.4.1)
+- Upgraded [Bootstrap](https://getbootstrap.com) to version 5.2.3.
+- Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.10.2.
+
 ## Version [3.4.0](https://github.com/mc2it/theme/compare/v3.3.2...v3.4.0)
 - Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.10.0.
 

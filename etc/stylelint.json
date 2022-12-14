@@ -3,6 +3,7 @@
 	"rules": {
 		"declaration-empty-line-before": "never",
 		"import-notation": "string",
-		"indentation": "tab"
+		"indentation": "tab",
+		"media-feature-range-notation": "context"
 	}
 }

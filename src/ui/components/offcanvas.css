@@ -24,6 +24,6 @@
 	align-items: center;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (width >= 576px) {
 	.offcanvas { --bs-offcanvas-width: 350px; }
 }

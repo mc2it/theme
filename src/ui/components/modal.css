@@ -1,3 +1,7 @@
+.modal {
+	--bs-modal-footer-bg: var(--bs-gray-100);
+}
+
 .modal-content {
 	box-shadow: var(--bs-modal-box-shadow);
 }
@@ -7,7 +11,6 @@
 }
 
 .modal-footer {
-	background-color: var(--bs-gray-100);
 	padding: calc(var(--bs-modal-padding) / 2) var(--bs-modal-padding);
 }
 

@@ -51,6 +51,6 @@ export default function(args) {
 	}});
 
 	if (values.help) return console.log(usage.trim());
-	if (!positionals.length) throw "Required argument 'directory' is missing.";
+	if (!positionals.length) throw Error("Required argument 'directory' is missing.");
 	copyAssets(positionals[0], values);
 }

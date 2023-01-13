@@ -49,7 +49,7 @@ try {
 	// Handle the subcommand.
 	const {index, value} = /** @type {{index: number, value: string}} */ (tokens.find(({kind}) => kind == "positional"));
 	const path = `../src/cli/${value}.js`;
-	if (!existsSync(new URL(path, import.meta.url))) throw `Unknown command '${value}'.`;
+	if (!existsSync(new URL(path, import.meta.url))) throw Error(`Unknown command '${value}'.`);
 
 	const {default: handler} = await import(path);
 	handler(process.argv.slice(index + 3));

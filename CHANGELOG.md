@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.5.0](https://github.com/mc2it/theme/compare/v3.4.2...v3.5.0)
+- Included the unminified stylesheet in the package.
+
 ## Version [3.4.2](https://github.com/mc2it/theme/compare/v3.4.1...v3.4.2)
 - Adjusted the box shadow and maximum width of the popover component.
 

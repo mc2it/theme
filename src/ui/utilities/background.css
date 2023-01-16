@@ -9,3 +9,6 @@
 .bg-red { background-color: var(--bs-red); }
 .bg-teal { background-color: var(--bs-teal); }
 .bg-yellow { background-color: var(--bs-yellow); }
+
+.text-bg-primary { background-color: var(--bs-primary); }
+.text-bg-secondary { background-color: var(--bs-secondary); }

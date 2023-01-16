@@ -48,9 +48,8 @@ export async function publish() {
 
 /** Watches for file changes. */
 export async function watch() {
-	const result = await esbuild({...cssOptions(), incremental: true});
-	const compile = () => result.rebuild?.();
-	gulp.watch("src/ui/**/*.css", compile);
+	const context = await esbuild.context({...cssOptions()});
+	gulp.watch("src/ui/**/*.css", context.rebuild);
 }
 
 /** Runs the default task. */

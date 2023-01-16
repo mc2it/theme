@@ -11,6 +11,7 @@ export default function(options = {}) {
 		external: ["*.gif", "*.jpg", "*.png", "*.webp", "*.woff2"],
 		legalComments: "none",
 		minify: production,
-		outfile: `www/css/${production ? "mc2it.min" : "mc2it"}.css`
+		outfile: `www/css/${production ? "mc2it.min" : "mc2it"}.css`,
+		sourcemap: !production
 	};
 }

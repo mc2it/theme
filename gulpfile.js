@@ -1,7 +1,7 @@
 import {cp} from "node:fs/promises";
 import {env} from "node:process";
 import {deleteAsync} from "del";
-import {build as esbuild} from "esbuild";
+import esbuild from "esbuild";
 import {execa} from "execa";
 import gulp from "gulp";
 import config from "./jsconfig.json" assert {type: "json"};
@@ -11,7 +11,7 @@ import {cssOptions} from "./etc/esbuild.js";
 /** Builds the project. */
 export async function build() {
 	await cp("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", "www/fonts/bootstrap_icons.woff2");
-	await esbuild(cssOptions());
+	await esbuild.build(cssOptions());
 	return exec("tsc", ["--project", "src/jsconfig.json"]);
 }
 

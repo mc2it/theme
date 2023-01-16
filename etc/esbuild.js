@@ -4,7 +4,7 @@
  * @returns {import("esbuild").BuildOptions} The build settings.
  */
 export default function(options = {}) {
-	const production = options.production ?? false;
+	const {production = false} = options;
 	return {
 		bundle: true,
 		entryPoints: ["src/ui/index.css"],

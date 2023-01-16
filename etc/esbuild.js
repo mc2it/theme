@@ -1,29 +1,16 @@
-import {env} from "node:process";
-
 /**
- * Returns the CSS settings.
- * @returns {import("esbuild").BuildOptions} The CSS settings.
+ * Returns the build settings.
+ * @param {{production?: boolean}} [options] Options indicating whether to target the production environment.
+ * @returns {import("esbuild").BuildOptions} The build settings.
  */
-export function cssOptions() {
-	return {
-		...sharedOptions(env.NODE_ENV == "production"),
-		entryPoints: ["src/ui/index.css"],
-		external: ["*.gif", "*.jpg", "*.png", "*.webp", "*.woff2"],
-		outfile: "www/css/mc2it.css",
-		sourceRoot: new URL("../www/css/", import.meta.url).href
-	};
-}
-
-/**
- * Returns the shared settings.
- * @param {boolean} production Value indicating whether the application runs in production mode.
- * @returns {import("esbuild").BuildOptions} The shared settings.
- */
-function sharedOptions(production) {
+export default function(options = {}) {
+	const production = options.production ?? false;
 	return {
 		bundle: true,
+		entryPoints: ["src/ui/index.css"],
+		external: ["*.gif", "*.jpg", "*.png", "*.webp", "*.woff2"],
 		legalComments: "none",
 		minify: production,
-		sourcemap: !production
+		outfile: `www/css/${production ? "mc2it.min" : "mc2it"}.css`
 	};
 }

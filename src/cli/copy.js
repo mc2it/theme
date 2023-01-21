@@ -47,7 +47,7 @@ export default function(args) {
 		css: {short: "c", type: "boolean", default: false},
 		fonts: {short: "f", type: "boolean", default: false},
 		img: {short: "i", type: "boolean", default: false},
-		help: {short: "h", type: "boolean"}
+		help: {short: "h", type: "boolean", default: false}
 	}});
 
 	if (values.help) return console.log(usage.trim());

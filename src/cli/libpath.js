@@ -28,7 +28,7 @@ Options:
  */
 export default function(args) {
 	const {values} = parseArgs({args, options: {
-		help: {short: "h", type: "boolean"}
+		help: {short: "h", type: "boolean", default: false}
 	}});
 
 	console.log(values.help ? usage.trim() : assetPath);

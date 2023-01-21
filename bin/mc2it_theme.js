@@ -29,8 +29,8 @@ try {
 		strict: false,
 		tokens: true,
 		options: {
-			help: {short: "h", type: "boolean"},
-			version: {short: "v", type: "boolean"}
+			help: {short: "h", type: "boolean", default: false},
+			version: {short: "v", type: "boolean", default: false}
 		}
 	});
 

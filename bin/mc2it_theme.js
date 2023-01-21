@@ -37,13 +37,13 @@ try {
 	// Print the usage.
 	if (values.version || (values.help && !positionals.length)) {
 		console.log(values.version ? pkg.version : usage.trim());
-		process.exit();
+		process.exit(0);
 	}
 
 	// Check the requirements.
 	if (!positionals.length) {
 		console.log(usage.trim());
-		process.exit();
+		process.exit(0);
 	}
 
 	// Handle the subcommand.
@@ -56,5 +56,5 @@ try {
 }
 catch (error) {
 	console.error(error instanceof Error ? error.message : error);
-	process.exitCode = 1;
+	process.exit(1);
 }

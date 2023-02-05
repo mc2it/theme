@@ -12,6 +12,6 @@ export default function(options = {}) {
 		legalComments: "none",
 		minify: production,
 		outfile: `www/css/${production ? "mc2it.min" : "mc2it"}.css`,
-		sourcemap: !production
+		sourcemap: true
 	};
 }

@@ -1,0 +1,12 @@
+{
+	"classPath": "src/",
+	"contributors": ["mc2it", "cedx"],
+	"dependencies": {"bootstrap_bundle": ""},
+	"description": "Bootstrap theme used by MC2IT applications.",
+	"license": "MIT",
+	"name": "mc2it_theme",
+	"releasenote": "Ported the command line interface to Haxe.",
+	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
+	"url": "https://github.com/mc2it/theme",
+	"version": "4.0.0"
+}

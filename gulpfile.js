@@ -34,7 +34,7 @@ export async function doc() {
 /** Performs the static analysis of source code. */
 export async function lint() {
 	await exec("eslint", ["--config=etc/eslint.json", ...config.include]);
-	await exec("stylelint", ["--config=etc/stylelint.json", "src/ui/**/*.css"]);
+	await exec("stylelint", ["--config=etc/stylelint.json", "src/mc2it_theme/ui/**/*.css"]);
 	return exec("tsc", ["--project", "jsconfig.json"]);
 }
 
@@ -48,7 +48,7 @@ export async function publish() {
 /** Watches for file changes. */
 export async function watch() {
 	const context = await esbuild.context(buildOptions());
-	gulp.watch("src/ui/**/*.css", {ignoreInitial: false}, context.rebuild);
+	gulp.watch("src/mc2it_theme/ui/**/*.css", {ignoreInitial: false}, context.rebuild);
 }
 
 /** Runs the default task. */

@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [4.0.0](https://github.com/mc2it/theme/compare/v3.5.0...v4.0.0)
+- Breaking change: ported the command line interface to [Haxe](https://haxe.org).
+
 ## Version [3.5.0](https://github.com/mc2it/theme/compare/v3.4.2...v3.5.0)
 - Included the unminified stylesheet in the package.
 

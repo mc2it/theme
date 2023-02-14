@@ -8,7 +8,7 @@ function main() {
 	File.copy('$bootstrap/fonts/bootstrap-icons.woff2', "www/fonts/bootstrap_icons.woff2");
 	["build", "run"].iter(file -> Sys.command("haxe", ['$file.hxml']));
 
-	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/".*\/dist\/css\/bootstrap.css"/, Path.join([bootstrap, "dist/css/bootstrap.css"]));
+	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/.*\/dist\/css\/bootstrap.css/, Path.join([bootstrap, "dist/css/bootstrap.css"]));
 	buildStyleSheet(false);
 	buildStyleSheet(true);
 

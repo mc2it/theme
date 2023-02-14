@@ -1,14 +1,15 @@
 import sys.io.File;
 using Lambda;
+using StringTools;
 using haxe.io.Path;
 
 /** Runs the script. **/
 function main() {
 	final bootstrap = Tools.captureCommand("lix run bootstrap_bundle libpath");
-	File.copy('$bootstrap/fonts/bootstrap-icons.woff2', "www/fonts/bootstrap_icons.woff2");
+	File.copy(Path.join([bootstrap, "fonts/bootstrap-icons.woff2"]), "www/fonts/bootstrap_icons.woff2");
 	["build", "run"].iter(file -> Sys.command("haxe", ['$file.hxml']));
 
-	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/.*\/dist\/css\/bootstrap.css/, Path.join([bootstrap, "dist/css/bootstrap.css"]));
+	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/BOOTSTRAP/, bootstrap.replace("\\", "/"));
 	buildStyleSheet(false);
 	buildStyleSheet(true);
 

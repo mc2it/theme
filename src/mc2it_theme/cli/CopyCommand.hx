@@ -25,21 +25,18 @@ class CopyCommand {
 	/** <directory> : The path to the output directory. **/
 	@:defaultCommand
 	public function run(rest: Rest<String>): Promise<Noise> {
-		if (help) return { Sys.println(Cli.getDoc(this)); Noise; };
+		if (help) return {
+			Sys.println(Cli.getDoc(this));
+			Noise;
+		};
 
 		final haxelibRun = Sys.getEnv("HAXELIB_RUN") == "1";
 		final requiredArgs = 1;
 		if (rest.length < requiredArgs || (haxelibRun && rest.length < requiredArgs + 1))
 			return new Error(BadRequest, "You must provide the path of the output directory.");
 
-		final sources = ["css", "fonts", "img"];
-		final directories = sources.filter(source -> Reflect.field(this, source));
-
-		final input = Path.join([Sys.programPath().directory(), #if js "../www" #else "www" #end]);
 		final output = rest[0].isAbsolute() ? rest[0] : Path.join([haxelibRun ? rest[rest.length - 1] : Sys.getCwd(), rest[0]]);
-		for (directory in (directories.length > 0 ? directories : sources))
-			copyDirectory(Path.join([input, directory]), directories.length == 1 ? output : Path.join([output, directory]));
-
+		Theme.copyAssets(output, {css: css, fonts: fonts, img: img});
 		return Noise;
 	}
 

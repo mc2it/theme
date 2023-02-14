@@ -15,8 +15,7 @@ class LibpathCommand {
 	// Runs this command.
 	@:defaultCommand
 	public function run() {
-		final path = Path.join([Sys.programPath().directory(), #if js "../www" #else "www" #end]);
-		Sys.println(help ? Cli.getDoc(this) : path.replace("/", Sys.systemName() == "Windows" ? "\\" : "/"));
+		Sys.println(help ? Cli.getDoc(this) : Theme.assetPath);
 		return Promise.NOISE;
 	}
 }

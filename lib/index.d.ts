@@ -1,11 +1,11 @@
 /**
- * The path to the library assets.
+ * The path to the theme assets.
  * @type {string}
  */
 export const assetPath: string;
 
 /**
- * Copies the library assets to a given `output` directory.
+ * Copies the theme assets to a given `output` directory.
  * @param {string} output The path to the output directory.
  * @param {{css?: boolean, fonts?: boolean, img?: boolean}} [options] The copy options.
  */

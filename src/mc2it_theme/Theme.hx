@@ -5,16 +5,16 @@ import sys.io.File;
 using StringTools;
 using haxe.io.Path;
 
-/** Provides access to the library assets. **/
+/** Provides access to the theme assets. **/
 abstract class Theme {
 
-	/** The path to the library assets. **/
+	/** The path to the theme assets. **/
 	@:expose("assetPath")
 	public static final assetPath = Path
 		.join([Sys.programPath().directory(), #if js "../www" #else "www" #end])
 		.replace("/", Sys.systemName() == "Windows" ? "\\" : "/");
 
-	/** Copies the library assets to a given `output` directory. **/
+	/** Copies the theme assets to a given `output` directory. **/
 	@:expose("copyAssets")
 	public static function copyAssets(output: String, ?options: ThemeCopyOptions) {
 		if (options == null) options = {};

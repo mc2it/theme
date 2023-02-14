@@ -3,7 +3,7 @@ using Lambda;
 
 /** Runs the script. **/
 function main() {
-	["js", "js.map"].map(ext -> 'bin/mc2it_theme.$ext').filter(FileSystem.exists).iter(FileSystem.deleteFile);
-	["lib", "www/css"].filter(FileSystem.exists).iter(Tools.removeDirectory);
+	["bin/mc2it_theme.js", "lib/index.js"].filter(FileSystem.exists).iter(FileSystem.deleteFile);
 	Tools.cleanDirectory("var");
+	Tools.removeDirectory("www/css");
 }

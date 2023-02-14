@@ -3,3 +3,5 @@
 --js lib/index.js
 --library hxnodejs
 share/build.hxml
+
+mc2it_theme.Theme

@@ -32,11 +32,10 @@
 	},
 	"exports": {
 		"types": "./lib/index.d.ts",
-		"default": "./src/index.js"
+		"default": "./lib/index.js"
 	},
 	"files": [
 		"lib/",
-		"src/",
 		"www/"
 	],
 	"keywords": [
@@ -45,9 +44,5 @@
 		"mc2it",
 		"theme",
 		"ui"
-	],
-	"scripts": {
-		"prepack": "lix Dist",
-		"start": "node bin/mc2it_theme.js"
-	}
+	]
 }

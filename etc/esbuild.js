@@ -3,7 +3,7 @@
  * @param {{production?: boolean}} [options] Options indicating whether to target the production environment.
  * @returns {import("esbuild").BuildOptions} The build settings.
  */
-export default function(options = {}) {
+module.exports = function(options = {}) {
 	const {production = false} = options;
 	return {
 		bundle: true,

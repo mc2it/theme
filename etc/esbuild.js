@@ -7,7 +7,7 @@ export default function(options = {}) {
 	const {production = false} = options;
 	return {
 		bundle: true,
-		entryPoints: ["src/ui/index.css"],
+		entryPoints: ["src/mc2it_theme/ui/index.css"],
 		external: ["*.gif", "*.jpg", "*.png", "*.webp", "*.woff2"],
 		legalComments: "none",
 		minify: production,

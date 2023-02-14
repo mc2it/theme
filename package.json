@@ -5,8 +5,8 @@
 	"license": "MIT",
 	"name": "@mc2it/theme",
 	"repository": "github:mc2it/theme",
-	"type": "module",
-	"version": "3.5.0",
+	"type": "commonjs",
+	"version": "4.0.0",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",
@@ -26,17 +26,17 @@
 		"@babel/eslint-parser": "^7.19.1",
 		"@babel/plugin-syntax-import-assertions": "^7.20.0",
 		"@types/gulp": "^4.0.10",
-		"@types/node": "^18.11.18",
+		"@types/node": "^18.13.0",
 		"bootstrap": "^5.2.3",
 		"bootstrap-icons": "^1.10.3",
 		"del": "^7.0.0",
-		"esbuild": "^0.17.5",
-		"eslint": "^8.33.0",
-		"execa": "^6.1.0",
+		"esbuild": "^0.17.8",
+		"eslint": "^8.34.0",
+		"execa": "^7.0.0",
 		"gulp": "^4.0.2",
-		"stylelint": "^14.16.1",
-		"stylelint-config-standard": "^29.0.0",
-		"typedoc": "^0.23.24",
+		"stylelint": "^15.1.0",
+		"stylelint-config-standard": "^30.0.1",
+		"typedoc": "^0.23.25",
 		"typescript": "^4.9.5"
 	},
 	"engines": {
@@ -58,7 +58,7 @@
 		"ui"
 	],
 	"scripts": {
-		"prepack": "gulp",
+		"prepack": "lix Dist",
 		"start": "node bin/mc2it_theme.js"
 	}
 }

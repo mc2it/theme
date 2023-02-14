@@ -1,4 +1,4 @@
-@import "haxelib:bootstrap_bundle/lib/css/bootstrap.css";
+@import "haxelib://bootstrap_bundle/lib/css/bootstrap.css";
 
 /* Fonts. */
 @import "fonts/bootstrap_icons.css";

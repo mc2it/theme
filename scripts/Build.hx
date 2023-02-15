@@ -9,8 +9,8 @@ function main() {
 	["build", "run"].iter(file -> Sys.command("haxe", ['$file.hxml']));
 
 	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/".*\/css\/bootstrap.css"/, '"${Path.join([bootstrap, "css/bootstrap.css"])}"');
-	buildStyleSheet(false);
-	buildStyleSheet(true);
+	buildStyleSheet();
+	Tools.replaceInFile("www/css/mc2it.css", ~/\s+\/\* [^*]+ \*\//gs, "");
 	Sys.command("git", ["checkout", "--", "src/mc2it_theme/ui/index.css"]);
 
 	final file = "bin/mc2it_theme.js";
@@ -19,13 +19,13 @@ function main() {
 }
 
 /** Builds the style sheet. **/
-private function buildStyleSheet(minify = false) Sys.command("npx", ["esbuild"].concat(minify ? ["--minify"] : []).concat([
+private function buildStyleSheet() Sys.command("npx", [
+	"esbuild",
 	"--bundle",
 	"--external:*.woff2",
 	"--legal-comments=none",
 	"--log-level=warning",
-	'--outfile=www/css/${minify ? "mc2it.min" : "mc2it"}.css',
+	"--outfile=www/css/mc2it.css",
 	"--platform=browser",
-	"--sourcemap",
 	"src/mc2it_theme/ui/index.css"
-]));
+]);

@@ -7,7 +7,7 @@ function main() {
 	File.copy(Path.join([bootstrap, "fonts/bootstrap-icons.woff2"]), "www/fonts/bootstrap_icons.woff2");
 
 	final debug = Sys.args().contains("--debug");
-	for (file in ["build", "run"]) Sys.command("haxe", (debug ? ["--debug"] : []).concat(['$file.hxml']));
+	for (file in ["build", "run"]) Sys.command('haxe ${debug ? "--debug" : ""} $file.hxml');
 
 	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/".*\/css\/bootstrap.css"/, '"${Path.join([bootstrap, "css/bootstrap.css"])}"');
 	buildStyleSheet();

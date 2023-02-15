@@ -11,7 +11,6 @@ function main() {
 	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/".*\/css\/bootstrap.css"/, '"${Path.join([bootstrap, "css/bootstrap.css"])}"');
 	buildStyleSheet();
 	Tools.replaceInFile("www/css/mc2it.css", ~/\s+\/\* [^*]+ \*\//gs, "");
-	Sys.command("git", ["checkout", "--", "src/mc2it_theme/ui/index.css"]);
 
 	final file = "bin/mc2it_theme.js";
 	Sys.command("git", ["update-index", "--chmod=+x", file]);

@@ -26,6 +26,5 @@ private function buildStyleSheet() Sys.command("npx", [
 	"--legal-comments=none",
 	"--log-level=warning",
 	"--outfile=www/css/mc2it.css",
-	"--platform=browser",
 	"src/mc2it_theme/ui/index.css"
 ]);

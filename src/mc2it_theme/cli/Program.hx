@@ -1,7 +1,7 @@
 package mc2it_theme.cli;
 
 /** Command line interface of MC2IT Theme. **/
-class Program {
+final class Program {
 
 	/** Copy the library assets to a given directory. **/
 	@:command

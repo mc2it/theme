@@ -1,7 +1,7 @@
 //! --class-path src
 import mc2it_theme.Version;
 
-/** Runs the script. **/
+/** Publishes the package. **/
 function main() {
 	Sys.command("lix Dist"]);
 	Tools.compress(["CHANGELOG.md", "LICENSE.md", "README.md", "haxelib.json", "run.n", "src", "www"], "var/haxelib.zip");

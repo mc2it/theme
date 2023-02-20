@@ -1,7 +1,7 @@
 //! --class-path src
 import mc2it_theme.Platform;
 
-/** Runs the script. **/
+/** Packages the project. **/
 function main() {
 	for (script in ["Clean", "Build", "Version"]) Sys.command('lix $script');
 	Sys.command("git checkout -- src/mc2it_theme/ui/index.css");

@@ -1,7 +1,7 @@
 import sys.FileSystem;
 using Lambda;
 
-/** Runs the script. **/
+/** Deletes all generated files. **/
 function main() {
 	for (file in ["bin/mc2it_theme.js", "lib/index.js"]) {
 		if (FileSystem.exists(file)) FileSystem.deleteFile(file);

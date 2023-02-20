@@ -1,7 +1,7 @@
 import sys.io.File;
 using haxe.io.Path;
 
-/** Runs the script. **/
+/** Builds the project. **/
 function main() {
 	final bootstrap = Tools.captureCommand("lix run bootstrap_bundle libpath");
 	File.copy(Path.join([bootstrap, "fonts/bootstrap-icons.woff2"]), "www/fonts/bootstrap_icons.woff2");

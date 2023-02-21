@@ -23,7 +23,7 @@
 		}
 	],
 	"devDependencies": {
-		"esbuild": "^0.17.9",
+		"esbuild": "^0.17.10",
 		"stylelint": "^15.2.0",
 		"stylelint-config-standard": "^30.0.1"
 	},

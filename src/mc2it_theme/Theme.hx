@@ -21,10 +21,8 @@ abstract class Theme {
 
 		final sources = ["css", "fonts", "img"];
 		final directories = sources.filter(source -> Reflect.field(options, source));
-
-		final input = Path.join([Sys.programPath().directory(), #if js "../www" #else "www" #end]);
 		for (directory in (directories.length > 0 ? directories : sources))
-			copyDirectory(Path.join([input, directory]), directories.length == 1 ? output : Path.join([output, directory]));
+			copyDirectory(Path.join([assetPath, directory]), directories.length == 1 ? output : Path.join([output, directory]));
 	}
 
 	/** Recursively copies all files in the specified `source` directory to a given `destination` directory. **/

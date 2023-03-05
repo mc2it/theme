@@ -9,4 +9,4 @@ share/build.hxml
 --define js-global=global
 --js bin/mc2it_theme.js
 --library hxnodejs
---macro mc2it_theme.Macro.shebang('node')
+--macro mc2it_theme.Macro.shebang("node")

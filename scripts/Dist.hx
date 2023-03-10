@@ -17,6 +17,7 @@ function main() {
 private function minifyFile(source: String, ?destination: String, platform = Platform.Browser) Sys.command("npx", [
 	"esbuild",
 	"--allow-overwrite",
+	"--legal-comments=none",
 	"--log-level=warning",
 	"--minify",
 	'--outfile=${destination != null ? destination : source}',

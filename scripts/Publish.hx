@@ -3,7 +3,7 @@ import mc2it_theme.Version;
 
 /** Publishes the package. **/
 function main() {
-	Sys.command("lix Dist"]);
+	Sys.command("lix Dist");
 	Tools.compress(["CHANGELOG.md", "LICENSE.md", "README.md", "haxelib.json", "run.n", "src", "www"], "var/haxelib.zip");
 	Sys.command("haxelib submit var/haxelib.zip");
 

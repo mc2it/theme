@@ -23,9 +23,7 @@
 		}
 	],
 	"devDependencies": {
-		"esbuild": "^0.17.11",
-		"stylelint": "^15.2.0",
-		"stylelint-config-standard": "^30.0.1"
+		"esbuild": "^0.17.12"
 	},
 	"engines": {
 		"node": ">=18.0.0"

@@ -23,7 +23,7 @@
 		}
 	],
 	"devDependencies": {
-		"esbuild": "^0.17.12"
+		"esbuild": "^0.17.13"
 	},
 	"engines": {
 		"node": ">=18.0.0"

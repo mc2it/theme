@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [4.0.1](https://github.com/mc2it/theme/compare/v4.0.0...v4.0.1)
+- Added the missing `.loading` class applied on the page body during navigation.
+
 ## Version [4.0.0](https://github.com/mc2it/theme/compare/v3.5.0...v4.0.0)
 - Breaking change: ported the source code to [Haxe](https://haxe.org).
 

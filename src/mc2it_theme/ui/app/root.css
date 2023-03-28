@@ -15,6 +15,11 @@
 	font-size: var(--bs-root-font-size);
 }
 
+::selection {
+	background-color: var(--bs-primary);
+	color: var(--bs-white);
+}
+
 a {
 	text-decoration: none;
 }
@@ -24,7 +29,6 @@ a:not(.btn, .dropdown-item, .list-group-item-action, .nav-link):focus {
 	text-decoration: underline;
 }
 
-::selection {
-	background-color: var(--bs-primary);
-	color: var(--bs-white);
+body.loading {
+	cursor: progress;
 }

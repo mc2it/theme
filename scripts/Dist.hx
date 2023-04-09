@@ -20,7 +20,7 @@ private function minifyFile(source: String, ?destination: String, platform = Pla
 	"--legal-comments=none",
 	"--log-level=warning",
 	"--minify",
-	'--outfile=${destination != null ? destination : source}',
+	'--outfile=${destination ?? source}',
 	'--platform=$platform',
 	source
 ]);

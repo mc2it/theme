@@ -13,7 +13,7 @@ function main() {
 		"--define", "source-path", "https://github.com/mc2it/theme/blob/main/src",
 		"--define", "themeColor", "0x165898",
 		"--define", "version", Version.packageVersion,
-		"--define", "website", "https://github.com/mc2it/theme",
+		"--define", "website", "https://mc2it.github.io/theme",
 		"--input-path", "var",
 		"--output-path", "docs",
 		"--title", "MC2IT Theme",

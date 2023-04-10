@@ -5,8 +5,8 @@
 The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://www.mc2it.com) applications.
 
 ## Documentation
-- [User guide](https://github.com/mc2it/theme/wiki)
-- [API reference](https://mc2it.github.io/theme)
+- [User guide](https://mc2it.github.io/theme)
+- [API reference](https://mc2it.github.io/theme/api)
 
 ## Development
 - [Git repository](https://github.com/mc2it/theme)
@@ -15,4 +15,4 @@ The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://www.mc2i
 - [Submit an issue](https://github.com/mc2it/theme/issues)
 
 ## License
-[MC2IT Theme](https://github.com/mc2it/theme) is distributed under the MIT License.
+[MC2IT Theme](https://mc2it.github.io/theme) is distributed under the MIT License.

@@ -7,6 +7,6 @@
 	"name": "mc2it_theme",
 	"releasenote": "Added the missing `.loading` class applied on the page body during navigation.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
-	"url": "https://github.com/mc2it/theme",
+	"url": "https://mc2it.github.io/theme",
 	"version": "4.0.1"
 }

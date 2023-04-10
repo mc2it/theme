@@ -5,12 +5,13 @@ import mc2it_theme.Platform;
 function main() {
 	for (script in ["Clean", "Build", "Version"]) Sys.command('lix $script');
 	Sys.command("git checkout -- src/mc2it_theme/ui/index.css");
-	for (file in ["bin/mc2it_theme.js", "lib/index.js"]) minifyFile(file, Node);
+
+	final cli = "bin/mc2it_theme.js";
+	for (file in [cli, "lib/index.js"]) minifyFile(file, Node);
 	minifyFile("www/css/mc2it.css", "www/css/mc2it.min.css");
 
-	final file = "bin/mc2it_theme.js";
-	Sys.command('git update-index --chmod=+x $file');
-	if (Sys.systemName() != "Windows") Sys.command('chmod +x $file');
+	Sys.command('git update-index --chmod=+x $cli');
+	if (Sys.systemName() != "Windows") Sys.command('chmod +x $cli');
 }
 
 /** Minifies the specified `source` file. **/

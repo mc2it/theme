@@ -12,6 +12,7 @@ using haxe.zip.Tools;
 /** Captures the output of the specified `command`. **/
 function captureCommand(command: String, ?arguments: Array<String>) {
 	final process = new Process(command, arguments);
+	if (process.exitCode() != 0) return "";
 	final stdout = process.stdout.readAll().toString();
 	process.close();
 	return stdout.rtrim();

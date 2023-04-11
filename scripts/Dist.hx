@@ -1,5 +1,6 @@
 //! --class-path src
 import mc2it_theme.Platform;
+using Lambda;
 
 /** Packages the project. **/
 function main() {
@@ -7,7 +8,7 @@ function main() {
 	Sys.command("git checkout -- src/mc2it_theme/ui/index.css");
 
 	final cli = "bin/mc2it_theme.js";
-	for (file in [cli, "lib/index.js"]) minifyFile(file, Node);
+	[cli, "lib/index.js"].iter(file -> minifyFile(file, Node));
 	minifyFile("www/css/mc2it.css", "www/css/mc2it.min.css");
 
 	Sys.command('git update-index --chmod=+x $cli');

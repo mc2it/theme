@@ -39,7 +39,7 @@ class CopyCommand {
 		if (rest.length < requiredArgs || (haxelibRun && rest.length < requiredArgs + 1))
 			return new Error(BadRequest, "You must provide the path of the output directory.");
 
-		final output = rest[0].isAbsolute() ? rest[0] : Path.join([haxelibRun ? rest[rest.length - 1] : Sys.getCwd(), rest[0]]);
+		final output = rest[0].isAbsolute() ? rest.shift() : Path.join([haxelibRun ? rest.pop() : Sys.getCwd(), rest.shift()]);
 		Theme.copyAssets(output, {css: css, fonts: fonts, img: img});
 		return Noise;
 	}

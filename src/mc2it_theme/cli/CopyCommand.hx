@@ -4,7 +4,11 @@ import sys.FileSystem;
 import sys.io.File;
 using haxe.io.Path;
 
-/** Copy the library assets to a given directory. **/
+/**
+	Copy the library assets to a given directory.
+
+	> bootstrap_bundle copy [flags] <directory>
+**/
 class CopyCommand {
 
 	/** Copy only the CSS files. **/
@@ -13,16 +17,16 @@ class CopyCommand {
 	/** Copy only the font files. **/
 	public var fonts = false;
 
-	/** Display this help. **/
-	public var help = false;
-
 	/** Copy only the image files. **/
 	public var img = false;
+
+	/** Display this help. **/
+	public var help = false;
 
 	/** Creates a new `copy` command. **/
 	public function new() {}
 
-	/** <directory> : The path to the output directory. **/
+	/** directory : The path to the output directory. **/
 	@:defaultCommand
 	public function run(rest: Rest<String>): Promise<Noise> {
 		if (help) return {

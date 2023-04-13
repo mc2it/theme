@@ -3,7 +3,11 @@ package mc2it_theme.cli;
 using StringTools;
 using haxe.io.Path;
 
-/** Print the path to the library assets. **/
+/**
+	Print the path to the library assets.
+
+	> mc2it_theme libpath [flags]
+**/
 class LibpathCommand {
 
 	/** Display this help. **/

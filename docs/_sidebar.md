@@ -1,2 +1,2 @@
-- [API reference](https://mc2it.github.io/theme/api)
+- [API reference](api/)
 - [License](license.md)

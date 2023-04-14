@@ -1,6 +1,6 @@
 /**/.DS_Store
 /bin/*.map
-/lib/*.js
+/lib/*.cjs
 /lib/*.map
 /node_modules/
 /npm-debug.log

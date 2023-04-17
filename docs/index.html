@@ -16,6 +16,10 @@
 		<link rel="icon" href="favicon.svg"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"/>
 
+		<script defer src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/docsify-tabs/dist/docsify-tabs.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+
 		<script>
 			window.$docsify = {
 				alias: {"/.*/_sidebar.md": "/_sidebar.md"},
@@ -24,12 +28,15 @@
 				name: "MC2IT Theme",
 				noCompileLinks: ["api/.*"],
 				repo: "mc2it/theme",
+				tabs: {theme: "material"},
 				themeColor: "#165898"
 			};
 		</script>
 
-		<script defer src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-		<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+		<style>
+			body { font-family: ui-sans-serif, sans-serif; }
+			button { font-family: inherit; }
+		</style>
 	</head>
 
 	<body>

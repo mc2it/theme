@@ -21,8 +21,8 @@ npm install @mc2it/theme
 <!-- tabs:end -->
 
 ## Usage
-Sorry, there is nothing to see here at the moment.  
-In the meantime, you can improve your skills by consulting the [Bootstrap documentation](https://getbootstrap.com).
+Sorry, there is nothing to see here for the moment.  
+In the meantime, you can check the [Bootstrap documentation](https://getbootstrap.com).
 
 ## See also
 - [Git repository](https://github.com/mc2it/theme)

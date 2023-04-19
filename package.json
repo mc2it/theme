@@ -26,12 +26,12 @@
 		"esbuild": "^0.17.17"
 	},
 	"engines": {
-		"node": ">=18.0.0"
+		"node": ">=20.0.0"
 	},
 	"exports": {
 		"types": "./lib/index.d.ts",
-		"import": "./lib/index.mjs",
-		"default": "./lib/index.cjs"
+		"require": "./lib/index.cjs",
+		"import": "./lib/index.mjs"
 	},
 	"files": [
 		"lib/",

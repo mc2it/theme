@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [4.0.2](https://github.com/mc2it/theme/compare/v4.0.1...v4.0.2)
+- Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.10.5.
+
 ## Version [4.0.1](https://github.com/mc2it/theme/compare/v4.0.0...v4.0.1)
 - Added the missing `.loading` class applied on the page body during navigation.
 

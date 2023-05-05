@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Added the missing `.loading` class applied on the page body during navigation.",
+	"releasenote": "Upgraded Bootstrap Icons to version 1.10.5.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
 	"version": "4.0.2"

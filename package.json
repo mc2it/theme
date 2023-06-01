@@ -6,7 +6,7 @@
 	"name": "@mc2it/theme",
 	"repository": "github:mc2it/theme",
 	"type": "commonjs",
-	"version": "4.0.2",
+	"version": "5.0.0",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",

@@ -3,20 +3,21 @@ import haxe.zip.Entry;
 import haxe.zip.Writer;
 import sys.FileSystem;
 import sys.io.File;
-import sys.io.Process;
+using DateTools;
 using Lambda;
-using StringTools;
 using haxe.io.Path;
 using haxe.zip.Tools;
 
-/** Captures the output of the specified `command`. **/
-function captureCommand(command: String, ?arguments: Array<String>) {
-	final process = new Process(command, arguments);
-	if (process.exitCode() != 0) return "";
-	final stdout = process.stdout.readAll().toString();
-	process.close();
-	return stdout.rtrim();
-}
+#if js
+/** The build settings. **/
+final buildOptions: js.esbuild.Options.BuildOptions = {
+	bundle: true,
+	entryPoints: ["src/mc2it_theme/ui/index.css"],
+	external: ["*.woff2"],
+	legalComments: None,
+	outfile: "www/css/mc2it.css"
+};
+#end
 
 /** Recursively deletes all files in the specified `directory`. **/
 function cleanDirectory(directory: String) for (entry in FileSystem.readDirectory(directory).filter(entry -> entry != ".gitkeep")) {
@@ -33,6 +34,16 @@ function compress(sources: Array<String>, destination: String) {
 	for (source in sources) entries = entries.concat(FileSystem.isDirectory(source) ? compressDirectory(source) : [compressFile(source)]);
 	writer.write(entries.list());
 	output.close();
+}
+
+/** Formats the specified `duration` in seconds. **/
+function formatDuration(duration: Float) {
+	final operand = Math.pow(10, 3);
+	final timestamp = Math.round(duration * operand) / operand;
+
+	final seconds = Std.int(timestamp);
+	final milliseconds = Std.int((timestamp - seconds).seconds());
+	return seconds > 1 ? '${seconds}s ${milliseconds}ms' : '${milliseconds}ms';
 }
 
 /** Recursively deletes the specified `directory`. **/

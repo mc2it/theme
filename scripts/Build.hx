@@ -1,7 +1,6 @@
 //! --class-path src --define hxnodejs --define no-deprecation-warnings --library hxnodejs --library tink_core
 import js.esbuild.Esbuild;
 import js.node.ChildProcess;
-import sys.FileSystem;
 import sys.io.File;
 using StringTools;
 using haxe.io.Path;
@@ -15,10 +14,9 @@ function main() {
 	final debug = Sys.args().contains("--debug");
 	for (file in ["build", "run"]) Sys.command('haxe ${debug ? "--debug" : ""} $file.hxml');
 
-	FileSystem.createDirectory("www/css");
 	Tools.replaceInFile("src/mc2it_theme/ui/index.css", ~/".*\/css\/bootstrap.css"/, '"${Path.join([bootstrap, "css/bootstrap.css"])}"');
 	Promise.ofJsPromise(Esbuild.build(Tools.buildOptions)).handle(outcome -> switch outcome {
 		case Failure(error): throw error;
-		case Success(_): if (debug) Tools.replaceInFile("www/css/mc2it.css", ~/\s+\/\* [^*]+ \*\//g, "");
+		case Success(_): if (!debug) Tools.replaceInFile("www/css/mc2it.css", ~/\s+\/\* [^*]+ \*\//g, "");
 	});
 }

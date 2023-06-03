@@ -5,12 +5,15 @@
 	--bs-font-monospace: "Consolas", monospace;
 	--bs-font-sans-serif: "Segoe UI", sans-serif;
 	--bs-link-color: var(--bs-primary);
+	--bs-link-color-rgb: var(--bs-primary-rgb);
 	--bs-link-hover-color: #12467a;
+	--bs-link-hover-color-rgb: 18, 70, 122;
 	--bs-primary: #165898;
 	--bs-primary-rgb: 22, 88, 152;
 	--bs-root-font-size: 14px;
 	--bs-secondary: #696969;
 	--bs-secondary-rgb: 105, 105, 105;
+	--bs-tertiary-bg: var(--bs-gray-200);
 	--navbar-height: 50px;
 	font-size: var(--bs-root-font-size);
 }

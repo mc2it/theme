@@ -1,4 +1,4 @@
 .list-group {
 	--bs-list-group-bg: var(--bs-white);
-	--bs-list-group-disabled-color: var(--bs-gray-600);
+	--bs-list-group-disabled-bg: var(--bs-list-group-bg);
 }

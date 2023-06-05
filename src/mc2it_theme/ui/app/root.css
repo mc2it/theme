@@ -1,4 +1,9 @@
 :root {
+	--navbar-height: 50px;
+	font-size: var(--bs-root-font-size, 14px);
+}
+
+:root, [data-bs-theme="light"] {
 	--bs-body-text-align: start;
 	--bs-font-monospace: "Consolas", monospace;
 	--bs-font-sans-serif: "Segoe UI", sans-serif;
@@ -9,8 +14,6 @@
 	--bs-primary: #165898;
 	--bs-primary-rgb: 22, 88, 152;
 	--bs-root-font-size: 14px;
-	--navbar-height: 50px;
-	font-size: var(--bs-root-font-size);
 }
 
 ::selection {

@@ -7,7 +7,7 @@
 .offcanvas-header {
 	--bs-offcanvas-padding-y: 0.8rem;
 	background-color: var(--bs-white);
-	border-bottom: 1px solid var(--bs-white);
+	border-bottom: var(--bs-border-width) solid var(--bs-white);
 }
 
 .offcanvas-title {

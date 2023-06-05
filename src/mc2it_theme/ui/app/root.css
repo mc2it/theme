@@ -17,6 +17,11 @@
 	--bs-root-font-size: 14px;
 }
 
+[data-bs-theme="dark"] {
+	--bs-body-bg: var(--bs-gray-900);
+	--bs-body-bg-rbg: 33, 37, 41;
+}
+
 ::selection {
 	background-color: var(--bs-primary);
 	color: var(--bs-white);

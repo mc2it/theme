@@ -3,21 +3,21 @@
 }
 
 .toast-header-danger {
-	background-color: #f8d7da;
-	color: #842029;
+	background-color: var(--bs-danger-bg-subtle);
+	color: var(--bs-danger-text-emphasis);
 }
 
 .toast-header-info {
-	background-color: #cff4fc;
-	color: #055160;
+	background-color: var(--bs-info-bg-subtle);
+	color: var(--bs-info-text-emphasis);
 }
 
 .toast-header-success {
-	background-color: #d1e7dd;
-	color: #0f5132;
+	background-color: var(--bs-success-bg-subtle);
+	color: var(--bs-success-text-emphasis);
 }
 
 .toast-header-warning {
-	background-color: #fff3cd;
-	color: #664d03;
+	background-color: var(--bs-warning-bg-subtle);
+	color: var(--bs-warning-text-emphasis);
 }

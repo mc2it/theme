@@ -5,6 +5,7 @@
 
 :root, [data-bs-theme="light"] {
 	--bs-body-text-align: start;
+	--bs-heading-color: var(--bs-emphasis-color);
 	--bs-font-monospace: "Consolas", monospace;
 	--bs-font-sans-serif: "Segoe UI", sans-serif;
 	--bs-link-color: var(--bs-primary);

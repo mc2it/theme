@@ -1,7 +1,6 @@
 .offcanvas {
 	--bs-offcanvas-bg: var(--bs-primary);
 	--bs-offcanvas-width: 300px;
-	box-shadow: var(--bs-offcanvas-box-shadow);
 }
 
 .offcanvas-header {

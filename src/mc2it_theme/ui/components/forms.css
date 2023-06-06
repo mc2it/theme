@@ -3,11 +3,11 @@
 	border-color: var(--bs-primary);
 }
 
-.input-remove-spin {
+.remove-spin {
 	appearance: textfield;
 }
 
-.input-remove-spin::-webkit-inner-spin-button,
-.input-remove-spin::-webkit-outer-spin-button {
+.remove-spin::-webkit-inner-spin-button,
+.remove-spin::-webkit-outer-spin-button {
 	appearance: none;
 }

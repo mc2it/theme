@@ -6,6 +6,7 @@
 
 /* Application. */
 @import "app/root.css";
+@import "app/reboot.css";
 @import "app/layout.css";
 
 /* Utilities. */

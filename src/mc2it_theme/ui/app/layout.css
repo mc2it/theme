@@ -9,7 +9,7 @@ body.loading {
 }
 
 [data-bs-theme="dark"] body {
-	background-color: var(--bs-black);
+	background-color: var(--bs-secondary-bg-subtle);
 }
 
 main {

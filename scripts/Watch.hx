@@ -8,9 +8,9 @@ using tink.CoreApi;
 
 /** Watches for file changes. **/
 function main() {
+	final srcDir = "src/mc2it_theme";
 	measureCommand("lix Build --debug");
 
-	final srcDir = "src/mc2it_theme";
 	GlobWatcher.watch('$srcDir/**/*.hx', done -> ["build", "run"].iter(file -> measureCommand(done, 'haxe --debug $file.hxml')));
 	Promise.ofJsPromise(Esbuild.context(Tools.buildOptions)).handle(outcome -> switch outcome {
 		case Failure(error): throw error;

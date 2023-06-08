@@ -20,10 +20,10 @@
 [data-bs-theme="dark"] {
 	--bs-body-bg: var(--bs-gray-900);
 	--bs-body-bg-rbg: 33, 37, 41;
-	--bs-link-color: #8db6f4;
-	--bs-link-color-rgb: 141, 182, 244;
-	--bs-link-hover-color: #93bcfb;
-	--bs-link-hover-color-rgb: 147, 188, 251;
+	--bs-link-color: #66a8e8;
+	--bs-link-color-rgb: 102, 168, 232;
+	--bs-link-hover-color: #70b2f2;
+	--bs-link-hover-color-rgb: 112, 178, 242;
 }
 
 ::selection {

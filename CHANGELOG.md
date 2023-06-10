@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [5.1.0](https://github.com/mc2it/theme/compare/v5.0.0...v5.1.0)
+- Added the `.filter-invert` class.
+
 ## Version [5.0.0](https://github.com/mc2it/theme/compare/v4.0.2...v5.0.0)
 - Breaking change: upgraded [Bootstrap](https://getbootstrap.com) to version 5.3.0.
 - Added support for dark mode.

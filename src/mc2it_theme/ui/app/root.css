@@ -1,6 +1,6 @@
 :root {
 	--bs-body-text-align: start;
-	--bs-font-monospace: "Consolas", monospace;
+	--bs-font-monospace: Consolas, monospace;
 	--bs-font-sans-serif: "Segoe UI", sans-serif;
 	--bs-root-font-size: 14px;
 	--navbar-height: 50px;

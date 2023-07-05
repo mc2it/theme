@@ -10,9 +10,6 @@ function main() {
 	final cli = "bin/mc2it_theme.js";
 	[cli, "lib/index.cjs"].iter(file -> minifyFile(file, Node));
 	minifyFile("www/css/mc2it.css", "www/css/mc2it.min.css");
-
-	Sys.command('git update-index --chmod=+x $cli');
-	if (Sys.systemName() != "Windows") Sys.command('chmod +x $cli');
 }
 
 /** Minifies the specified `source` file. **/

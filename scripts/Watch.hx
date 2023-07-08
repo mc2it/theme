@@ -12,7 +12,7 @@ function main() {
 	measureCommand("lix Build --debug");
 
 	GlobWatcher.watch('$srcDir/**/*.hx', done -> ["build", "run"].iter(file -> measureCommand(done, 'haxe --debug $file.hxml')));
-	Promise.ofJsPromise(Esbuild.context(Tools.buildOptions)).handle(outcome -> switch outcome {
+	Promise.ofJsPromise(Esbuild.context(Tools.buildOptions())).handle(outcome -> switch outcome {
 		case Failure(error): throw error;
 		case Success(context): GlobWatcher.watch('$srcDir/ui/**/*.css', done -> measurePromise(done, 'esbuild $srcDir/ui/index.css', context.rebuild()));
 	});

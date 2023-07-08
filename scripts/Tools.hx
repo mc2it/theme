@@ -1,3 +1,8 @@
+#if js
+import js.esbuild.Options.BuildOptions;
+import js.html.URL;
+import js.lib.RegExp;
+#end
 import haxe.crypto.Crc32;
 import haxe.zip.Entry;
 import haxe.zip.Writer;
@@ -9,13 +14,28 @@ using haxe.io.Path;
 using haxe.zip.Tools;
 
 #if js
-/** The build settings. **/
-final buildOptions: js.esbuild.Options.BuildOptions = {
+/** Returns the build settings. **/
+function buildOptions(): BuildOptions return {
 	bundle: true,
 	entryPoints: ["src/mc2it_theme/ui/index.css"],
-	external: ["*.woff2"],
+	external: ["*.webp", "*.woff2"],
 	legalComments: None,
-	outfile: "www/css/mc2it.css"
+	outfile: "www/css/mc2it.css",
+	plugins: [haxelibResolver]
+};
+
+/** Resolves `haxelib://` imports. **/
+private final haxelibResolver = {
+	name: "haxelib",
+	setup: build -> build.onResolve({filter: new RegExp("^haxelib://")}, args -> {
+		final fileUri = new URL(args.path);
+		final haxeRoot = Sys.getEnv("HAXESHIM_ROOT") ?? Sys.getEnv("HAXE_ROOT") ?? '${Sys.getEnv(Sys.systemName() == "Windows" ? "APPDATA" : "HOME")}/haxe';
+		{path: Path.join([
+			Sys.getEnv("HAXESHIM_LIBCACHE") ?? Sys.getEnv("HAXE_LIBCACHE") ?? Path.join([haxeRoot, "haxe_libraries"]),
+			~/\r?\n/.split(File.getContent('haxe_libraries/${fileUri.hostname}.hxml')).shift().split(" ").pop(),
+			fileUri.pathname.substring(1)
+		])};
+	})
 };
 #end
 

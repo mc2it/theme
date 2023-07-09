@@ -1,5 +1,5 @@
-//! --class-path src
-import mc2it_theme.Version;
+//! --class-path src --library tink_core
+import mc2it_theme.Platform;
 import sys.FileSystem;
 import sys.io.File;
 using Lambda;
@@ -14,7 +14,7 @@ function main() {
 		"--define", "description", "Bootstrap theme used by MC2IT applications.",
 		"--define", "source-path", "https://github.com/mc2it/theme/blob/main/src",
 		"--define", "themeColor", "0x165898",
-		"--define", "version", Version.packageVersion,
+		"--define", "version", Platform.packageVersion,
 		"--define", "website", "https://mc2it.github.io/theme",
 		"--input-path", "var",
 		"--output-path", "docs/api",

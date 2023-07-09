@@ -2,6 +2,7 @@
 	"defaultSeverity": "ERROR",
 	"exclude": {
 		"path": "RELATIVE_TO_PROJECT",
+		"ConditionalCompilation": ["src/mc2it_theme/Platform"],
 		"ReturnCount": ["src/mc2it_theme/cli/CopyCommand:run"]
 	},
 	"checks": [

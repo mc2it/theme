@@ -1,5 +1,5 @@
 //! --class-path src
-import mc2it_theme.Version;
+import mc2it_theme.Platform;
 
 /** Publishes the package. **/
 function main() {
@@ -9,5 +9,5 @@ function main() {
 
 	final registries = ["https://registry.npmjs.org", "https://git.mc2it.com/api/packages/mc2it/npm/"];
 	for (registry in registries) Sys.command('npm publish --registry=$registry');
-	for (action in ["tag", "push origin"]) Sys.command('git $action v${Version.packageVersion}');
+	for (action in ["tag", "push origin"]) Sys.command('git $action v${Platform.packageVersion}');
 }

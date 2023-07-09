@@ -8,5 +8,5 @@
 	"releasenote": "Added the `.filter-invert` class.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
-	"version": "5.1.0"
+	"version": "5.1.1"
 }

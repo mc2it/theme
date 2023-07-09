@@ -5,8 +5,8 @@
 
 .offcanvas-header {
 	--bs-offcanvas-padding-y: 0.8rem;
-	background-color: var(--bs-white);
-	border-bottom: var(--bs-border-width) solid var(--bs-white);
+	background-color: var(--bs-body-bg);
+	height: var(--navbar-height, auto);
 }
 
 .offcanvas-title {
@@ -16,7 +16,7 @@
 
 .offcanvas-title img {
 	position: relative;
-	top: 2px;
+	top: -1px;
 }
 
 .offcanvas-body {

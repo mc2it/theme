@@ -1,4 +1,4 @@
-//! --class-path src
+//! --class-path src --library tink_core
 import mc2it_theme.Platform;
 
 /** Publishes the package. **/

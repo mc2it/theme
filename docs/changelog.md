@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [5.1.2](https://github.com/mc2it/theme/compare/v5.1.1...v5.1.2)
+- Fixed the vertical position of the offcanvas header image.
+
 ## Version [5.1.1](https://github.com/mc2it/theme/compare/v5.1.0...v5.1.1)
 - Fixed the styles of the offcanvas header in dark mode.
 

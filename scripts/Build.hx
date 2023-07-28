@@ -13,7 +13,7 @@ function main() {
 
 	final bootstrap = ChildProcess.execSync("lix run bootstrap_bundle libpath", {encoding: "utf8"}).rtrim();
 	File.copy(Path.join([bootstrap, "fonts/bootstrap-icons.woff2"]), "www/fonts/bootstrap_icons.woff2");
-	Promise.ofJsPromise(Esbuild.build(Tools.buildOptions())).handle(outcome -> switch outcome {
+	Esbuild.build(Tools.buildOptions()).toPromise().handle(outcome -> switch outcome {
 		case Failure(error): throw error;
 		case Success(_): if (!debug) Tools.replaceInFile("www/css/mc2it.css", ~/\s+\/\* [^*]+ \*\//g, "");
 	});

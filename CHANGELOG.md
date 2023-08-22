@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [5.2.1](https://github.com/mc2it/theme/compare/v5.2.1...v5.2.1)
+- Adjusted the opacity of the toast component.
+
 ## Version [5.2.0](https://github.com/mc2it/theme/compare/v5.1.2...v5.2.0)
 - Added accordion styles for the `<details>` and `<summary>` tags.
 - Customized the default style of the `<optgroup>` tag.

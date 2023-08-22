@@ -8,5 +8,5 @@
 	"releasenote": "Added accordion styles for the `<details>` and `<summary>` tags, customized the default style of the `<optgroup>` tag.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
-	"version": "5.2.0"
+	"version": "5.2.1"
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## Version [5.2.1](https://github.com/mc2it/theme/compare/v5.2.1...v5.2.1)
+- Adjusted the opacity of the toast component.
+
+## Version [5.2.0](https://github.com/mc2it/theme/compare/v5.1.2...v5.2.0)
+- Added accordion styles for the `<details>` and `<summary>` tags.
+- Customized the default style of the `<optgroup>` tag.
+
 ## Version [5.1.2](https://github.com/mc2it/theme/compare/v5.1.1...v5.1.2)
 - Fixed the vertical position of the offcanvas header image.
 
@@ -12,7 +19,7 @@
 ## Version [5.0.0](https://github.com/mc2it/theme/compare/v4.0.2...v5.0.0)
 - Breaking change: upgraded [Bootstrap](https://getbootstrap.com) to version 5.3.0.
 - Added support for dark mode.
-- Added a style reset to the `menu` tag.
+- Added a style reset to the `<menu>` tag.
 
 ## Version [4.0.2](https://github.com/mc2it/theme/compare/v4.0.1...v4.0.2)
 - Upgraded [Bootstrap Icons](https://icons.getbootstrap.com) to version 1.10.5.

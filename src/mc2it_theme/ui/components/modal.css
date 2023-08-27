@@ -52,6 +52,7 @@ dialog.modal::backdrop {
 dialog.modal[open] {
 	display: flex;
 	flex-direction: column;
+	position: fixed;
 }
 
 dialog.modal-dialog-centered {

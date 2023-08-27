@@ -25,3 +25,45 @@
 .modal-footer .btn {
 	min-width: 75px;
 }
+
+dialog.modal {
+	background: none;
+	border: none;
+	height: auto;
+	margin: var(--bs-modal-margin);
+	max-height: none;
+	max-width: none;
+	overflow: visible;
+	padding: 0;
+}
+
+@media screen and (width >= 576px) {
+	dialog.modal {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: var(--bs-modal-width);
+	}
+}
+
+dialog.modal::backdrop {
+	background-color: rgb(var(--bs-backdrop-bg), var(--bs-backdrop-opacity));
+}
+
+dialog.modal[open] {
+	display: flex;
+	flex-direction: column;
+}
+
+dialog.modal-dialog-centered {
+	display: none;
+}
+
+dialog.modal-dialog-centered .modal-content {
+	margin-bottom: auto;
+	margin-top: auto;
+}
+
+dialog.modal-fullscreen {
+	margin: 0;
+	max-width: none;
+}

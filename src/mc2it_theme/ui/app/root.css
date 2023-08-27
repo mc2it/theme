@@ -26,6 +26,11 @@
 	--bs-link-hover-color-rgb: 112, 178, 242;
 }
 
+::backdrop {
+	--bs-backdrop-bg: 0, 0, 0;
+	--bs-backdrop-opacity: 0.5;
+}
+
 ::selection {
 	background-color: var(--bs-primary);
 	color: var(--bs-white);

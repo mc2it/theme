@@ -1,10 +1,10 @@
 .offcanvas {
 	--bs-offcanvas-bg: var(--bs-primary);
 	--bs-offcanvas-width: 300px;
-}
 
-@media screen and (width >= 576px) {
-	.offcanvas { --bs-offcanvas-width: 350px; }
+	@media screen and (width >= 576px) {
+		--bs-offcanvas-width: 350px;
+	}
 }
 
 .offcanvas-header {
@@ -16,11 +16,11 @@
 .offcanvas-title {
 	align-items: center;
 	display: flex;
-}
 
-.offcanvas-title img {
-	position: relative;
-	top: 1px;
+	img {
+		position: relative;
+		top: 1px;
+	}
 }
 
 .offcanvas-body {

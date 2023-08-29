@@ -9,9 +9,9 @@ optgroup {
 
 .remove-spin {
 	appearance: textfield;
-}
 
-.remove-spin::-webkit-inner-spin-button,
-.remove-spin::-webkit-outer-spin-button {
-	appearance: none;
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		appearance: none;
+	}
 }

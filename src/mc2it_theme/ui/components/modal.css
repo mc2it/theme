@@ -1,11 +1,11 @@
 .modal {
 	--bs-modal-color: var(--bs-body-color);
 	--bs-modal-footer-bg: var(--bs-gray-100);
-}
 
-[data-bs-theme="dark"] .modal {
-	--bs-modal-color: var(--bs-gray-400);
-	--bs-modal-footer-bg: var(--bs-gray-800);
+	[data-bs-theme="dark"] & {
+		--bs-modal-color: var(--bs-gray-400);
+		--bs-modal-footer-bg: var(--bs-gray-800);
+	}
 }
 
 .modal-content {
@@ -20,10 +20,10 @@
 .modal-footer {
 	padding: calc(var(--bs-modal-padding) / 2) var(--bs-modal-padding);
 	user-select: none;
-}
 
-.modal-footer .btn {
-	min-width: 75px;
+	.btn {
+		min-width: 75px;
+	}
 }
 
 dialog.modal {
@@ -35,33 +35,31 @@ dialog.modal {
 	max-width: none;
 	overflow: visible;
 	padding: 0;
-}
 
-@media screen and (width >= 576px) {
-	dialog.modal {
+	@media screen and (width >= 576px) {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: var(--bs-modal-width);
 	}
-}
 
-dialog.modal::backdrop {
-	background-color: rgb(var(--bs-backdrop-bg), var(--bs-backdrop-opacity));
-}
+	&::backdrop {
+		background-color: rgb(var(--bs-backdrop-bg), var(--bs-backdrop-opacity));
+	}
 
-dialog.modal[open] {
-	display: flex;
-	flex-direction: column;
-	position: fixed;
+	&[open] {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+	}
 }
 
 dialog.modal-dialog-centered {
 	display: none;
-}
 
-dialog.modal-dialog-centered .modal-content {
-	margin-bottom: auto;
-	margin-top: auto;
+	.modal-content {
+		margin-bottom: auto;
+		margin-top: auto;
+	}
 }
 
 dialog.modal-fullscreen {

@@ -10,21 +10,21 @@ details.accordion-item:not([open]) > summary.accordion-button {
 	border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
 	box-shadow: none;
 	color: var(--bs-accordion-btn-color);
-}
 
-details.accordion-item:not([open]) > summary.accordion-button::after {
-	background-image: var(--bs-accordion-btn-icon);
-	transform: rotate(0);
-}
+	&::after {
+		background-image: var(--bs-accordion-btn-icon);
+		transform: rotate(0);
+	}
 
-details.accordion-item:not([open]) > summary.accordion-button:focus {
-	box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+	&:focus {
+		box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+	}
 }
 
 summary.accordion-button {
 	line-height: 1.2;
-}
 
-summary.accordion-button::after {
-	transition: none;
+	&::after {
+		transition: none;
+	}
 }

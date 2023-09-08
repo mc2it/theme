@@ -8,5 +8,5 @@
 	"releasenote": "Use CSS nesting for the stylesheet.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
-	"version": "5.4.0"
+	"version": "5.4.1"
 }

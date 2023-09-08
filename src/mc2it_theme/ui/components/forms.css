@@ -7,7 +7,20 @@ optgroup {
 	border-color: var(--bs-primary);
 }
 
-.remove-spin {
+.form-control,
+.form-select,
+.input-group-text {
+
+	&:not(:focus) {
+		border-bottom-color: var(--bs-gray-500);
+
+		[data-bs-theme="dark"] & {
+			border-bottom-color: var(--bs-gray-600);
+		}
+	}
+}
+
+.remove-spin-button {
 	appearance: textfield;
 
 	&::-webkit-inner-spin-button,

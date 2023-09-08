@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [5.4.1](https://github.com/mc2it/theme/compare/v5.4.0...v5.4.1)
+- Added a darker bottom border to form controls.
+
 ## Version [5.4.0](https://github.com/mc2it/theme/compare/v5.3.0...v5.4.0)
 - Use CSS nesting for the stylesheet.
 

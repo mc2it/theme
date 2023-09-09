@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [5.4.2](https://github.com/mc2it/theme/compare/v5.4.1...v5.4.2)
+- Fixed the styles of the accordion component in dark mode.
+
 ## Version [5.4.1](https://github.com/mc2it/theme/compare/v5.4.0...v5.4.1)
 - Added a darker bottom border to form controls.
 

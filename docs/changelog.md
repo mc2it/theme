@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [5.5.0](https://github.com/mc2it/theme/compare/v5.4.2...v5.5.0)
+- Updated the package dependencies.
+
 ## Version [5.4.2](https://github.com/mc2it/theme/compare/v5.4.1...v5.4.2)
 - Fixed the styles of the accordion component in dark mode.
 

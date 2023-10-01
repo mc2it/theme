@@ -28,7 +28,7 @@
 	align-items: center;
 	display: flex;
 
-	img {
+	& img {
 		position: relative;
 		top: -1px;
 	}

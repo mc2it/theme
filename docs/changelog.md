@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [5.7.0](https://github.com/mc2it/theme/compare/v5.6.0...v5.7.0)
+- Added some cursor utilities.
+
 ## Version [5.6.0](https://github.com/mc2it/theme/compare/v5.5.0...v5.6.0)
 - Added a loading component.
 - Updated the brand logo.

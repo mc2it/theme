@@ -1,0 +1,21 @@
+@keyframes loader-rotation {
+	to { transform: rotate(360deg); }
+}
+
+@keyframes loader-stroke {
+	from { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
+	50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+	to { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
+}
+
+svg.loader {
+	animation: 2s linear infinite loader-rotation;
+
+	& circle {
+		animation: 1.5s ease-in-out infinite loader-stroke;
+		fill: none;
+		stroke: var(--bs-white);
+		stroke-linecap: round;
+		stroke-width: 5px;
+	}
+}

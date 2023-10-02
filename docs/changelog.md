@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [5.6.0](https://github.com/mc2it/theme/compare/v5.5.0...v5.6.0)
+- Added a loading component.
+- Updated the brand logo.
+
 ## Version [5.5.0](https://github.com/mc2it/theme/compare/v5.4.2...v5.5.0)
 - Updated the package dependencies.
 

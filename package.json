@@ -4,7 +4,7 @@
 	"homepage": "https://mc2it.github.io/theme",
 	"license": "MIT",
 	"name": "@mc2it/theme",
-	"repository": "github:mc2it/theme",
+	"repository": "mc2it/theme",
 	"type": "commonjs",
 	"version": "5.7.0",
 	"author": {

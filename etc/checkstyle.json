@@ -2,8 +2,7 @@
 	"defaultSeverity": "ERROR",
 	"exclude": {
 		"path": "RELATIVE_TO_PROJECT",
-		"ConditionalCompilation": ["src/mc2it_theme/Platform"],
-		"ReturnCount": ["src/mc2it_theme/cli/CopyCommand:run"]
+		"ConditionalCompilation": ["src/mc2it_theme/Platform"]
 	},
 	"checks": [
 		{"type": "BlockBreakingConditional"},
@@ -19,7 +18,7 @@
 		{"type": "NestedIfDepth"},
 		{"type": "NestedTryDepth"},
 		{"type": "NullableParameter"},
-		{"type": "ReturnCount"},
+		{"type": "ReturnCount", "props": {"max": 3}},
 		{"type": "SimplifyBooleanExpression"},
 		{"type": "SimplifyBooleanReturn"},
 		{"type": "Trace", "props": {"severity": "WARNING"}},

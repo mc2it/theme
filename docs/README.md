@@ -1,6 +1,10 @@
 # MC2IT Theme
 The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://www.mc2it.com) applications.
 
+!> **Prohibited use outside MC2IT softwares**  
+This theme is intended for official MC2IT applications and websites only.  
+Its main purpose is to facilitate identification of these applications.
+
 ## Quick start
 Install the latest version of **MC2IT Theme** with a package manager:
 

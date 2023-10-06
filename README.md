@@ -4,6 +4,10 @@
 
 The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://www.mc2it.com) applications.
 
+> **Prohibited use outside MC2IT softwares**  
+This theme is intended for official MC2IT applications and websites only.  
+Its main purpose is to facilitate identification of these applications.
+
 ## Documentation
 - [User guide](https://mc2it.github.io/theme)
 - [API reference](https://mc2it.github.io/theme/api)
@@ -15,4 +19,5 @@ The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://www.mc2i
 - [Submit an issue](https://github.com/mc2it/theme/issues)
 
 ## License
-[MC2IT Theme](https://mc2it.github.io/theme) is distributed under the MIT License.
+[MC2IT Theme](https://mc2it.github.io/theme) is distributed under the MIT License,
+with the exception of the MC2IT logo.

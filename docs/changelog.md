@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [5.7.1](https://github.com/mc2it/theme/compare/v5.7.0...v5.7.1)
+- Added the alternative logo.
+- Updated the license.
+
 ## Version [5.7.0](https://github.com/mc2it/theme/compare/v5.6.0...v5.7.0)
 - Added some cursor utilities.
 

@@ -1,5 +1,5 @@
 # MIT License, with the exception of the MC2IT logo
-Copyright &copy; 2020-2023 MC2IT
+Copyright (c) MC2IT
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

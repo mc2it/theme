@@ -19,3 +19,7 @@
 	white-space: nowrap;
 	word-wrap: normal;
 }
+
+.icon-fill {
+	font-variation-settings: "FILL" 1;
+}

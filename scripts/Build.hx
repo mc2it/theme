@@ -11,7 +11,7 @@ function main() {
 	for (file in ["build", "run"]) Sys.command('haxe ${debug ? "--debug" : ""} $file.hxml');
 
 	final fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files";
-	File.copy(Path.join([fontsource, "material-symbols-rounded-latin-wght-normal.woff2"]), "www/fonts/material_symbols.woff2");
+	File.copy(Path.join([fontsource, "material-symbols-rounded-latin-fill-normal.woff2"]), "www/fonts/material_symbols.woff2");
 	Esbuild.build(Tools.buildOptions()).toPromise().handle(outcome -> switch outcome {
 		case Failure(error): throw error;
 		case Success(_): if (!debug) Tools.replaceInFile("www/css/mc2it.css", ~/\s+\/\* [^*]+ \*\//g, "");

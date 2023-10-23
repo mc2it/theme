@@ -22,6 +22,9 @@
 			"url": "https://belin.io"
 		}
 	],
+	"dependencies": {
+		"@fontsource-variable/material-symbols-rounded": "^5.0.16"
+	},
 	"devDependencies": {
 		"esbuild": "^0.19.5",
 		"glob-watcher": "^6.0.0"

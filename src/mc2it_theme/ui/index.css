@@ -1,7 +1,7 @@
 @import "haxelib://bootstrap_bundle/lib/css/bootstrap.css";
 
 /* Fonts. */
-@import "fonts/bootstrap_icons.css";
+@import "fonts/material_symbols.css";
 @import "fonts/segoe_ui.css";
 
 /* Application. */

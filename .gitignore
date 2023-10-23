@@ -8,4 +8,4 @@
 /run.n
 /var/
 /www/css/
-/www/fonts/bootstrap*
+/www/fonts/material*.woff2

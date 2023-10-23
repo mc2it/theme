@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [6.0.0](https://github.com/mc2it/theme/compare/v5.7.1...v6.0.0)
+- Replaced [Bootstrap Icons](https://icons.getbootstrap.com) by [Material Symbols](https://fonts.google.com/icons).
+
 ## Version [5.7.1](https://github.com/mc2it/theme/compare/v5.7.0...v5.7.1)
 - Added the alternative logo.
 - Updated the license.

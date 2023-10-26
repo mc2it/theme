@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Added the missing `.icon-fill` class.",
+	"releasenote": "Fixed the vertical alignment of icons, scaled the navigation bar icons.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
 	"version": "6.0.2"

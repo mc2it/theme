@@ -1,5 +1,12 @@
 # Changelog
 
+## Version [6.0.2](https://github.com/mc2it/theme/compare/v6.0.1...v6.0.2)
+- Fixed the vertical alignment of icons.
+- Scaled the navigation bar icons.
+
+## Version [6.0.1](https://github.com/mc2it/theme/compare/v6.0.0...v6.0.1)
+- Added the missing `.icon-fill` class.
+
 ## Version [6.0.0](https://github.com/mc2it/theme/compare/v5.7.1...v6.0.0)
 - Replaced [Bootstrap Icons](https://icons.getbootstrap.com) by [Material Symbols](https://fonts.google.com/icons).
 

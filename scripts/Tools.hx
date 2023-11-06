@@ -29,7 +29,7 @@ function buildOptions(): BuildOptions return {
 private final haxelibResolver = {
 	name: "haxelib",
 	setup: build -> {
-		final cache: Map<String, String> = [];
+		final cache = new Map<String, String>();
 		build.onResolve({filter: new RegExp("^haxelib://")}, args -> {
 			final uri = new URL(args.path);
 			if (!cache.exists(uri.hostname)) cache[uri.hostname] = Platform.resolveLibrary(uri.hostname);
@@ -50,7 +50,7 @@ function compress(sources: Array<String>, destination: String) {
 	final output = File.write(destination);
 	final writer = new Writer(output);
 
-	var entries: Array<Entry> = [];
+	var entries = [];
 	for (source in sources) entries = entries.concat(FileSystem.isDirectory(source) ? compressDirectory(source) : [compressFile(source)]);
 	writer.write(entries.list());
 	output.close();
@@ -76,7 +76,7 @@ function replaceInFile(file: String, pattern: EReg, replacement: String)
 
 /** Compresses the content of the specified `directory` in ZIP format. **/
 private function compressDirectory(directory: String) {
-	var entries: Array<Entry> = [];
+	var entries = [];
 	for (entry in FileSystem.readDirectory(directory)) {
 		final path = Path.join([directory, entry]);
 		entries = entries.concat(FileSystem.isDirectory(path) ? compressDirectory(path) : [compressFile(path)]);

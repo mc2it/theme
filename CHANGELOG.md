@@ -1,5 +1,10 @@
 # Changelog
 
+## Version [6.1.0](https://github.com/mc2it/theme/compare/v6.0.2...v6.1.0)
+- Removed the bottom margin from the pagination component.
+- Scaled the pagination icons.
+- Updated the package dependencies.
+
 ## Version [6.0.2](https://github.com/mc2it/theme/compare/v6.0.1...v6.0.2)
 - Fixed the vertical alignment of icons.
 - Scaled the navigation bar icons.

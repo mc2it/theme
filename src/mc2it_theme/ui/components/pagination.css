@@ -1,4 +1,8 @@
 .pagination {
 	--bs-pagination-active-bg: var(--bs-primary);
 	--bs-pagination-active-border-color: var(--bs-pagination-active-bg);
+
+	.icon {
+		transform: scale(1.2);
+	}
 }

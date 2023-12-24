@@ -29,6 +29,7 @@
 	display: flex;
 }
 
-.navbar-nav .nav-link .icon {
-	transform: scale(1.2);
+.navbar-nav .nav-link {
+	.icon { transform: scale(1.2); }
+	&.active .icon { font-variation-settings: "FILL" 1; }
 }

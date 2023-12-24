@@ -8,5 +8,5 @@
 	"releasenote": "Removed the bottom margin from the pagination component, scaled the pagination icons, updated the package dependencies.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
-	"version": "6.1.0"
+	"version": "6.2.0"
 }

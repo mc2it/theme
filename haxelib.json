@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Set the `font-variation` to `FILL` when a navigation bar icon is active.",
+	"releasenote": "Fixed the `overflow` of the `<article>` tag.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
 	"version": "6.2.1"

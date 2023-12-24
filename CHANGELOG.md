@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [6.2.0](https://github.com/mc2it/theme/compare/v6.1.0...v6.2.0)
+- Set the `font-variation` to `FILL` when a navigation bar icon is active.
+
 ## Version [6.1.0](https://github.com/mc2it/theme/compare/v6.0.2...v6.1.0)
 - Removed the bottom margin from the pagination component.
 - Scaled the pagination icons.

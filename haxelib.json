@@ -8,5 +8,5 @@
 	"releasenote": "Set the `font-variation` to `FILL` when a navigation bar icon is active.",
 	"tags": ["bootstrap", "css", "mc2it", "theme", "ui"],
 	"url": "https://mc2it.github.io/theme",
-	"version": "6.2.0"
+	"version": "6.2.1"
 }

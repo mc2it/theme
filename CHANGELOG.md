@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [6.2.2](https://github.com/mc2it/theme/compare/v6.2.1...v6.2.2)
+- Reverted the `overflow` of the `<article>` tag.
+
 ## Version [6.2.1](https://github.com/mc2it/theme/compare/v6.2.0...v6.2.1)
 - Fixed the `overflow` of the `<article>` tag.
 

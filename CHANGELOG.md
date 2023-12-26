@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [6.2.3](https://github.com/mc2it/theme/compare/v6.2.2...v6.2.3)
+- Fixed the `pointer-events` of the modal dialogs.
+
 ## Version [6.2.2](https://github.com/mc2it/theme/compare/v6.2.1...v6.2.2)
 - Reverted the `overflow` of the `<article>` tag.
 

@@ -53,6 +53,10 @@ dialog.modal {
 	}
 }
 
+dialog.modal-dialog {
+	pointer-events: auto;
+}
+
 dialog.modal-dialog-centered {
 	display: none;
 

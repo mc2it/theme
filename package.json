@@ -24,7 +24,7 @@
 	],
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.0.21",
-		"esbuild": "^0.19.12",
+		"esbuild": "^0.20.0",
 		"glob-watcher": "^6.0.0"
 	},
 	"engines": {

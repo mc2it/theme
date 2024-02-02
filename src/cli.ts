@@ -1,5 +1,6 @@
 import {argv} from "node:process";
 import {parseArgs} from "node:util";
+import copy from "./cli/copy.js";
 import libpath from "./cli/libpath.js";
 import pkg from "../package.json" with {type: "json"};
 
@@ -13,12 +14,12 @@ Usage:
   mc2it_theme [options] <command>
 
 Options:
-  -h, --help                        Display this help.
-  -v, --version                     Output the version number.
+  -h, --help                  Display this help.
+  -v, --version               Output the version number.
 
 Commands:
-  copy [options] <fileOrDirectory>  Copy the library assets to a given directory.
-  libpath [options]                 Print the path to the library assets.
+  copy [options] <directory>  Copy the library assets to a given directory.
+  libpath [options]           Print the path to the library assets.
 `;
 
 /**
@@ -44,9 +45,9 @@ export async function main(): Promise<void> {
 	const [command] = positionals;
 
 	switch (command) {
-		//case "copy": await copyAssets(args); break;
+		case "copy": await copy(args); break;
 		case "libpath": libpath(args); break;
-		default: throw Error(`Unknown command "${command}".`); // TODO ??? console.log(usage.trim());
+		default: console.log(usage.trim());
 	}
 }
 

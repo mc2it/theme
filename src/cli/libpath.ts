@@ -1,6 +1,6 @@
 import console from "node:console";
-import {fileURLToPath} from "node:url";
 import {parseArgs} from "node:util";
+import {assetPath} from "../theme.js";
 
 /**
  * The usage information.
@@ -17,26 +17,6 @@ Options:
 `;
 
 /**
- * Returns the path to the library assets.
- * @param options The command line options.
- * @returns The path to the library assets.
- */
-export function getAssetPath(options: Partial<AssetPathOptions> = {}): string {
-	return fileURLToPath(new URL(options.scss ? "../src/ui" : "../www", import.meta.url));
-}
-
-/**
- * Defines the options of the {@link getAssetPath} function.
- */
-export interface AssetPathOptions {
-
-	/**
-	 * Value indicating whether to return the specific path for SCSS files.
-	 */
-	scss: boolean;
-}
-
-/**
  * Prints the path to the library assets.
  * @param args The command line arguments.
  */
@@ -46,5 +26,5 @@ export default function(args: string[]): void {
 		scss: {short: "s", type: "boolean", default: false}
 	}});
 
-	console.log(values.help ? usage.trim() : getAssetPath(values));
+	console.log(values.help ? usage.trim() : assetPath(values));
 }

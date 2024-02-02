@@ -1,20 +1,62 @@
+import {cp} from "node:fs/promises";
+import {join} from "node:path";
+import {fileURLToPath} from "node:url";
+
 /**
- * Defines the options of the `copyAssets()` function.
+ * Returns the path to the library assets.
+ * @param options The command line options.
+ * @returns The path to the library assets.
  */
-export interface ThemeCopyOptions {
+export function assetPath(options: Partial<PathOptions> = {}): string {
+	return fileURLToPath(new URL(options.scss ? "../src/ui" : "../www", import.meta.url));
+}
+
+/**
+ * Copies the library assets to a given directory.
+ * @param output The path to the output directory.
+ * @param options The command line options.
+ * @returns Resolves when the assets have been copied.
+ */
+export async function copyAssets(output: string, options: Partial<CopyOptions> = {}): Promise<void> {
+	const sources = ["css", "fonts", "img"];
+
+	// @ts-expect-error TS7053
+	let directories = sources.filter(source => options[source]);
+	if (!directories.length) directories = sources;
+
+	const input = fileURLToPath(new URL("../www", import.meta.url));
+	for (const directory of directories)
+		await cp(join(input, directory), directories.length == 1 ? output : join(output, directory), {recursive: true});
+}
+
+/**
+ * Defines the options of the {@link copyAssets} function.
+ */
+export interface CopyOptions {
 
 	/**
-	 * Value indicating whether to only copy the CSS files.
+	 * Value indicating whether to copy only the CSS files.
 	 */
 	css: boolean;
 
 	/**
-	 * Value indicating whether to only copy the font files.
+	 * Value indicating whether to copy only the font files.
 	 */
 	fonts: boolean;
 
 	/**
-	 * Value indicating whether to only copy the image files.
+	 * Value indicating whether copy only the image files.
 	 */
 	img: boolean;
+}
+
+/**
+ * Defines the options of the {@link assetPath} function.
+ */
+export interface PathOptions {
+
+	/**
+	 * Value indicating whether to return the specific path for SCSS files.
+	 */
+	scss: boolean;
 }

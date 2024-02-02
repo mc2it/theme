@@ -1,7 +1,0 @@
---define js-es=6
---define js-global=global
---js lib/index.cjs
---library hxnodejs
-share/build.hxml
-
-mc2it_theme.Theme

@@ -1,32 +1,22 @@
-@import "haxelib://bootstrap_bundle/lib/css/bootstrap.css";
+// Fonts.
+@use "fonts/material_symbols";
+@use "fonts/segoe_ui";
 
-/* Fonts. */
-@import "fonts/material_symbols.css";
-@import "fonts/segoe_ui.css";
+// Core.
+@use "theme";
+@use "bootstrap";
 
-/* Application. */
-@import "app/root.css";
-@import "app/reboot.css";
-@import "app/layout.css";
+// Utilities.
+@use "utilities/background";
+@use "utilities/cursor";
+@use "utilities/filter";
+@use "utilities/text";
 
-/* Utilities. */
-@import "utilities/background.css";
-@import "utilities/cursor.css";
-@import "utilities/filter.css";
-@import "utilities/text.css";
+// Application.
+//@use "app/root";
+@use "app/reboot";
+//@use "app/layout";
 
-/* Components. */
-@import "components/accordion.css";
-@import "components/buttons.css";
-@import "components/dropdown.css";
-@import "components/forms.css";
-@import "components/loader.css";
-@import "components/modal.css";
-@import "components/nav.css";
-@import "components/navbar.css";
-@import "components/offcanvas.css";
-@import "components/pagination.css";
-@import "components/popover.css";
-@import "components/tables.css";
-@import "components/toasts.css";
-@import "components/tooltip.css";
+// Components.
+@use "components/loader";
+@use "components/tables";

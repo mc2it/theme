@@ -1,12 +1,9 @@
 /**/.DS_Store
 /.idea/
-/bin/*.map
-/lib/*.cjs
-/lib/*.map
+/etc/http-client.private.env.json
+/lib/
 /node_modules/
 /npm-debug.log
-/res/
-/run.n
 /var/
 /www/css/
 /www/fonts/material*.woff2

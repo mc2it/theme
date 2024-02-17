@@ -27,7 +27,7 @@
 	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.0.22",
-		"@types/node": "^20.11.17",
+		"@types/node": "^20.11.19",
 		"@typescript-eslint/eslint-plugin": "^7.0.1",
 		"@typescript-eslint/parser": "^7.0.1",
 		"clean-css-cli": "^5.6.3",
@@ -35,7 +35,7 @@
 		"esbuild": "^0.20.0",
 		"eslint": "^8.56.0",
 		"execa": "^8.0.1",
-		"sass": "^1.70.0",
+		"sass-embedded": "^1.71.0",
 		"typedoc": "^0.25.8",
 		"typescript": "^5.3.3"
 	},
@@ -60,7 +60,7 @@
 	],
 	"scripts": {
 		"build": "npm run build-cli && npm run build-css",
-		"build-cli": "tsc --project src/tsconfig.json && esbuild \"--banner:js=#!/usr/bin/env node\" --bundle --format=esm --legal-comments=none --log-level=warning --minify --outfile=bin/mc2it_theme.js --platform=node src/cli.ts",
+		"build-cli": "tsc --project src/tsconfig.json && esbuild \"--banner:js=#!/usr/bin/env node\" --bundle --format=esm --legal-comments=none --minify --outfile=bin/mc2it_theme.js --platform=node src/cli.ts",
 		"build-css": "sass --load-path=node_modules --no-source-map src/ui/index.scss www/css/main.css && cleancss -O2 --output=www/css/mc2it.min.css www/css/mc2it.css && node tool/build.js",
 		"clean": "node tool/clean.js",
 		"dist": "npm run clean && npm run build && git update-index --chmod=+x bin/mc2it_theme.js",

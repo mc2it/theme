@@ -23,13 +23,12 @@
 		}
 	],
 	"dependencies": {
-		"bootstrap": "^5.3.2"
+		"bootstrap": "^5.3.3"
 	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.0.23",
+		"@types/eslint__js": "^8.42.3",
 		"@types/node": "^20.11.19",
-		"@typescript-eslint/eslint-plugin": "^7.0.2",
-		"@typescript-eslint/parser": "^7.0.2",
 		"clean-css-cli": "^5.6.3",
 		"del": "^7.1.0",
 		"esbuild": "^0.20.1",
@@ -37,7 +36,8 @@
 		"execa": "^8.0.1",
 		"sass-embedded": "^1.71.0",
 		"typedoc": "^0.25.8",
-		"typescript": "^5.3.3"
+		"typescript": "^5.3.3",
+		"typescript-eslint": "^7.0.2"
 	},
 	"engines": {
 		"node": ">=20.0.0"
@@ -65,7 +65,7 @@
 		"clean": "node tool/clean.js",
 		"dist": "npm run clean && npm run build && git update-index --chmod=+x bin/mc2it_theme.js",
 		"doc": "typedoc --options etc/typedoc.js && node tool/doc.js",
-		"lint": "npm run build && tsc --project tsconfig.json && eslint --config=etc/eslint.cjs src tool",
+		"lint": "npm run build && tsc --project tsconfig.json && eslint --config=etc/eslint.config.js src tool",
 		"postpublish": "node tool/publish.js",
 		"prepack": "npm run dist",
 		"start": "npm run build && node bin/mc2it_theme.js"

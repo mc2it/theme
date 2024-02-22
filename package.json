@@ -34,7 +34,7 @@
 		"esbuild": "^0.20.1",
 		"eslint": "^8.56.0",
 		"execa": "^8.0.1",
-		"sass-embedded": "^1.71.0",
+		"sass-embedded": "^1.71.1",
 		"typedoc": "^0.25.8",
 		"typescript": "^5.3.3",
 		"typescript-eslint": "^7.0.2"

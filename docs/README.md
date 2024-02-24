@@ -6,23 +6,13 @@ This theme is intended for official MC2IT applications and websites only.
 Its main purpose is to facilitate identification of these applications.
 
 ## Quick start
-Install the latest version of **MC2IT Theme** with a package manager:
-
-<!-- tabs:start -->
-
-#### **Haxe**
-
-```shell
-lix +lib mc2it_theme
-```
-
-#### **JavaScript**
+Install the latest version of **MC2IT Theme** with [npm](https://www.npmjs.com) package manager:
 
 ```shell
 npm install @mc2it/theme
 ```
 
-<!-- tabs:end -->
+For detailed instructions, see the [installation guide](installation.md).
 
 ## Usage
 Sorry, there is nothing to see here for the moment.  

@@ -1,3 +1,10 @@
+@use "../theme" as *;
+
+::backdrop {
+  --backdrop-bg: #{to-rgb($modal-backdrop-bg)};
+  --backdrop-opacity: #{$modal-backdrop-opacity};
+}
+
 ::selection {
 	background-color: var(--primary);
 	color: var(--white);

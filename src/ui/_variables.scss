@@ -1,0 +1,33 @@
+// Options.
+$enable-shadows: true;
+$prefix: "";
+
+// Color system.
+$gray-100: #f8f9fa;
+$gray-900: #212529;
+$primary: #165898;
+$white: white;
+
+// Typography.
+$font-size-root: 14px;
+
+// Body.
+$body-bg-dark: $gray-900;
+$body-text-align: start;
+
+// Links.
+$link-color-dark: #79a8f0;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Modal.
+$modal-footer-bg: $gray-100;
+
+// Navigation bar.
+$navbar-height: 50px;
+$navbar-light-active-color: $white;
+$navbar-light-brand-color: $white;
+$navbar-light-brand-hover-color: $white;
+$navbar-light-color: rgb($white, 75%);
+$navbar-light-hover-color: rgb($white, 95%);
+$navbar-nav-link-padding-x: 0.75rem;

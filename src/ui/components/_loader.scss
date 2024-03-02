@@ -14,7 +14,7 @@ svg.loader {
 	& circle {
 		animation: 1.5s ease-in-out infinite loader-stroke;
 		fill: none;
-		stroke: var(--bs-white);
+		stroke: var(--white);
 		stroke-linecap: round;
 		stroke-width: 5px;
 	}

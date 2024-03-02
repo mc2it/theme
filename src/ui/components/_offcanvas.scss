@@ -1,15 +1,15 @@
 .offcanvas {
-	--bs-offcanvas-bg: var(--bs-primary);
-	--bs-offcanvas-width: 300px;
+	--offcanvas-bg: var(--primary);
+	--offcanvas-width: 300px;
 
 	@media screen and (width >= 576px) {
-		--bs-offcanvas-width: 350px;
+		--offcanvas-width: 350px;
 	}
 }
 
 .offcanvas-header {
-	--bs-offcanvas-padding-y: 0.8rem;
-	background-color: var(--bs-body-bg);
+	--offcanvas-padding-y: 0.8rem;
+	background-color: var(--body-bg);
 	height: var(--navbar-height);
 }
 
@@ -24,6 +24,6 @@
 }
 
 .offcanvas-body {
-	--bs-offcanvas-padding-y: 0.5rem;
+	--offcanvas-padding-y: 0.5rem;
 	align-items: center;
 }

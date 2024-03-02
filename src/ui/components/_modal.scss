@@ -1,24 +1,24 @@
 .modal {
-	--bs-modal-color: var(--bs-body-color);
-	--bs-modal-footer-bg: var(--bs-gray-100);
+	--modal-color: var(--body-color);
+	--modal-footer-bg: var(--gray-100);
 
 	[data-bs-theme="dark"] & {
-		--bs-modal-color: var(--bs-gray-400);
-		--bs-modal-footer-bg: var(--bs-gray-800);
+		--modal-color: var(--gray-400);
+		--modal-footer-bg: var(--gray-800);
 	}
 }
 
 .modal-content {
-	box-shadow: var(--bs-modal-box-shadow);
+	box-shadow: var(--modal-box-shadow);
 }
 
 .modal-header {
-	background-color: var(--bs-modal-footer-bg);
+	background-color: var(--modal-footer-bg);
 	user-select: none;
 }
 
 .modal-footer {
-	padding: calc(var(--bs-modal-padding) / 2) var(--bs-modal-padding);
+	padding: calc(var(--modal-padding) / 2) var(--modal-padding);
 	user-select: none;
 
 	.btn {
@@ -30,7 +30,7 @@ dialog.modal {
 	background: none;
 	border: none;
 	height: auto;
-	margin: var(--bs-modal-margin);
+	margin: var(--modal-margin);
 	max-height: none;
 	max-width: none;
 	overflow: visible;
@@ -39,11 +39,11 @@ dialog.modal {
 	@media screen and (width >= 576px) {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: var(--bs-modal-width);
+		max-width: var(--modal-width);
 	}
 
 	&::backdrop {
-		background-color: rgb(var(--bs-backdrop-bg), var(--bs-backdrop-opacity));
+		background-color: rgb(var(--backdrop-bg), var(--backdrop-opacity));
 	}
 
 	&[open] {

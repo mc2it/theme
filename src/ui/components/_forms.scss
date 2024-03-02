@@ -3,8 +3,8 @@ optgroup {
 }
 
 .form-check-input:checked {
-	background-color: var(--bs-primary);
-	border-color: var(--bs-primary);
+	background-color: var(--primary);
+	border-color: var(--primary);
 }
 
 .form-control,
@@ -12,10 +12,10 @@ optgroup {
 .input-group-text {
 
 	&:not(:focus) {
-		border-bottom-color: var(--bs-gray-500);
+		border-bottom-color: var(--gray-500);
 
 		[data-bs-theme="dark"] & {
-			border-bottom-color: var(--bs-gray-600);
+			border-bottom-color: var(--gray-600);
 		}
 	}
 }

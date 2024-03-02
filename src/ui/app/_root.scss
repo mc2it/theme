@@ -1,3 +1,17 @@
+@use "../theme" as *;
+
+:root {
+	--navbar-height: #{$navbar-height};
+}
+
+
+
+
+
+
+
+// TODO !!!
+
 :root {
 	--bs-body-text-align: start;
 	--bs-font-monospace: Consolas, monospace;
@@ -32,9 +46,4 @@
 ::backdrop {
 	--bs-backdrop-bg: 0, 0, 0;
 	--bs-backdrop-opacity: 0.5;
-}
-
-::selection {
-	background-color: var(--bs-primary);
-	color: var(--bs-white);
 }

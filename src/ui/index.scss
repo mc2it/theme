@@ -13,10 +13,11 @@
 @use "utilities/text";
 
 // Application.
-//@use "app/root";
+@use "app/root";
 @use "app/reboot";
-//@use "app/layout";
+@use "app/layout";
 
 // Components.
-@use "components/loader";
-@use "components/tables";
+@use "components/action_bar";
+//@use "components/loader";
+//@use "components/tables";

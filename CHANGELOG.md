@@ -2,6 +2,7 @@
 
 ## Version [7.0.0](https://github.com/mc2it/theme/compare/v6.2.3...v7.0.0)
 - Breaking change: ported the source code to [Sass](https://sass-lang.com) and [TypeScript](https://www.typescriptlang.org).
+- Breaking change: removed the `.table-sticky` class.
 
 ## Version [6.2.3](https://github.com/mc2it/theme/compare/v6.2.2...v6.2.3)
 - Fixed the `pointer-events` of the modal dialogs.

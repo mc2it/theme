@@ -9,6 +9,8 @@ $primary: #165898;
 $white: white;
 
 // Typography.
+$font-family-monospace: Consolas, monospace;
+$font-family-sans-serif: "Segoe UI", serif;
 $font-size-root: 14px;
 
 // Body.
@@ -31,3 +33,6 @@ $navbar-light-brand-hover-color: $white;
 $navbar-light-color: rgb($white, 75%);
 $navbar-light-hover-color: rgb($white, 95%);
 $navbar-nav-link-padding-x: 0.75rem;
+
+// Tooltips.
+$tooltip-max-width: 250px;

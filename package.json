@@ -63,7 +63,7 @@
 	"scripts": {
 		"build": "npm run build-cli && npm run build-css",
 		"build-cli": "tsc --project src/tsconfig.json && esbuild \"--banner:js=#!/usr/bin/env node\" --bundle --format=esm --legal-comments=none --minify --outfile=bin/mc2it_theme.js --platform=node src/cli.ts",
-		"build-css": "sass --load-path=node_modules --no-source-map src/ui/index.scss www/css/main.css && cleancss -O2 --output=www/css/mc2it.min.css www/css/mc2it.css && node tool/build.js",
+		"build-css": "sass --load-path=node_modules --no-source-map src/ui/index.scss www/css/mc2it.css && cleancss -O2 --output=www/css/mc2it.min.css www/css/mc2it.css && node tool/build.js",
 		"clean": "node tool/clean.js",
 		"dist": "npm run clean && npm run build && git update-index --chmod=+x bin/mc2it_theme.js",
 		"doc": "typedoc --options etc/typedoc.js && node tool/doc.js",

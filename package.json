@@ -28,12 +28,14 @@
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.0.23",
 		"@types/eslint__js": "^8.42.3",
+		"@types/gulp": "^4.0.17",
 		"@types/node": "^20.11.24",
 		"clean-css-cli": "^5.6.3",
 		"del": "^7.1.0",
 		"esbuild": "^0.20.1",
 		"eslint": "^8.57.0",
 		"execa": "^8.0.1",
+		"gulp": "^4.0.2",
 		"sass-embedded": "^1.71.1",
 		"source-map-js": "^1.0.2",
 		"typedoc": "^0.25.9",
@@ -44,9 +46,14 @@
 		"node": ">=20.0.0"
 	},
 	"exports": {
-		"types": "./lib/index.d.ts",
-		"sass": "./src/ui/index.scss",
-		"import": "./lib/index.js"
+		".": {
+			"types": "./lib/index.d.ts",
+			"sass": "./src/ui/index.scss",
+			"import": "./lib/index.js"
+		},
+		"./_variables.scss": {
+			"sass": "./src/ui/_theme.scss"
+		}
 	},
 	"files": [
 		"lib/",
@@ -61,15 +68,7 @@
 		"ui"
 	],
 	"scripts": {
-		"build": "npm run build-cli && npm run build-css",
-		"build-cli": "tsc --project src/tsconfig.json && esbuild \"--banner:js=#!/usr/bin/env node\" --bundle --format=esm --legal-comments=none --minify --outfile=bin/mc2it_theme.js --platform=node src/cli.ts",
-		"build-css": "sass --load-path=node_modules --no-source-map src/ui/index.scss www/css/mc2it.css && cleancss -O2 --output=www/css/mc2it.min.css www/css/mc2it.css && node tool/build.js",
-		"clean": "node tool/clean.js",
-		"dist": "npm run clean && npm run build && git update-index --chmod=+x bin/mc2it_theme.js",
-		"doc": "typedoc --options etc/typedoc.js && node tool/doc.js",
-		"lint": "npm run build && tsc --project tsconfig.json && eslint --config=etc/eslint.config.js etc src tool",
-		"postpublish": "node tool/publish.js",
-		"prepack": "npm run dist",
-		"start": "npm run build && node bin/mc2it_theme.js"
+		"prepack": "gulp",
+		"start": "gulp cli && node bin/mc2it_theme.js"
 	}
 }

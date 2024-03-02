@@ -198,7 +198,7 @@ export default tsEslint.config(
 		}
 	},
 	{
-		files: ["etc/*.js"],
+		files: ["gulpfile.js", "etc/*.js"],
 		rules: {
 			"prefer-arrow-callback": "off",
 			"@typescript-eslint/explicit-function-return-type": "off",

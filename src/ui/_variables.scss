@@ -35,7 +35,16 @@ $navbar-light-brand-color: $white;
 $navbar-light-brand-hover-color: $white;
 $navbar-light-color: rgb($white, 75%);
 $navbar-light-hover-color: rgb($white, 95%);
-$navbar-nav-link-padding-x: 0.75rem;
+$navbar-light-icon-color: rgba($white, 55%);
+$navbar-light-toggler-border-color: transparent;
+$navbar-toggler-focus-width: 0;
+$navbar-toggler-padding-x: $spacer * 0.25;
+$navbar-nav-link-padding-x: $spacer * 0.75;
+
+// Offcanvas.
+$offcanvas-bg-color: $primary;
+$offcanvas-horizontal-width: 300px;
+$offcanvas-padding-y: $spacer * 0.5;
 
 // Tooltips.
 $tooltip-max-width: 250px;

@@ -1,29 +1,18 @@
-.offcanvas {
-	--offcanvas-bg: var(--primary);
-	--offcanvas-width: 300px;
+@use "sass:map";
+@use "../theme" as *;
 
-	@media screen and (width >= 576px) {
+.offcanvas {
+	@media screen and (width >= map.get($grid-breakpoints, sm)) {
 		--offcanvas-width: 350px;
 	}
 }
 
 .offcanvas-header {
-	--offcanvas-padding-y: 0.8rem;
 	background-color: var(--body-bg);
 	height: var(--navbar-height);
 }
 
-.offcanvas-title {
-	align-items: center;
-	display: flex;
-
-	img {
-		position: relative;
-		top: 1px;
-	}
-}
-
-.offcanvas-body {
-	--offcanvas-padding-y: 0.5rem;
-	align-items: center;
+.offcanvas-title img {
+	position: relative;
+	top: 1px;
 }

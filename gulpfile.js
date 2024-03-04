@@ -43,7 +43,6 @@ export async function doc() {
 // Packages the project.
 export const dist = gulp.series(
 	function init(done) { env.NODE_ENV = "production"; done(); },
-	// TODO ? await $`cleancss -O2 --output=www/css/mc2it.min.css www/css/mc2it.css`
 	build,
 	cli
 );

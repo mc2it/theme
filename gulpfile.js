@@ -50,7 +50,8 @@ export const dist = gulp.series(
 // Performs the static analysis of source code.
 export async function lint() {
 	await $`tsc --project tsconfig.json`;
-	return $`eslint --config=etc/eslint.config.js gulpfile.js etc src`;
+	await $`eslint --config=etc/eslint.config.js gulpfile.js etc src`;
+	return $`stylelint --config=etc/stylelint.js src/ui/**/*.scss`;
 }
 
 // Publishes the package.

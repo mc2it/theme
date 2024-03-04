@@ -37,6 +37,8 @@
 		"gulp": "^4.0.2",
 		"sass-embedded": "^1.71.1",
 		"source-map-js": "^1.0.2",
+		"stylelint": "^16.2.1",
+		"stylelint-config-standard-scss": "^13.0.0",
 		"typedoc": "^0.25.10",
 		"typescript": "^5.3.3",
 		"typescript-eslint": "^7.1.0"

@@ -32,7 +32,8 @@ dialog.modal {
 	}
 
 	&::backdrop {
-		background-color: rgb(var(--backdrop-bg) / var(--backdrop-opacity));
+		// stylelint-disable-next-line color-function-notation
+		background-color: rgb(var(--backdrop-bg), var(--backdrop-opacity));
 	}
 
 	&[open] {

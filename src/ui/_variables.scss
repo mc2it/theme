@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Options.
 $enable-shadows: true;
 $prefix: "";
@@ -23,11 +25,12 @@ $body-bg-dark: $gray-900;
 $body-text-align: start;
 
 // Links.
-$link-color-dark: #79a8f0;
+$link-color-dark: color.scale($primary, $lightness: 50%);
 $link-decoration: none;
 $link-hover-decoration: underline;
 
 // Modal.
+$modal-content-color: var(--body-color);
 $modal-footer-bg: $gray-100;
 
 // Navigation bar.

@@ -8,10 +8,12 @@
 	to { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
 }
 
-svg.loader {
-	animation: 2s linear infinite loader-rotation;
+loading-indicator {
+	svg {
+		animation: 2s linear infinite loader-rotation;
+	}
 
-	& circle {
+	circle {
 		animation: 1.5s ease-in-out infinite loader-stroke;
 		fill: none;
 		stroke: var(--white);

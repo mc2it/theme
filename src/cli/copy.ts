@@ -1,6 +1,6 @@
 import console from "node:console";
 import {parseArgs} from "node:util";
-import {copyAssets} from "@mc2it/theme";
+import {copyAssets} from "../theme.js";
 
 /**
  * The usage information.

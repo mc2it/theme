@@ -2,12 +2,8 @@
 @use "../theme" as *;
 
 .modal {
-	--modal-color: var(--body-color);
 	--modal-footer-bg: var(--gray-100);
-
-	[data-bs-theme="dark"] & {
-		--modal-footer-bg: var(--gray-800);
-	}
+	[data-bs-theme="dark"] & { --modal-footer-bg: var(--gray-800); }
 }
 
 .modal-header {
@@ -15,7 +11,7 @@
 }
 
 .modal-footer {
-	padding: calc(var(--modal-padding) / 2) var(--modal-padding);
+	padding: calc(var(--modal-padding) * 0.5) var(--modal-padding);
 	.btn { min-width: 75px; }
 }
 

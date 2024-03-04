@@ -4,7 +4,7 @@ import {fileURLToPath} from "node:url";
 
 /**
  * Returns the path to the library assets.
- * @param options The command line options.
+ * @param options The path options.
  * @returns The path to the library assets.
  */
 export function assetPath(options: Partial<PathOptions> = {}): string {
@@ -14,7 +14,7 @@ export function assetPath(options: Partial<PathOptions> = {}): string {
 /**
  * Copies the library assets to a given directory.
  * @param output The path to the output directory.
- * @param options The command line options.
+ * @param options The copy options.
  * @returns Resolves when the assets have been copied.
  */
 export async function copyAssets(output: string, options: Partial<CopyOptions> = {}): Promise<void> {

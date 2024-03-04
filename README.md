@@ -13,10 +13,8 @@ Its main purpose is to facilitate identification of these applications.
 
 ## Development
 - [Git repository](https://github.com/mc2it/theme)
-- [Haxelib package](https://lib.haxe.org/p/mc2it_theme)
 - [npm package](https://www.npmjs.com/package/@mc2it/theme)
 - [Submit an issue](https://github.com/mc2it/theme/issues)
 
 ## License
-[MC2IT Theme](https://mc2it.github.io/theme) is distributed under the MIT License,
-with the exception of the MC2IT logo.
+[MC2IT Theme](https://mc2it.github.io/theme) is distributed under the MIT License, except the MC2IT logo.

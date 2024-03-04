@@ -15,10 +15,6 @@
 	.btn { min-width: 75px; }
 }
 
-.modal-footer .btn {
-	min-width: 75px;
-}
-
 dialog.modal {
 	background: none;
 	border: none;
@@ -36,7 +32,7 @@ dialog.modal {
 	}
 
 	&::backdrop {
-		background-color: rgb(var(--backdrop-bg), var(--backdrop-opacity));
+		background-color: rgb(var(--backdrop-bg) / var(--backdrop-opacity));
 	}
 
 	&[open] {

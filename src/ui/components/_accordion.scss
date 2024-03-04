@@ -7,6 +7,11 @@
 	}
 }
 
+summary.accordion-button {
+	line-height: 1.2;
+	&::after { transition: none; }
+}
+
 details.accordion-item:not([open]) > summary.accordion-button {
 	background-color: var(--accordion-btn-bg);
 	border-bottom-left-radius: var(--accordion-inner-border-radius);
@@ -21,13 +26,5 @@ details.accordion-item:not([open]) > summary.accordion-button {
 
 	&:focus {
 		box-shadow: var(--accordion-btn-focus-box-shadow);
-	}
-}
-
-summary.accordion-button {
-	line-height: 1.2;
-
-	&::after {
-		transition: none;
 	}
 }

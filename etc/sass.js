@@ -12,6 +12,7 @@ export default async function compileSass() {
 	const {css, sourceMap} = await compileAsync("src/ui/index.scss", {
 		importers: [new NodePackageImporter],
 		sourceMap: !production,
+		sourceMapIncludeSources: true,
 		style: production ? "compressed" : "expanded"
 	});
 

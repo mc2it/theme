@@ -64,8 +64,8 @@ export async function publish() {
 export async function watch() {
 	await assets();
 	const context = await esbuild.context(buildOptions());
-	const buildJs = async () => { await $`tsc --project src/tsconfig.json`; return context.rebuild(); };
-	gulp.watch("src/**/*.ts", {ignoreInitial: false}, buildJs);
+	const compileTypeScript = async () => { await $`tsc --project src/tsconfig.json`; return context.rebuild(); };
+	gulp.watch("src/**/*.ts", {ignoreInitial: false}, compileTypeScript);
 	gulp.watch("src/ui/**/*.scss", {ignoreInitial: false}, compileSass);
 }
 

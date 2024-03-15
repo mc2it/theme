@@ -18,7 +18,7 @@ export async function assets() {
 // Builds the project.
 export async function build() {
 	await assets();
-	await $`tsc --project src/tsconfig.json`;
+	await $`tsc --project src`;
 	return compileSass();
 }
 
@@ -49,7 +49,7 @@ export const dist = gulp.series(
 
 // Performs the static analysis of source code.
 export async function lint() {
-	await $`tsc --project tsconfig.json`;
+	await $`tsc --project .`;
 	await $`eslint --config=etc/eslint.config.js gulpfile.js etc src`;
 	return $`stylelint --config=etc/stylelint.js src/ui/**/*.scss`;
 }
@@ -64,7 +64,7 @@ export async function publish() {
 export async function watch() {
 	await assets();
 	const context = await esbuild.context(buildOptions());
-	const compileTypeScript = async () => { await $`tsc --project src/tsconfig.json`; return context.rebuild(); };
+	const compileTypeScript = async () => { await $`tsc --project src`; return context.rebuild(); };
 	gulp.watch("src/**/*.ts", {ignoreInitial: false}, compileTypeScript);
 	gulp.watch("src/ui/**/*.scss", {ignoreInitial: false}, compileSass);
 }

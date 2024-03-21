@@ -20,8 +20,7 @@ export function assetPath(options: Partial<PathOptions> = {}): string {
 export async function copyAssets(output: string, options: Partial<CopyOptions> = {}): Promise<void> {
 	const sources = ["css", "fonts", "img"];
 
-	// @ts-expect-error TS7053
-	let directories = sources.filter(source => options[source]);
+	let directories = sources.filter(source => (options as Record<string, boolean>)[source]);
 	if (!directories.length) directories = sources;
 
 	const input = fileURLToPath(new URL("../www", import.meta.url));

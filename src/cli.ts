@@ -34,10 +34,7 @@ export async function main(): Promise<void> {
 
 	// Print the usage.
 	if (values.version) return console.log(pkg.version);
-	if (values.help && !positionals.length) return console.log(usage.trim());
-
-	// Check the requirements.
-	if (!positionals.length) return console.log(usage.trim());
+	if (!positionals.length || (values.help && !positionals.length)) return console.log(usage.trim());
 
 	// Run the requested command.
 	const {index} = tokens.find(({kind}) => kind == "positional")!;

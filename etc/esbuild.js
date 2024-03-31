@@ -17,6 +17,8 @@ export default function buildOptions() {
 		minify: production,
 		outfile: "bin/mc2it_theme.js",
 		platform: "node",
+		sourceRoot: new URL("../bin/", import.meta.url).href,
+		sourcemap: !production,
 		treeShaking: production
 	};
 }

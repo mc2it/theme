@@ -36,8 +36,7 @@ export async function cli() {
 // Builds the documentation.
 export async function doc() {
 	for (const file of ["CHANGELOG.md", "LICENSE.md"]) await cp(file, `docs/${file.toLowerCase()}`);
-	await $`typedoc --options etc/typedoc.js`;
-	return cp("docs/favicon.ico", "docs/api/favicon.ico");
+	return $`typedoc --options etc/typedoc.js`;
 }
 
 // Packages the project.
@@ -58,6 +57,12 @@ export async function lint() {
 export async function publish() {
 	for (const registry of ["https://registry.npmjs.org", "https://npm.pkg.github.com"]) await $`npm publish --registry=${registry}`;
 	for (const action of [["tag"], ["push", "origin"]]) await $`git ${action} v${pkg.version}`;
+}
+
+// Starts the development server.
+export async function serve() {
+	await doc();
+	return $({stdio: "inherit"})`mkdocs serve --config-file=etc/mkdocs.yaml`;
 }
 
 // Watches for file changes.

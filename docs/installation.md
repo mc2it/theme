@@ -8,7 +8,7 @@ You can verify if you're already good to go with the following command:
 
 ```shell
 node --version
-# v21.6.1
+# v21.7.2
 ```
 
 ## Installing with npm package manager
@@ -24,5 +24,5 @@ npm install @mc2it/theme
 Now in your [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) code, you can use:
 
 ```js
-import theme from "@mc2it/theme";
+import * as theme from "@mc2it/theme";
 ```

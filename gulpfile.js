@@ -40,11 +40,11 @@ export async function doc() {
 }
 
 // Packages the project.
-export const dist = gulp.series(
-	function init(done) { env.NODE_ENV = "production"; done(); },
-	build,
-	cli
-);
+export async function dist() {
+	env.NODE_ENV = "production";
+	await build();
+	return cli();
+}
 
 // Performs the static analysis of source code.
 export async function lint() {

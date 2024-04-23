@@ -1,4 +1,4 @@
-import {argv} from "node:process";
+import {argv, exit} from "node:process";
 import {parseArgs} from "node:util";
 import copy from "./cli/copy.js";
 import libpath from "./cli/libpath.js";
@@ -51,5 +51,5 @@ export async function main(): Promise<void> {
 // Start the application.
 main().catch((error: unknown) => {
 	console.error(error instanceof Error ? error.message : error);
-	process.exitCode = 1;
+	exit(1);
 });

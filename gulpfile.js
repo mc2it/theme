@@ -1,36 +1,26 @@
-import {cp} from "node:fs/promises";
+import {cp, mkdir, writeFile} from "node:fs/promises";
 import {join} from "node:path";
-import {env} from "node:process";
 import {deleteAsync} from "del";
-import esbuild from "esbuild";
 import {$} from "execa";
 import gulp from "gulp";
+import {compileAsync, NodePackageImporter} from "sass-embedded";
 import pkg from "./package.json" with {type: "json"};
-import buildOptions from "./etc/esbuild.js";
-import compileSass from "./etc/sass.js";
-
-// Deploys the assets.
-export async function assets() {
-	const fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files";
-	return cp(join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2");
-}
 
 // Builds the project.
 export async function build() {
-	await assets();
-	await $`tsc --project src`;
-	return compileSass();
+	const fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files";
+	await cp(join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2");
+
+	const {css} = await compileAsync("src/ui/index.scss", {importers: [new NodePackageImporter], style: "compressed"});
+	await mkdir("www/css", {recursive: true});
+	await writeFile("www/css/mc2it.css", css);
+
+	return $`tsc --project src/tsconfig.json`;
 }
 
 // Deletes all generated files.
 export function clean() {
 	return deleteAsync(["lib", "var/**/*", "www/css", "www/fonts/material_symbols.woff2"]);
-}
-
-// Builds the command line interface.
-export async function cli() {
-	await esbuild.build(buildOptions());
-	return $`git update-index --chmod=+x bin/mc2it_theme.js`;
 }
 
 // Builds the documentation.
@@ -39,17 +29,10 @@ export async function doc() {
 	return $`typedoc --options etc/typedoc.js`;
 }
 
-// Packages the project.
-export async function dist() {
-	env.NODE_ENV = "production";
-	await build();
-	return cli();
-}
-
 // Performs the static analysis of source code.
 export async function lint() {
-	await $`tsc --project .`;
-	await $`eslint --config=etc/eslint.config.js gulpfile.js etc src`;
+	await $`tsc --project tsconfig.json`;
+	await $`eslint --config=etc/eslint.config.js gulpfile.js bin etc src`;
 	return $`stylelint --config=etc/stylelint.js src/ui/**/*.scss`;
 }
 
@@ -65,17 +48,8 @@ export async function serve() {
 	return $({stdio: "inherit"})`mkdocs serve --config-file=etc/mkdocs.yaml`;
 }
 
-// Watches for file changes.
-export async function watch() {
-	await assets();
-	const context = await esbuild.context(buildOptions());
-	const compileTypeScript = async () => { await $`tsc --project src`; return context.rebuild(); };
-	gulp.watch("src/**/*.ts", {ignoreInitial: false}, compileTypeScript);
-	gulp.watch("src/ui/**/*.scss", {ignoreInitial: false}, compileSass);
-}
-
 // The default task.
 export default gulp.series(
 	clean,
-	dist
+	build
 );

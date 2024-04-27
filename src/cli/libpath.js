@@ -18,13 +18,14 @@ Options:
 
 /**
  * Prints the path to the library assets.
- * @param args The command line arguments.
+ * @param {string[]} args The command line arguments.
+ * @returns {Promise<void>} Resolves when the library path has been printed.
  */
-export default function(args: string[]): void {
+export default function(args) {
 	const {values} = parseArgs({args, options: {
 		help: {short: "h", type: "boolean", default: false},
 		scss: {short: "s", type: "boolean", default: false}
 	}});
 
-	console.log(values.help ? usage.trim() : assetPath(values));
+	return Promise.resolve(console.log(values.help ? usage.trim() : assetPath(values)));
 }

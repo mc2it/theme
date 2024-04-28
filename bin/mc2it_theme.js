@@ -49,7 +49,7 @@ try {
 	const {index} = /** @type {{index: number}} */ (tokens.find(({kind}) => kind == "positional"));
 	await run(argv.slice(index + 3));
 }
-catch(error) {
+catch (error) {
 	console.error(error instanceof Error ? error.message : error);
 	exit(1);
 }

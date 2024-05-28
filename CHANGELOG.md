@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [7.0.1](https://github.com/mc2it/theme/compare/v7.0.0...v7.0.1)
+- Fixed the styles of the toast component.
+
 ## Version [7.0.0](https://github.com/mc2it/theme/compare/v6.2.3...v7.0.0)
 - Breaking change: ported the source code to [Sass](https://sass-lang.com) and [TypeScript](https://www.typescriptlang.org).
 - Breaking change: removed the `.table-sticky` class.

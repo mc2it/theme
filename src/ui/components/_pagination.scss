@@ -1,9 +1,4 @@
-.pagination {
-	--pagination-active-bg: var(--primary);
-	--pagination-active-border-color: var(--pagination-active-bg);
-	margin-bottom: 0;
-
-	.icon {
-		transform: scale(1.2);
-	}
+.page-item {
+	.icon { transform: scale(1.2); }
+	&.active .icon { font-variation-settings: "FILL" 1; }
 }

@@ -1,39 +1,10 @@
-@use "sass:color";
-@use "sass:math";
+@use "sass:map";
 @use "../theme" as *;
 
-@each $color, $value in $theme-colors {
-	$toast-background: shift-color($value, $alert-bg-scale);
-	$toast-color: shift-color($value, $alert-color-scale);
-
-	@if contrast-ratio($toast-background, $toast-color) < $min-contrast-ratio {
-		$toast-color: color.mix($value, color-contrast($toast-background), math.abs($alert-color-scale));
-	}
-
+@each $color in danger, info, success, warning {
 	.toast-header-#{$color} {
-		background-color: $toast-background;
-		color: $toast-color;
+		--toast-header-bg: var(--#{$color}-bg-subtle);
+		--toast-header-border-color: var(--#{$color}-border-subtle);
+		--toast-header-color: var(--#{$color}-text-emphasis);
 	}
-}
-
-
-// TODO !!!!
-.toast-header-danger {
-	background-color: var(--danger-bg-subtle);
-	color: var(--danger-text-emphasis);
-}
-
-.toast-header-info {
-	background-color: var(--info-bg-subtle);
-	color: var(--info-text-emphasis);
-}
-
-.toast-header-success {
-	background-color: var(--success-bg-subtle);
-	color: var(--success-text-emphasis);
-}
-
-.toast-header-warning {
-	background-color: var(--warning-bg-subtle);
-	color: var(--warning-text-emphasis);
 }

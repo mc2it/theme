@@ -23,6 +23,9 @@
 @use "components/forms";
 @use "components/loading_indicator";
 @use "components/modal";
-@use "components/offcanvas";
+@use "components/nav";
 @use "components/navbar";
+@use "components/offcanvas";
+@use "components/pagination";
 @use "components/tables";
+@use "components/toasts";

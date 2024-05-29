@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [7.0.2](https://github.com/mc2it/theme/compare/v7.0.1...v7.0.2)
+- Fixed the vertical alignment of the `.navbar` image.
+
 ## Version [7.0.1](https://github.com/mc2it/theme/compare/v7.0.0...v7.0.1)
 - Fixed the styles of the toast component.
 

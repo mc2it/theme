@@ -1,6 +1,10 @@
 @use "sass:map";
 @use "../theme" as *;
 
+.toast-header .icon {
+	transform: scale(1.3);
+}
+
 @each $color in danger, info, success, warning {
 	.toast-header-#{$color} {
 		--toast-header-bg: var(--#{$color}-bg-subtle);

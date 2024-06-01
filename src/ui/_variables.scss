@@ -14,8 +14,8 @@ $white: white;
 $spacer: 1rem;
 
 // Typography.
-$font-family-monospace: "Consolas", monospace;
-$font-family-sans-serif: "Segoe UI", serif;
+$font-family-monospace: "Consolas", ui-monospace, monospace;
+$font-family-sans-serif: "Segoe UI", ui-sans-serif, sans-serif;
 $font-size-root: 14px;
 $headings-color: var(--emphasis-color);
 $headings-color-dark: $headings-color;

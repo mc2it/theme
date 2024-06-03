@@ -22,9 +22,6 @@
 			"url": "https://belin.io"
 		}
 	],
-	"dependencies": {
-		"bootstrap": "^5.3.3"
-	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.24.6",
 		"@babel/plugin-syntax-import-attributes": "^7.24.6",
@@ -67,6 +64,9 @@
 		"theme",
 		"ui"
 	],
+	"peerDependencies": {
+		"bootstrap": ">=5.3.0"
+	},
 	"scripts": {
 		"prepack": "gulp",
 		"start": "node bin/mc2it_theme.js"

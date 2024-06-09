@@ -25,7 +25,7 @@
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.24.7",
 		"@babel/plugin-syntax-import-attributes": "^7.24.7",
-		"@fontsource-variable/material-symbols-rounded": "^5.0.32",
+		"@fontsource-variable/material-symbols-rounded": "^5.0.33",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^20.14.2",
 		"del": "^7.1.0",

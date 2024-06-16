@@ -1,12 +1,12 @@
 {
 	"bugs": "https://github.com/mc2it/theme/issues",
 	"description": "Bootstrap theme used by MC2IT applications.",
-	"homepage": "https://mc2it.github.io/theme",
+	"homepage": "https://github.com/mc2it/theme",
 	"license": "MIT",
 	"name": "@mc2it/theme",
 	"repository": "mc2it/theme",
 	"type": "module",
-	"version": "7.0.2",
+	"version": "7.0.3",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",
@@ -39,7 +39,6 @@
 		"sass-embedded": "^1.77.5",
 		"stylelint": "^16.6.1",
 		"stylelint-config-standard-scss": "^13.1.0",
-		"typedoc": "^0.25.13",
 		"typescript": "^5.4.5"
 	},
 	"engines": {

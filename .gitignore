@@ -1,10 +1,10 @@
 /**/.DS_Store
 /.idea/
-/docs/api/
 /etc/http-client.private.env.json
 /lib/
 /node_modules/
 /npm-debug.log
 /var/
+/wiki/
 /www/css/
 /www/fonts/material*.woff2

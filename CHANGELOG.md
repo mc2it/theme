@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [7.0.3](https://github.com/mc2it/theme/compare/v7.0.2...v7.0.3)
+- Migrated the documentation to the [GitHub wiki](https://github.com/mc2it/theme/wiki).
+
 ## Version [7.0.2](https://github.com/mc2it/theme/compare/v7.0.1...v7.0.2)
 - Fixed the vertical alignment of the `.navbar` image.
 

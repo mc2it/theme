@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [7.0.5](https://github.com/mc2it/theme/compare/v7.0.4...v7.0.5)
+- Adjusted the scale of the navigation links.
+
 ## Version [7.0.4](https://github.com/mc2it/theme/compare/v7.0.3...v7.0.4)
 - Adjusted the `font-weight` of the dropdown headers.
 

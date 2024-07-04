@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [7.0.4](https://github.com/mc2it/theme/compare/v7.0.3...v7.0.4)
+- Adjusted the `font-weight` of the dropdown headers.
+
 ## Version [7.0.3](https://github.com/mc2it/theme/compare/v7.0.2...v7.0.3)
 - Migrated the documentation to the [GitHub wiki](https://github.com/mc2it/theme/wiki).
 

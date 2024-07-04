@@ -1,3 +1,8 @@
+.nav-link {
+	.icon { transform: scale(1.2); }
+	&.active .icon { font-variation-settings: "FILL" 1; }
+}
+
 .nav-tabs .nav-link:not(.active):hover {
 	background-color: var(--light-bg-subtle);
 

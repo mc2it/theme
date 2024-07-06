@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 import console from "node:console";
 import {access} from "node:fs/promises";
-import {argv, exit} from "node:process";
+import process from "node:process";
 import {parseArgs} from "node:util";
 import pkg from "../package.json" with {type: "json"};
+
+// Give the process a friendly name.
+process.title = "MC2IT Theme";
 
 // The usage information.
 const usage = `
@@ -31,25 +34,28 @@ try {
 	// Print the usage.
 	if (values.version) {
 		console.log(pkg.version);
-		exit();
+		process.exit();
 	}
 
 	if (!positionals.length || (values.help && !positionals.length)) {
 		console.log(usage.trim());
-		exit();
+		process.exit();
 	}
 
 	// Run the requested command.
 	const [command] = positionals;
 	const path = `../src/cli/${command}.js`;
 	try { await access(new URL(path, import.meta.url)); }
-	catch { throw Error(`Unknown command "${command}".`); }
+	catch {
+		console.error(`Unknown command "${command}".`);
+		process.exit(2);
+	}
 
 	const {default: run} = await import(path);
 	const {index} = /** @type {{index: number}} */ (tokens.find(({kind}) => kind == "positional"));
-	await run(argv.slice(index + 3));
+	await run(process.argv.slice(index + 3));
 }
 catch (error) {
 	console.error(error instanceof Error ? error.message : error);
-	exit(1);
+	process.exit(1);
 }

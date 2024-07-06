@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [7.0.7](https://github.com/mc2it/theme/compare/v7.0.6...v7.0.7)
+- Adjusted the scale of icons in dropdown items.
+
 ## Version [7.0.6](https://github.com/mc2it/theme/compare/v7.0.5...v7.0.6)
 - Adjusted the scale of icons in dropdown items.
 

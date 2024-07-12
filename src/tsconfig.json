@@ -1,6 +1,5 @@
 {
 	"extends": "../tsconfig.json",
-	"exclude": ["cli/*.ts"],
 	"include": ["**/*.ts"],
 	"compilerOptions": {
 		"declaration": true,

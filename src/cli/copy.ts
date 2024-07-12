@@ -2,9 +2,7 @@ import console from "node:console";
 import {parseArgs} from "node:util";
 import {copyAssets} from "../index.js";
 
-/**
- * The usage information.
- */
+// The usage information.
 const usage = `
 Copy the library assets to a given directory.
 

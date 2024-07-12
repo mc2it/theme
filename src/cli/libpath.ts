@@ -2,9 +2,7 @@ import console from "node:console";
 import {parseArgs} from "node:util";
 import {assetPath} from "../index.js";
 
-/**
- * The usage information.
- */
+// The usage information.
 const usage = `
 Print the path to the library assets.
 

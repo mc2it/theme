@@ -1,10 +1,13 @@
 import {cp, mkdir, writeFile} from "node:fs/promises";
 import {join} from "node:path";
 import {deleteAsync} from "del";
-import {$} from "execa";
+import {execa} from "execa";
 import gulp from "gulp";
 import {compileAsync, NodePackageImporter} from "sass-embedded";
 import pkg from "./package.json" with {type: "json"};
+
+// Runs a command.
+const $ = execa({preferLocal: true, stdio: "inherit"});
 
 // Builds the project.
 export async function build() {
@@ -25,8 +28,9 @@ export function clean() {
 
 // Performs the static analysis of source code.
 export async function lint() {
+	await build();
 	await $`tsc --project tsconfig.json`;
-	await $`eslint --config=etc/eslint.config.js gulpfile.js bin src`;
+	await $`eslint --config=etc/eslint.js gulpfile.js bin src`;
 	return $`stylelint --config=etc/stylelint.js src/ui/**/*.scss`;
 }
 

@@ -44,7 +44,7 @@ try {
 
 	// Run the requested command.
 	const [command] = positionals;
-	const path = `../src/cli/${command}.js`;
+	const path = `../lib/cli/${command}.js`;
 	try { await access(new URL(path, import.meta.url)); }
 	catch {
 		console.error(`Unknown command "${command}".`);

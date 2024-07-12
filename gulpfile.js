@@ -14,7 +14,8 @@ export async function build() {
 	const fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files";
 	await cp(join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2");
 
-	const {css} = await compileAsync("src/ui/index.scss", {importers: [new NodePackageImporter], style: "compressed"});
+	const importers = [new NodePackageImporter];
+	const {css} = await compileAsync("src/ui/index.scss", {importers, silenceDeprecations: ["mixed-decls"], style: "compressed"});
 	await mkdir("www/css", {recursive: true});
 	await writeFile("www/css/mc2it.css", css);
 

@@ -18,10 +18,10 @@ Options:
 
 /**
  * Prints the path to the library assets.
- * @param {string[]} args The command line arguments.
- * @returns {Promise<void>} Resolves when the library path has been printed.
+ * @param args The command line arguments.
+ * @returns Resolves when the library path has been printed.
  */
-export default function(args) {
+export default function(args: string[]): Promise<void> {
 	const {values} = parseArgs({args, options: {
 		help: {short: "h", type: "boolean", default: false},
 		scss: {short: "s", type: "boolean", default: false}

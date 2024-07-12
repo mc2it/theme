@@ -23,10 +23,10 @@ Options:
 
 /**
  * Copies the library assets to a given directory.
- * @param {string[]} args The command line arguments.
- * @returns {Promise<void>} Resolves when the assets have been copied.
+ * @param args The command line arguments.
+ * @returns Resolves when the assets have been copied.
  */
-export default function(args) {
+export default function(args: string[]): Promise<void> {
 	const {positionals, values} = parseArgs({allowPositionals: true, args, options: {
 		css: {short: "c", type: "boolean", default: false},
 		fonts: {short: "f", type: "boolean", default: false},

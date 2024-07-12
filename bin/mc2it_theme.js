@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import console from "node:console";
 import {access} from "node:fs/promises";
+import {join} from "node:path";
 import process from "node:process";
 import {parseArgs} from "node:util";
 import pkg from "../package.json" with {type: "json"};
@@ -45,7 +46,7 @@ try {
 	// Run the requested command.
 	const [command] = positionals;
 	const path = `../lib/cli/${command}.js`;
-	try { await access(new URL(path, import.meta.url)); }
+	try { await access(join(import.meta.dirname, path)); }
 	catch {
 		console.error(`Unknown command "${command}".`);
 		process.exit(2);

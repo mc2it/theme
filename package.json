@@ -26,20 +26,19 @@
 		"bootstrap": "^5.3.3"
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.24.7",
-		"@babel/plugin-syntax-import-attributes": "^7.24.7",
 		"@fontsource-variable/material-symbols-rounded": "^5.0.34",
+		"@types/eslint__js": "^8.42.3",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^20.14.10",
 		"del": "^7.1.0",
-		"eslint": "^9.6.0",
 		"execa": "^9.3.0",
 		"globals": "^15.8.0",
 		"gulp": "^5.0.0",
-		"sass-embedded": "^1.77.5",
-		"stylelint": "^16.6.1",
+		"sass-embedded": "^1.77.8",
+		"stylelint": "^16.7.0",
 		"stylelint-config-standard-scss": "^13.1.0",
-		"typescript": "^5.5.3"
+		"typescript": "^5.5.3",
+		"typescript-eslint": "^8.0.0-alpha.41"
 	},
 	"engines": {
 		"node": ">=22.0.0"
@@ -48,7 +47,7 @@
 		".": {
 			"types": "./lib/index.d.ts",
 			"sass": "./src/ui/index.scss",
-			"default": "./src/index.js"
+			"default": "./lib/index.js"
 		},
 		"./_variables.scss": {
 			"sass": "./src/ui/_theme.scss"
@@ -68,6 +67,6 @@
 	],
 	"scripts": {
 		"prepack": "gulp",
-		"start": "node bin/mc2it_theme.js"
+		"start": "gulp build && node bin/mc2it_theme.js"
 	}
 }

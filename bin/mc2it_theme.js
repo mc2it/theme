@@ -53,9 +53,9 @@ try {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-	const module = /** @type {{default: (args: string[]) => Promise<void>}} */ (await import(path));
+	const {default: run} = /** @type {{default: (args: string[]) => Promise<void>}} */ (await import(path));
 	const {index} = /** @type {{index: number}} */ (tokens.find(({kind}) => kind == "positional"));
-	await module.default(process.argv.slice(index + 3));
+	await run(process.argv.slice(index + 3));
 }
 catch (error) {
 	console.error(error instanceof Error ? error.message : error);

@@ -52,8 +52,8 @@ try {
 		process.exit(2);
 	}
 
-	/** @type {{default: (args: string[]) => Promise<void>}} */
-	const module = await import(path); // eslint-disable-line @typescript-eslint/no-unsafe-assignment
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+	const module = /** @type {{default: (args: string[]) => Promise<void>}} */ (await import(path));
 	const {index} = /** @type {{index: number}} */ (tokens.find(({kind}) => kind == "positional"));
 	await module.default(process.argv.slice(index + 3));
 }

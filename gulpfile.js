@@ -14,7 +14,7 @@ const $ = execa({preferLocal: true, stdio: "inherit"});
 export async function build() {
 	const fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files";
 	await cp(join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2");
-	return Promise.all([compileSass(), $`tsc --project src/tsconfig.json`]);
+	return Promise.all([compileSass(), $`tsc --build src/tsconfig.json`]);
 }
 
 // Deletes all generated files.
@@ -31,7 +31,7 @@ export function dist() {
 // Performs the static analysis of source code.
 export async function lint() {
 	await build();
-	await $`tsc --project tsconfig.json`;
+	await $`tsc --build tsconfig.json`;
 	await $`eslint --config=etc/eslint.js gulpfile.js bin src`;
 	return $`stylelint --config=etc/stylelint.js src/ui/**/*.scss`;
 }
@@ -46,7 +46,7 @@ export async function publish() {
 export async function watch() {
 	await build();
 
-	const buildApp = () => $`tsc --sourceMap --project src/tsconfig.json`;
+	const buildApp = () => $`tsc --sourceMap --build src/tsconfig.json`;
 	gulp.watch("src/**/*.ts", buildApp);
 
 	const buildStyleSheet = () => compileSass();

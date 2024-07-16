@@ -46,7 +46,7 @@ export async function publish() {
 export async function watch() {
 	await build();
 
-	const buildApp = () => $`tsc --sourceMap --build src/tsconfig.json`;
+	const buildApp = () => $`tsc --build src/tsconfig.json --sourceMap`;
 	gulp.watch("src/**/*.ts", buildApp);
 
 	const buildStyleSheet = () => compileSass();

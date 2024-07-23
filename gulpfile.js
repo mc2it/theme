@@ -1,11 +1,11 @@
-import {cp} from "node:fs/promises";
-import {join} from "node:path";
-import {env} from "node:process";
 import {deleteAsync} from "del";
 import {execa} from "execa";
 import gulp from "gulp";
-import pkg from "./package.json" with {type: "json"};
+import {cp} from "node:fs/promises";
+import {join} from "node:path";
+import {env} from "node:process";
 import compileSass from "./etc/sass.js";
+import pkg from "./package.json" with {type: "json"};
 
 // Runs a command.
 const $ = execa({preferLocal: true, stdio: "inherit"});

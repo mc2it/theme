@@ -19,7 +19,7 @@ Options:
  * @param args The command line arguments.
  * @returns Resolves when the library path has been printed.
  */
-export default function(args: string[]): Promise<void> {
+export default function(args: Array<string>): Promise<void> {
 	const {values} = parseArgs({args, options: {
 		help: {short: "h", type: "boolean", default: false},
 		scss: {short: "s", type: "boolean", default: false}

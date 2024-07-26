@@ -24,7 +24,7 @@ Options:
  * @param args The command line arguments.
  * @returns Resolves when the assets have been copied.
  */
-export default function(args: string[]): Promise<void> {
+export default function(args: Array<string>): Promise<void> {
 	const {positionals, values} = parseArgs({allowPositionals: true, args, options: {
 		css: {short: "c", type: "boolean", default: false},
 		fonts: {short: "f", type: "boolean", default: false},

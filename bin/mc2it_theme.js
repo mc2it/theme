@@ -53,7 +53,7 @@ try {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-	const {default: run} = /** @type {{default: (args: string[]) => Promise<void>}} */ (await import(path));
+	const {default: run} = /** @type {{default: (args: Array<string>) => Promise<void>}} */ (await import(path));
 	const {index} = /** @type {{index: number}} */ (tokens.find(({kind}) => kind == "positional"));
 	await run(process.argv.slice(index + 3));
 }

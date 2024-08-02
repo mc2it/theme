@@ -29,16 +29,16 @@
 		"@fontsource-variable/material-symbols-rounded": "^5.0.36",
 		"@types/eslint__js": "^8.42.3",
 		"@types/gulp": "^4.0.17",
-		"@types/node": "^22.0.0",
+		"@types/node": "^22.0.3",
 		"del": "^7.1.0",
 		"execa": "^9.3.0",
-		"globals": "^15.8.0",
+		"globals": "^15.9.0",
 		"gulp": "^5.0.0",
 		"sass-embedded": "^1.77.8",
 		"stylelint": "^16.8.1",
 		"stylelint-config-standard-scss": "^13.1.0",
 		"typescript": "^5.5.4",
-		"typescript-eslint": "^8.0.0-alpha.59"
+		"typescript-eslint": "^8.0.0"
 	},
 	"engines": {
 		"node": ">=22.0.0"

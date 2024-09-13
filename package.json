@@ -26,7 +26,7 @@
 		"bootstrap": "^5.3.3"
 	},
 	"devDependencies": {
-		"@fontsource-variable/material-symbols-rounded": "^5.0.41",
+		"@fontsource-variable/material-symbols-rounded": "^5.1.0",
 		"@types/eslint__js": "^8.42.3",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^22.5.4",

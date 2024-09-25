@@ -29,7 +29,7 @@
 		"@fontsource-variable/material-symbols-rounded": "^5.1.0",
 		"@types/eslint__js": "^8.42.3",
 		"@types/gulp": "^4.0.17",
-		"@types/node": "^22.6.1",
+		"@types/node": "^22.7.0",
 		"del": "^7.1.0",
 		"execa": "^9.4.0",
 		"globals": "^15.9.0",

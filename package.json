@@ -26,11 +26,11 @@
 		"bootstrap": "^5.3.3"
 	},
 	"devDependencies": {
-		"@fontsource-variable/material-symbols-rounded": "^5.1.0",
+		"@fontsource-variable/material-symbols-rounded": "^5.1.1",
 		"@types/eslint__js": "^8.42.3",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^22.7.4",
-		"del": "^7.1.0",
+		"del": "^8.0.0",
 		"execa": "^9.4.0",
 		"globals": "^15.10.0",
 		"gulp": "^5.0.0",
@@ -38,7 +38,7 @@
 		"stylelint": "^16.9.0",
 		"stylelint-config-standard-scss": "^13.1.0",
 		"typescript": "^5.6.2",
-		"typescript-eslint": "^8.8.0"
+		"typescript-eslint": "^8.8.1"
 	},
 	"engines": {
 		"node": ">=22.0.0"

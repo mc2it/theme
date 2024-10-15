@@ -49,7 +49,7 @@ try {
 	try { await access(join(import.meta.dirname, path)); }
 	catch {
 		console.error(`Unknown command "${command}".`);
-		process.exit(2);
+		process.exit(400);
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -59,5 +59,5 @@ try {
 }
 catch (error) {
 	console.error(error instanceof Error ? error.message : error);
-	process.exit(1);
+	process.exit(500);
 }

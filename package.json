@@ -30,8 +30,6 @@
 		"@types/eslint__js": "^8.42.3",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^22.7.6",
-		"del": "^8.0.0",
-		"execa": "^9.4.1",
 		"globals": "^15.11.0",
 		"gulp": "^5.0.0",
 		"sass-embedded": "^1.80.1",

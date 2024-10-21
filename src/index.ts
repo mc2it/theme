@@ -6,7 +6,7 @@ import {join} from "node:path";
  * @param options The path options.
  * @returns The path to the library assets.
  */
-export function assetPath(options: Partial<PathOptions> = {}): string {
+export function assetPath(options: PathOptions = {}): string {
 	return join(import.meta.dirname, options.scss ? "../src/ui" : "../www");
 }
 
@@ -16,7 +16,7 @@ export function assetPath(options: Partial<PathOptions> = {}): string {
  * @param options The copy options.
  * @returns Resolves when the assets have been copied.
  */
-export async function copyAssets(output: string, options: Partial<CopyOptions> = {}): Promise<void> {
+export async function copyAssets(output: string, options: CopyOptions = {}): Promise<void> {
 	const sources = ["css", "fonts", "img"];
 	let directories = sources.filter(source => (options as Record<string, boolean>)[source]);
 	if (!directories.length) directories = sources;
@@ -29,7 +29,7 @@ export async function copyAssets(output: string, options: Partial<CopyOptions> =
 /**
  * Defines the options of the {@link copyAssets} function.
  */
-export interface CopyOptions {
+export type CopyOptions = Partial<{
 
 	/**
 	 * Value indicating whether to copy only the CSS files.
@@ -45,15 +45,15 @@ export interface CopyOptions {
 	 * Value indicating whether copy only the image files.
 	 */
 	img: boolean;
-}
+}>;
 
 /**
  * Defines the options of the {@link assetPath} function.
  */
-export interface PathOptions {
+export type PathOptions = Partial<{
 
 	/**
 	 * Value indicating whether to return the specific path for SCSS files.
 	 */
 	scss: boolean;
-}
+}>;

@@ -38,7 +38,7 @@ article {
 	width: 100%;
 
 	@media screen and (width >= map.get($grid-breakpoints, xl)) {
-		border-radius: var(--border-radius);
+		@include border-radius(var(--border-radius));
 		margin: map.get($spacers, 4) auto;
 		max-width: map.get($container-max-widths, xl);
 	}

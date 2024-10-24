@@ -1,5 +1,10 @@
 # Changelog
 
+## Version [8.0.0](https://github.com/mc2it/theme/compare/v7.0.8...v8.0.0)
+- Breaking change: renamed the configuration module from `_variables` to `_config`.
+- Fixed the border radius not respecting the `$enable-rounded` option.
+- Updated the package dependencies.
+
 ## Version [7.0.8](https://github.com/mc2it/theme/compare/v7.0.7...v7.0.8)
 - Enabled the fill of icons in active dropdown items.
 

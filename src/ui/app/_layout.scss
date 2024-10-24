@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../theme" as *;
+@use "../config" as *;
 
 body {
 	accent-color: var(--primary);

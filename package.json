@@ -47,8 +47,8 @@
 			"sass": "./src/ui/index.scss",
 			"default": "./lib/index.js"
 		},
-		"./_variables.scss": {
-			"sass": "./src/ui/_theme.scss"
+		"./_config.scss": {
+			"sass": "./src/ui/_config.scss"
 		}
 	},
 	"files": [

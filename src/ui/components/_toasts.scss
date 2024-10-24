@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../theme" as *;
+@use "../config" as *;
 
 .toast-header .icon {
 	transform: scale(1.3);

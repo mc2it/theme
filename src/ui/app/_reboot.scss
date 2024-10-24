@@ -1,4 +1,4 @@
-@use "../theme" as *;
+@use "../config" as *;
 
 ::backdrop {
   --backdrop-bg: #{to-rgb($modal-backdrop-bg)};

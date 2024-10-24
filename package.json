@@ -66,6 +66,6 @@
 	],
 	"scripts": {
 		"prepack": "gulp",
-		"start": "gulp build && node bin/mc2it_theme.js"
+		"start": "node bin/mc2it_theme.js"
 	}
 }

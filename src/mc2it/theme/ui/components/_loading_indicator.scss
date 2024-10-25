@@ -8,7 +8,7 @@
 	100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
 }
 
-loading-indicator {
+loading-indicator, .loading-indicator {
 	svg {
 		animation: 2s linear infinite loader-rotation;
 	}

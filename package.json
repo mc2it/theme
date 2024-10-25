@@ -5,8 +5,8 @@
 	"license": "MIT",
 	"name": "@mc2it/theme",
 	"repository": "mc2it/theme",
-	"type": "module",
-	"version": "8.0.0",
+	"type": "commonjs",
+	"version": "8.0.1",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",
@@ -27,16 +27,9 @@
 	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.1.3",
-		"@types/eslint__js": "^8.42.3",
-		"@types/gulp": "^4.0.17",
-		"@types/node": "^22.8.0",
-		"globals": "^15.11.0",
-		"gulp": "^5.0.0",
 		"sass-embedded": "^1.80.4",
 		"stylelint": "^16.10.0",
-		"stylelint-config-standard-scss": "^13.1.0",
-		"typescript": "^5.6.3",
-		"typescript-eslint": "^8.11.0"
+		"stylelint-config-standard-scss": "^13.1.0"
 	},
 	"engines": {
 		"node": ">=22.0.0"
@@ -44,28 +37,28 @@
 	"exports": {
 		".": {
 			"types": "./lib/index.d.ts",
-			"sass": "./src/ui/index.scss",
+			"sass": "./src/mc2it/theme/ui/index.scss",
 			"default": "./lib/index.js"
 		},
 		"./_config.scss": {
-			"sass": "./src/ui/_config.scss"
+			"sass": "./src/mc2it/theme/ui/_config.scss"
 		}
 	},
 	"files": [
 		"lib/",
 		"src/",
-		"tsconfig.json",
 		"www/"
 	],
 	"keywords": [
 		"bootstrap",
 		"css",
 		"mc2it",
+		"sass",
 		"theme",
 		"ui"
 	],
 	"scripts": {
-		"prepack": "gulp",
+		"prepack": "lix Dist",
 		"start": "node bin/mc2it_theme.js"
 	}
 }

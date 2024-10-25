@@ -1,4 +1,4 @@
-# MIT License, except the MC2IT logo
+# MIT License, except the MC2IT logos
 Copyright (c) MC2IT
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

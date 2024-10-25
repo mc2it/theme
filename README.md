@@ -1,4 +1,5 @@
 # MC2IT Theme
+![Haxe](https://badgen.net/badge/haxe/%3E%3D4.3.0/green) ![Haxelib](https://badgen.net/haxelib/v/mc2it_theme) ![License](https://badgen.net/haxelib/license/mc2it_theme) ![Downloads](https://badgen.net/haxelib/d/mc2it_theme)  
 ![Node.js](https://badgen.net/npm/node/@mc2it/theme) ![npm](https://badgen.net/npm/v/@mc2it/theme) ![License](https://badgen.net/npm/license/@mc2it/theme) ![Downloads](https://badgen.net/npm/dt/@mc2it/theme)
 
 The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://www.mc2it.com) applications.
@@ -15,4 +16,4 @@ The [Bootstrap](https://getbootstrap.com) theme used by [MC2IT](https://www.mc2i
 - [Submit an issue](https://github.com/mc2it/theme/issues)
 
 ## License
-[MC2IT Theme](https://github.com/mc2it/theme) is distributed under the MIT License, except the MC2IT logo.
+[MC2IT Theme](https://github.com/mc2it/theme) is distributed under the MIT License, except the MC2IT logos.

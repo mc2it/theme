@@ -9,7 +9,7 @@ import {compileAsync, NodePackageImporter} from "sass-embedded";
  */
 export default async function compileSass() {
 	const production = env.NODE_ENV == "production";
-	const {css, sourceMap} = await compileAsync("src/ui/index.scss", {
+	const {css, sourceMap} = await compileAsync("src/mc2it/theme/ui/index.scss", {
 		importers: [new NodePackageImporter],
 		silenceDeprecations: ["color-functions", "global-builtin", "import", "mixed-decls"],
 		sourceMap: !production,

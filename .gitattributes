@@ -5,6 +5,8 @@
 *.css text diff=css
 *.html text diff=html
 *.http text
+*.hx text
+*.hxml text
 *.js text
 *.json text
 *.md text diff=markdown
@@ -12,15 +14,14 @@
 *.ps1 text
 *.scss text diff=css
 *.svg text
-*.ts text
 *.txt text
 *.xml text
 *.yaml text
 *.yml text
 
-*.gif binary
 *.ico binary
 *.jpg binary
+*.n binary
 *.pdf binary
 *.png binary
 *.webp binary

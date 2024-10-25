@@ -1,0 +1,12 @@
+{
+	"classPath": "src/",
+	"contributors": ["mc2it", "cedx"],
+	"dependencies": {"bootstrap_bundle": ""},
+	"description": "Bootstrap theme used by MC2IT applications.",
+	"license": "MIT",
+	"name": "mc2it_theme",
+	"releasenote": "Ported the source code to Haxe.",
+	"tags": ["bootstrap", "css", "mc2it", "sass", "theme", "ui"],
+	"url": "https://github.com/cedx/bootstrap.hx",
+	"version": "8.0.1"
+}

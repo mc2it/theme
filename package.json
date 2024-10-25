@@ -22,9 +22,6 @@
 			"url": "https://belin.io"
 		}
 	],
-	"dependencies": {
-		"bootstrap": "^5.3.3"
-	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.1.3",
 		"sass-embedded": "^1.80.4",

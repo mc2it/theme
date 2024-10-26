@@ -11,7 +11,7 @@ abstract class Theme {
 	/** Returns the path to the theme assets. **/
 	@:expose("assetPath")
 	public static function assetPath(?options: PathOptions): String {
-		final folder = (options?.scss ?? false) ? "www" : "src/mc2it/theme/ui";
+		final folder = (options?.scss ?? false) ? "src/mc2it/theme/ui" : "www";
 		return Path
 			.join([Sys.programPath().directory(), #if js '../$folder' #else folder #end])
 			.replace("/", Sys.systemName() == "Windows" ? "\\" : "/");

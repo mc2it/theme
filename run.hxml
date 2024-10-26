@@ -1,3 +1,12 @@
 --main mc2it.theme.cli.Program
---neko run.n
 share/build.hxml
+--each
+
+--neko run.n
+--next
+
+--define js-es=6
+--define js-global=globalThis
+--js bin/mc2it_theme.js
+--library hxnodejs
+--macro mc2it.theme.Macro.shebang("node")

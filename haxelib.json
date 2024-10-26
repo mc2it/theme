@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"name": "mc2it_theme",
 	"releasenote": "Ported the source code to Haxe.",
-	"tags": ["bootstrap", "css", "mc2it", "sass", "theme", "ui"],
+	"tags": ["bootstrap", "css", "mc2it", "sass", "scss", "theme", "ui"],
 	"url": "https://github.com/cedx/bootstrap.hx",
 	"version": "8.0.1"
 }

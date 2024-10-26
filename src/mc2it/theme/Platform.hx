@@ -1,4 +1,4 @@
-package bootstrap;
+package mc2it.theme;
 
 #if macro
 import haxe.Json;

@@ -1,4 +1,4 @@
-package belin.card;
+package mc2it.theme;
 
 #if macro
 import haxe.macro.Compiler;

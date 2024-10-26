@@ -1,5 +1,7 @@
 # Changelog
 
+## Version [8.0.1](https://github.com/mc2it/theme/compare/v8.0.0...v8.0.1)
+
 ## Version [8.0.0](https://github.com/mc2it/theme/compare/v7.0.8...v8.0.0)
 - Breaking change: renamed the configuration module from `_variables` to `_config`.
 - Fixed the border radius not respecting the `$enable-rounded` option.

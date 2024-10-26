@@ -36,7 +36,8 @@
 		".": {
 			"types": "./lib/index.d.ts",
 			"sass": "./src/mc2it/theme/ui/index.scss",
-			"default": "./lib/index.js"
+			"import": "./lib/index.mjs",
+			"default": "./lib/index.cjs"
 		},
 		"./_config.scss": {
 			"sass": "./src/mc2it/theme/ui/_config.scss"

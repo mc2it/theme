@@ -39,7 +39,7 @@ export type CopyOptions = Partial<{
 export type PathOptions = Partial<{
 
 	/**
-	 * Value indicating whether to return the specific of SCSS files.
+	 * Value indicating whether to return the specific path of SCSS files.
 	 */
 	scss: boolean;
 }>;

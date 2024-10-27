@@ -1,6 +1,9 @@
 # Changelog
 
-## Version [8.0.1](https://github.com/mc2it/theme/compare/v8.0.0...v8.0.1)
+## Version [9.0.0](https://github.com/mc2it/theme/compare/v8.0.0...v9.0.0)
+- Breaking change: ported the source code to [Haxe](https://haxe.org).
+- Added a [Sass](https://sass-lang.com) importer for `theme:` URLs.
+- Removed the alternative logos.
 
 ## Version [8.0.0](https://github.com/mc2it/theme/compare/v7.0.8...v8.0.0)
 - Breaking change: renamed the configuration module from `_variables` to `_config`.

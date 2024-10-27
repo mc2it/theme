@@ -3,4 +3,3 @@
 --js var/scripts.js
 --library bootstrap_bundle
 --library hxnodejs
---library tink_core

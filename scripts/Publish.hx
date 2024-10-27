@@ -13,7 +13,7 @@ using haxe.zip.Tools;
 function main() {
 	Sys.command("lix Dist");
 	compress(["CHANGELOG.md", "LICENSE.md", "README.md", "haxelib.json", "run.n", "src", "www"], "var/haxelib.zip");
-	Sys.command("haxelib submit var/haxelib.zip");
+	// Sys.command("haxelib submit var/haxelib.zip");
 
 	for (registry in ["https://registry.npmjs.org", "https://npm.pkg.github.com"]) Sys.command('npm publish --registry=$registry');
 	for (action in ["tag", "push origin"]) Sys.command('git $action v${Platform.packageVersion}');

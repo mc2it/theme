@@ -5,7 +5,7 @@
 	"description": "Bootstrap theme used by MC2IT applications.",
 	"license": "MIT",
 	"name": "mc2it_theme",
-	"releasenote": "Ported the source code to Haxe, added a Sass importer for `theme:` URLs, removed the alternative logos.",
+	"releasenote": "Fixed the project URL.",
 	"tags": ["bootstrap", "css", "mc2it", "sass", "scss", "theme", "ui"],
 	"url": "https://github.com/mc2it/theme",
 	"version": "9.0.1"

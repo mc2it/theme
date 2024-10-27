@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [9.0.1](https://github.com/mc2it/theme/compare/v9.0.0...v9.0.1)
+- Fixed the project URL.
+
 ## Version [9.0.0](https://github.com/mc2it/theme/compare/v8.0.0...v9.0.0)
 - Breaking change: ported the source code to [Haxe](https://haxe.org).
 - Added a [Sass](https://sass-lang.com) importer for `theme:` URLs.

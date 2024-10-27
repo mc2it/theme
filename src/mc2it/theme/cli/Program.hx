@@ -1,9 +1,5 @@
 package mc2it.theme.cli;
 
-#if nodejs
-import js.Node;
-#end
-
 /**
 	Command line interface of MC2IT Theme.
 
@@ -30,7 +26,7 @@ final class Program {
 
 	/** Application entry point. **/
 	static function main() {
-		#if nodejs Node.process.title = "MC2IT Theme"; #end
+		#if nodejs js.Node.process.title = "MC2IT Theme"; #end
 		Cli.process(Sys.args(), new Program()).handle(Cli.exit);
 	}
 

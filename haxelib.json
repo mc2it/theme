@@ -8,5 +8,5 @@
 	"releasenote": "Ported the source code to Haxe, added a Sass importer for `theme:` URLs, removed the alternative logos.",
 	"tags": ["bootstrap", "css", "mc2it", "sass", "scss", "theme", "ui"],
 	"url": "https://github.com/cedx/bootstrap.hx",
-	"version": "9.0.0"
+	"version": "9.0.1"
 }

@@ -7,7 +7,8 @@ action-bar, .action-bar {
 	box-shadow: var(--box-shadow-sm);
 	display: block;
 	inset: var(--navbar-height) 0 auto 0;
-	padding: map.get($spacers, 2) 0;
+	padding-bottom: map.get($spacers, 2) 0;
+	padding-top: map.get($spacers, 2) 0;
 	position: fixed;
 	user-select: none;
 	z-index: $zindex-fixed - 1;

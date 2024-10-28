@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [9.0.3](https://github.com/mc2it/theme/compare/v9.0.2...v9.0.3)
+- Fixed the action bar padding.
+
 ## Version [9.0.2](https://github.com/mc2it/theme/compare/v9.0.1...v9.0.2)
 - Fixed the action bar padding.
 

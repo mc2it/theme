@@ -41,11 +41,11 @@
 	"exports": {
 		".": {
 			"types": "./lib/index.d.ts",
-			"sass": "./lib/scss/index.scss",
+			"sass": "./src/ui/index.scss",
 			"default": "./lib/index.js"
 		},
 		"./config.scss": {
-			"sass": "./lib/scss/_config.scss"
+			"sass": "./src/ui/_config.scss"
 		}
 	},
 	"files": [

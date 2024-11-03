@@ -35,7 +35,7 @@ export type PathOptions = Partial<{
  * @param options The path options.
  * @returns The path to the theme assets.
  */
-export function assetPath(options?: PathOptions): Promise<string>;
+export function assetPath(options?: PathOptions): string;
 
 /**
  * Copies the theme assets to a given output directory.

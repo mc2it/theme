@@ -10,7 +10,7 @@ using haxe.io.Path;
 **/
 class LibpathCommand {
 
-	/** Print the specific path of SCSS files. **/
+	/** Print the specific path of Sass files. **/
 	public var scss = false;
 
 	/** Display this help. **/
@@ -22,7 +22,7 @@ class LibpathCommand {
 	// Runs this command.
 	@:defaultCommand
 	public function run(): Promise<Noise> {
-		Sys.println(help ? Cli.getDoc(this) : Theme.assetPath({scss: scss}));
+		Sys.println(help ? Cli.getDoc(this) : Theme.assetPath({sass: scss}));
 		return Noise;
 	}
 }

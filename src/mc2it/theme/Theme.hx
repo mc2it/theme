@@ -58,6 +58,6 @@ typedef CopyOptions = {
 /** Defines the options of the `Theme.assetPath()` method. **/
 typedef PathOptions = {
 
-	/** Value indicating whether to return the specific path of SCSS files. **/
-	var ?scss: Bool;
+	/** Value indicating whether to return the specific path of Sass files. **/
+	var ?sass: Bool;
 }

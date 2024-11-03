@@ -7,10 +7,10 @@ export assetPath = (options = {}) ->
 
 # Copies the theme assets to a given output directory.
 export copyAssets = (output, options = {}) ->
-	sources = ["css", "fonts", "img"]
+	sources = ["css", "fonts", "img", "sass"]
 	directories = if (folders = sources.filter (source) -> options[source]).length then folders else sources
 
-	input = assetPath()
+	input = assetPath(options)
 	for directory in directories
 		target = if directories.length is 1 then output else join output, directory
 		await cp join(input, directory), target, recursive: true

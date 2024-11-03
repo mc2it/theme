@@ -1,6 +1,0 @@
---class-path src
---dce full
---define analyzer-optimize
---define no-deprecation-warnings
---library bootstrap_bundle
---library tink_cli

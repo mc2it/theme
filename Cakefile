@@ -40,11 +40,11 @@ task "watch", "Watches for file changes.", (options) ->
 
 # Compiles the Sass stylesheet.
 compileSass = (debug) ->
-	{css, sourceMap} = compile("src/ui/index.scss",
-		importers: [new NodePackageImporter],
-		silenceDeprecations: ["color-functions", "global-builtin", "import", "mixed-decls"],
-		sourceMap: debug,
-		sourceMapIncludeSources: no,
+	{css, sourceMap} = compile "src/ui/index.scss",
+		importers: [new NodePackageImporter]
+		silenceDeprecations: ["color-functions", "global-builtin", "import", "mixed-decls"]
+		sourceMap: debug
+		sourceMapIncludeSources: no
 		style: if debug then "expanded" else "compressed"
 
 	mkdirSync "www/css", recursive: yes

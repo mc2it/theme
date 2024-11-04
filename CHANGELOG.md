@@ -1,7 +1,8 @@
 # Changelog
 
 ## Version [10.0.0](https://github.com/mc2it/theme/compare/v9.0.3...v10.0.0)
-- Breaking change: ported the source code to [CoffeeScript](https://coffeescript.org).
+- Breaking change: ported the [Haxe](https://haxe.org) source code to [CoffeeScript](https://coffeescript.org).
+- Breaking change: ported the SCSS stylesheet to [Sass](https://sass-lang.com) indented syntax.
 - Breaking change: removed the [Sass](https://sass-lang.com) importer for `theme:` URLs.
 - Breaking change: renamed the `--scss` command line option to `--sass`.
 

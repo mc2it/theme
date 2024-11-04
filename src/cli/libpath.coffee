@@ -17,8 +17,8 @@ Options:
 # Prints the path to the library assets.
 export default (args) ->
 	{values} = parseArgs args: args, options:
-		help: {short: "h", type: "boolean", default: false}
-		sass: {short: "s", type: "boolean", default: false}
+		help: {short: "h", type: "boolean", default: off}
+		sass: {short: "s", type: "boolean", default: off}
 
 	console.log if values.help then usage else assetPath values
 	Promise.resolve()

@@ -3,6 +3,7 @@
 ## Version [10.0.0](https://github.com/mc2it/theme/compare/v9.0.3...v10.0.0)
 - Breaking change: ported the source code to [CoffeeScript](https://coffeescript.org).
 - Breaking change: removed the [Sass](https://sass-lang.com) importer for `theme:` URLs.
+- Breaking change: renamed the `--scss` command line option to `--sass`.
 
 ## Version [9.0.3](https://github.com/mc2it/theme/compare/v9.0.2...v9.0.3)
 - Fixed the action bar padding.

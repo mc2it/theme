@@ -41,7 +41,7 @@
 			"sass": "./src/ui/index.sass",
 			"default": "./lib/index.js"
 		},
-		"./config.sass": {
+		"./config": {
 			"sass": "./src/ui/_config.sass"
 		}
 	},

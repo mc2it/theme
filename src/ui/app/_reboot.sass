@@ -1,0 +1,13 @@
+@use "../config" as *
+
+::backdrop
+  --backdrop-bg: #{to-rgb($modal-backdrop-bg)}
+  --backdrop-opacity: #{$modal-backdrop-opacity}
+
+::selection
+	background-color: var(--primary)
+	color: var(--white)
+
+menu
+	margin: 0
+	padding: 0

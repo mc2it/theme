@@ -1,0 +1,14 @@
+.form-control, .form-select, .input-group-text
+	&:not(:focus)
+		border-bottom-color: var(--gray-500)
+		box-shadow: none
+
+		[data-bs-theme="dark"] &
+			border-bottom-color: var(--gray-600)
+
+.remove-spin-button
+	appearance: textfield
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button
+		appearance: none

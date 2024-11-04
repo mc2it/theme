@@ -1,0 +1,11 @@
+@use "sass:map"
+@use "../config" as *
+
+.toast-header .icon
+	transform: scale(1.3)
+
+@each $color in danger, info, success, warning
+	.toast-header-#{$color}
+		--toast-header-bg: var(--#{$color}-bg-subtle)
+		--toast-header-border-color: var(--#{$color}-border-subtle)
+		--toast-header-color: var(--#{$color}-text-emphasis)

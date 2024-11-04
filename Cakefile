@@ -27,7 +27,6 @@ task "dist", "Packages the project.", ->
 
 task "lint", "Performs the static analysis of source code.", ->
 	npx "coffeelint", "--file=etc/coffeelint.json", "Cakefile", "src"
-	npx "stylelint", "--config=etc/stylelint.js", "src/ui/**/*.scss"
 
 task "publish", "Publishes the package.", ->
 	invoke "dist"
@@ -40,7 +39,7 @@ task "watch", "Watches for file changes.", (options) ->
 
 # Compiles the Sass stylesheet.
 compileSass = (debug) ->
-	{css, sourceMap} = compile "src/ui/index.scss",
+	{css, sourceMap} = compile "src/ui/index.sass",
 		importers: [new NodePackageImporter]
 		silenceDeprecations: ["color-functions", "global-builtin", "import", "mixed-decls"]
 		sourceMap: debug

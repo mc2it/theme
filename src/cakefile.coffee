@@ -22,8 +22,7 @@ task "clean", "Deletes all generated files.", ->
 	rmSync "www/fonts/material_symbols.woff2", force: yes
 
 task "dist", "Packages the project.", ->
-	invoke "clean"
-	invoke "build"
+	invoke script for script in ["clean", "build"]
 	rmSync "lib/cakefile.js"
 
 task "lint", "Performs the static analysis of source code.", ->

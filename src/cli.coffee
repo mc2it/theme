@@ -9,15 +9,15 @@ usage = """
 Command line interface of MC2IT Theme.
 
 Usage:
-  mc2it_theme [options] <command>
+	mc2it_theme [options] <command>
 
 Options:
-  -h, --help                  Display this help.
-  -v, --version               Output the version number.
+	-h, --help                  Display this help.
+	-v, --version               Output the version number.
 
 Commands:
-  copy [options] <directory>  Copy the theme assets to a given directory.
-  libpath [options]           Print the path to the theme assets.
+	copy [options] <directory>  Copy the theme assets to a given directory.
+	libpath [options]           Print the path to the theme assets.
 """
 
 # Start the application.
@@ -36,7 +36,7 @@ try
 		process.exit()
 
 	if not positionals.length or (values.help and not positionals.length)
-		console.log usage
+		console.log usage.replaceAll "\t", "  "
 		process.exit()
 
 	# Run the requested command.

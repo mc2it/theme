@@ -7,17 +7,17 @@ usage = """
 Copy the theme assets to a given directory.
 
 Usage:
-  mc2it_theme copy [options] <directory>
+	mc2it_theme copy [options] <directory>
 
 Arguments:
-  directory    The path to the output directory.
+	directory    The path to the output directory.
 
 Options:
-  -c, --css    Copy only CSS files.
-  -f, --fonts  Copy only font files.
-  -i, --img    Copy only image files.
-  -s, --sass   Copy only Sass files.
-  -h, --help   Display this help.
+	-c, --css    Copy only CSS files.
+	-f, --fonts  Copy only font files.
+	-i, --img    Copy only image files.
+	-s, --sass   Copy only Sass files.
+	-h, --help   Display this help.
 """
 
 # Copies the theme assets to a given directory.
@@ -30,6 +30,8 @@ export default (args) ->
 		sass: {short: "s", type: "boolean", default: off}
 
 	switch
-		when values.help then console.log usage; Promise.resolve()
+		when values.help
+			console.log usage.replaceAll "\t", "  "
+			Promise.resolve()
 		when not positionals.length then throw Error "You must provide the path of the output directory."
 		else copyAssets(positionals[0], values)

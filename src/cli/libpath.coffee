@@ -7,11 +7,11 @@ usage = """
 Print the path to the theme assets.
 
 Usage:
-  mc2it_theme libpath [options]
+	mc2it_theme libpath [options]
 
 Options:
-  -s, --sass  Print the specific path of Sass files.
-  -h, --help  Display this help.
+	-s, --sass  Print the specific path of Sass files.
+	-h, --help  Display this help.
 """
 
 # Prints the path to the library assets.
@@ -20,5 +20,5 @@ export default (args) ->
 		help: {short: "h", type: "boolean", default: off}
 		sass: {short: "s", type: "boolean", default: off}
 
-	console.log if values.help then usage else assetPath values
+	console.log if values.help then usage.replaceAll "\t", "  " else assetPath values
 	Promise.resolve()

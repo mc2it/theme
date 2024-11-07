@@ -9,7 +9,7 @@ export assetPath = (options = {}) ->
 export copyAssets = (output, options = {}) ->
 	sources = ["css", "fonts", "img", "sass"]
 	directories = if (folders = sources.filter (source) -> options[source]).length then folders else sources
-	for directory in directories
+	for directory from directories
 		input = if directory is "sass" then assetPath sass: on else join assetPath(), directory
 		target = if directories.length is 1 then output else join output, directory
 		await cp input, target, recursive: yes

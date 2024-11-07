@@ -50,7 +50,7 @@ try
 
 	{default: run} = await import(path)
 	{index} = tokens.find ({kind}) -> kind is "positional"
-	await run process.argv.slice index + 3
+	await run process.argv[index + 3..]
 
 catch error
 	console.error if error instanceof Error then error.message else error

@@ -13,7 +13,7 @@
 		"url": "https://www.mc2it.com"
 	},
 	"bin": {
-		"mc2it_theme": "bin/mc2it_theme.js"
+		"theme": "bin/theme.js"
 	},
 	"contributors": [
 		{
@@ -60,6 +60,6 @@
 		"ui"
 	],
 	"scripts": {
-		"start": "node bin/mc2it_theme.js"
+		"start": "node bin/theme.js"
 	}
 }

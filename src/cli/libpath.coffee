@@ -7,7 +7,7 @@ usage = """
 Print the path to the theme assets.
 
 Usage:
-	mc2it_theme libpath [options]
+	npx @mc2it/theme libpath [options]
 
 Options:
 	-s, --sass  Print the specific path of Sass files.

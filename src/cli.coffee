@@ -9,7 +9,7 @@ usage = """
 Command line interface of MC2IT Theme.
 
 Usage:
-	mc2it_theme [options] <command>
+	npx @mc2it/theme [options] <command>
 
 Options:
 	-h, --help                  Display this help.

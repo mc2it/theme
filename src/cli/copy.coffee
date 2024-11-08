@@ -7,7 +7,7 @@ usage = """
 Copy the theme assets to a given directory.
 
 Usage:
-	mc2it_theme copy [options] <directory>
+	npx @mc2it/theme copy [options] <directory>
 
 Arguments:
 	directory    The path to the output directory.

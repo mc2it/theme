@@ -47,8 +47,8 @@ compileSass = (debug) ->
 		style: if debug then "expanded" else "compressed"
 
 	mkdirSync "www/css", recursive: yes
-	writeFileSync "www/css/main.css", if sourceMap then "#{css}#{EOL}/*# sourceMappingURL=main.css.map */" else css
-	writeFileSync "www/css/main.css.map", JSON.stringify(sourceMap) if sourceMap
+	writeFileSync "www/css/mc2it.css", if sourceMap then "#{css}#{EOL}/*# sourceMappingURL=mc2it.css.map */" else css
+	writeFileSync "www/css/mc2it.css.map", JSON.stringify(sourceMap) if sourceMap
 
 # Executes a command from a local package.
 npx = (command, args...) -> run "npm", "exec", "--", command, args...

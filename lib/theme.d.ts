@@ -49,3 +49,10 @@ export function assetPath(options?: PathOptions): string;
  * @returns Resolves when the assets have been copied.
  */
 export function copyAssets(output: string, options?: CopyOptions): Promise<void>;
+
+/**
+ * Copies the theme assets to a given output directory.
+ * @param output The path to the output directory.
+ * @param options The copy options.
+ */
+export function copyAssetsSync(output: string, options?: CopyOptions): void;

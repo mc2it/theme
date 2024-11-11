@@ -1,3 +1,4 @@
+import {cpSync} from "node:fs"
 import {cp} from "node:fs/promises"
 import {join} from "node:path"
 
@@ -13,3 +14,12 @@ export copyAssets = (output, options = {}) ->
 		input = if directory is "sass" then assetPath sass: on else join assetPath(), directory
 		target = if directories.length is 1 then output else join output, directory
 		await cp input, target, recursive: yes
+
+# Copies the theme assets to a given output directory.
+export copyAssetsSync = (output, options = {}) ->
+	sources = ["css", "fonts", "img", "sass"]
+	directories = if (folders = sources.filter (source) -> options[source]).length then folders else sources
+	for directory from directories
+		input = if directory is "sass" then assetPath sass: on else join assetPath(), directory
+		target = if directories.length is 1 then output else join output, directory
+		cpSync input, target, recursive: yes

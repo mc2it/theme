@@ -1,7 +1,9 @@
 {spawnSync} = require "node:child_process"
+console = require "node:console"
 {cpSync, mkdirSync, readdirSync, rmSync, writeFileSync} = require "node:fs"
 {EOL} = require "node:os"
 {join} = require "node:path"
+{exit} = require "node:process"
 {compile, NodePackageImporter} = require "sass"
 pkg = require "../package.json"
 
@@ -58,4 +60,4 @@ run = (command, args...) ->
 	{status} = spawnSync command, args, shell: yes, stdio: "inherit"
 	unless status is 0
 		console.error "Command failed:", command, args...
-		process.exit status
+		exit status

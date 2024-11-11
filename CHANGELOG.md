@@ -1,7 +1,7 @@
 # Changelog
 
 ## Version [10.1.0](https://github.com/mc2it/theme/compare/v10.0.1...v10.1.0)
-- Add the `copyAssetsSync()` function.
+- Added the `copyAssetsSync()` function.
 
 ## Version [10.0.1](https://github.com/mc2it/theme/compare/v10.0.0...v10.0.1)
 - Fixed a regression: the generated stylesheet was named `main.css` instead of `mc2it.css`.

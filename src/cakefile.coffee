@@ -14,7 +14,7 @@ task "build", "Builds the project.", (options) ->
 	cpSync join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2"
 
 	sourcemaps = if options.map then ["--map"] else []
-	npx "coffee", "--compile", sourcemaps..., "--no-header", "--output", "lib", "src"
+	run "coffee", "--compile", sourcemaps..., "--no-header", "--output", "lib", "src"
 	compileSass options.map
 
 task "clean", "Deletes all generated files.", ->
@@ -37,7 +37,7 @@ task "publish", "Publishes the package.", ->
 
 task "watch", "Watches for file changes.", (options) ->
 	sourcemaps = if options.map then ["--map"] else []
-	npx "coffee", "--compile", sourcemaps..., "--no-header", "--output", "lib", "--watch", "src"
+	run "coffee", "--compile", sourcemaps..., "--no-header", "--output", "lib", "--watch", "src"
 
 # Compiles the Sass stylesheet.
 compileSass = (debug) ->

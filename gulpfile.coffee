@@ -50,7 +50,7 @@ compileSass = (compiler) ->
 	build = if compiler then compiler.compile.bind compiler else compile
 	production = env.NODE_ENV is "production"
 
-	{css, sourceMap} = compile "src/ui/index.sass",
+	{css, sourceMap} = build "src/ui/index.sass",
 		importers: [new NodePackageImporter]
 		silenceDeprecations: ["color-functions", "global-builtin", "import", "mixed-decls"]
 		sourceMap: not production

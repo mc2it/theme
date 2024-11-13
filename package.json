@@ -32,7 +32,7 @@
 		"@types/node": "^22.9.0",
 		"coffeescript": "^2.7.0",
 		"gulp": "^5.0.0",
-		"sass": "^1.80.6"
+		"sass": "^1.80.7"
 	},
 	"engines": {
 		"node": ">=22.0.0"

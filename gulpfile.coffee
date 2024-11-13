@@ -36,7 +36,7 @@ export watch = ->
 	gulp.watch "src/ui/**/*.sass", buildStyleSheet = -> compileSass debug: on
 	await npx "coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src"
 
-# Packages the project.
+# The default task.
 export default gulp.series clean, build
 
 # Compiles the Sass stylesheet.

@@ -32,8 +32,8 @@ export publish = ->
 
 # Watches for file changes.
 export watch = ->
-	await compileSass debug: on
-	gulp.watch "src/ui/**/*.sass", buildStyleSheet = -> compileSass debug: on
+	buildStyleSheet = -> compileSass debug: on
+	gulp.watch "src/ui/**/*.sass", ignoreInitial: no, buildStyleSheet
 	await npx "coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src"
 
 # The default task.

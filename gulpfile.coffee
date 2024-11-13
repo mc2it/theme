@@ -38,6 +38,7 @@ export publish = ->
 
 # Watches for file changes.
 export watch = ->
+	env.NODE_ENV = "development"
 	compiler = initCompiler()
 	gulp.watch "src/ui/**/*.sass", ignoreInitial: no, buildStyleSheet = -> compileSass(compiler)
 	await npx "coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src"

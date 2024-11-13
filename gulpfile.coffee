@@ -3,13 +3,14 @@ import {spawn} from "node:child_process"
 import {cp, mkdir, readdir, rm, writeFile} from "node:fs/promises"
 import {EOL} from "node:os"
 import {join} from "node:path"
-import {compile, NodePackageImporter} from "sass"
+import {env} from "node:process"
+import {compile, initCompiler, NodePackageImporter} from "sass"
 
 # Builds the project.
 export build = ->
 	fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files"
 	await cp join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2"
-	await compileSass debug: off
+	await compileSass()
 	await npx "coffee", "--compile", "--no-header", "--output", "lib", "src"
 
 # Deletes all generated files.
@@ -18,6 +19,11 @@ export clean = ->
 	await rm join("var", file), recursive: yes for file from await readdir "var" when file isnt ".gitkeep"
 	await rm "www/css", force: yes, recursive: yes
 	await rm "www/fonts/material_symbols.woff2", force: yes
+
+# Packages the project.
+export dist = ->
+	env.NODE_ENV = "production"
+	await build()
 
 # Performs the static analysis of source code.
 export lint = ->
@@ -32,21 +38,24 @@ export publish = ->
 
 # Watches for file changes.
 export watch = ->
-	buildStyleSheet = -> compileSass debug: on
-	gulp.watch "src/ui/**/*.sass", ignoreInitial: no, buildStyleSheet
+	compiler = initCompiler()
+	gulp.watch "src/ui/**/*.sass", ignoreInitial: no, buildStyleSheet = -> compileSass(compiler)
 	await npx "coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src"
 
 # The default task.
-export default gulp.series clean, build
+export default gulp.series clean, dist
 
 # Compiles the Sass stylesheet.
-compileSass = (options = {}) ->
+compileSass = (compiler) ->
+	build = if compiler then compiler.compile.bind compiler else compile
+	production = env.NODE_ENV is "production"
+
 	{css, sourceMap} = compile "src/ui/index.sass",
 		importers: [new NodePackageImporter]
 		silenceDeprecations: ["color-functions", "global-builtin", "import", "mixed-decls"]
-		sourceMap: options.debug
+		sourceMap: not production
 		sourceMapIncludeSources: no
-		style: if options.debug then "expanded" else "compressed"
+		style: if production then "compressed" else "expanded"
 
 	await mkdir "www/css", recursive: yes
 	await writeFile "www/css/mc2it.css", if sourceMap then "#{css}#{EOL}/*# sourceMappingURL=mc2it.css.map */" else css

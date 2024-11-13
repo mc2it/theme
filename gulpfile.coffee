@@ -9,7 +9,7 @@ import {compile, NodePackageImporter} from "sass"
 export build = ->
 	fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files"
 	await cp join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2"
-	await compileSass()
+	await compileSass debug: off
 	await npx "coffee", "--compile", "--no-header", "--output", "lib", "src"
 
 # Deletes all generated files.

@@ -4,11 +4,7 @@ import {cp, readdir, rm} from "node:fs/promises"
 import {join} from "node:path"
 
 # The shared Sass options.
-sassOptions = [
-	"--no-source-map"
-	"--pkg-importer=node"
-	"--silence-deprecation=color-functions,global-builtin,import,mixed-decls"
-]
+sassOptions = ["--no-source-map", "--pkg-importer=node", "--silence-deprecation=color-functions,global-builtin,import,mixed-decls"]
 
 # Builds the project.
 export build = ->

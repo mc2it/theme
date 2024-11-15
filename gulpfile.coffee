@@ -11,7 +11,7 @@ export build = ->
 	fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files"
 	await cp join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2"
 	await npx "coffee", "--compile", "--no-header", "--output", "lib", "src"
-	await npx "sass", sassOptions..., "--style=compressed", "src/ui/index.sass", "www/css/mc2it.css"
+	await npx "sass", sassOptions..., "--style=compressed", "src/ui/index.sass:www/css/mc2it.css"
 
 # Deletes all generated files.
 export clean = ->
@@ -34,7 +34,7 @@ export publish = ->
 # Watches for file changes.
 export watch = ->
 	npx "coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src"
-	npx "sass", sassOptions..., "--watch", "src/ui/index.sass", "www/css/mc2it.css"
+	npx "sass", sassOptions..., "--watch", "src/ui/index.sass:www/css/mc2it.css"
 
 # The default task.
 export default gulp.series clean, build

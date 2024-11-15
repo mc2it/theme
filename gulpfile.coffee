@@ -1,17 +1,21 @@
 import gulp from "gulp"
 import {spawn} from "node:child_process"
-import {cp, mkdir, readdir, rm, writeFile} from "node:fs/promises"
-import {EOL} from "node:os"
+import {cp, readdir, rm} from "node:fs/promises"
 import {join} from "node:path"
-import {env} from "node:process"
-import {compile, initCompiler, NodePackageImporter} from "sass"
+
+# The shared Sass options.
+sassOptions = [
+	"--no-source-map"
+	"--pkg-importer=node"
+	"--silence-deprecation=color-functions,global-builtin,import,mixed-decls"
+]
 
 # Builds the project.
 export build = ->
 	fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files"
 	await cp join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2"
-	await compileSass()
 	await npx "coffee", "--compile", "--no-header", "--output", "lib", "src"
+	await npx "sass", sassOptions..., "--style=compressed", "src/ui/index.sass", "www/css/mc2it.css"
 
 # Deletes all generated files.
 export clean = ->
@@ -19,11 +23,6 @@ export clean = ->
 	await rm join("var", file), recursive: yes for file from await readdir "var" when file isnt ".gitkeep"
 	await rm "www/css", force: yes, recursive: yes
 	await rm "www/fonts/material_symbols.woff2", force: yes
-
-# Packages the project.
-export dist = ->
-	env.NODE_ENV = "production"
-	await build()
 
 # Performs the static analysis of source code.
 export lint = ->
@@ -38,29 +37,11 @@ export publish = ->
 
 # Watches for file changes.
 export watch = ->
-	env.NODE_ENV = "development"
-	compiler = initCompiler()
-	gulp.watch "src/ui/**/*.sass", ignoreInitial: no, buildStyleSheet = -> compileSass(compiler)
-	await npx "coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src"
+	npx "coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src"
+	npx "sass", sassOptions..., "--watch", "src/ui/index.sass", "www/css/mc2it.css"
 
 # The default task.
-export default gulp.series clean, dist
-
-# Compiles the Sass stylesheet.
-compileSass = (compiler) ->
-	build = if compiler then compiler.compile.bind compiler else compile
-	production = env.NODE_ENV is "production"
-
-	{css, sourceMap} = build "src/ui/index.sass",
-		importers: [new NodePackageImporter]
-		silenceDeprecations: ["color-functions", "global-builtin", "import", "mixed-decls"]
-		sourceMap: not production
-		sourceMapIncludeSources: no
-		style: if production then "compressed" else "expanded"
-
-	await mkdir "www/css", recursive: yes
-	await writeFile "www/css/mc2it.css", if sourceMap then "#{css}#{EOL}/*# sourceMappingURL=mc2it.css.map */" else css
-	await writeFile "www/css/mc2it.css.map", JSON.stringify(sourceMap) if sourceMap
+export default gulp.series clean, build
 
 # Executes a command from a local package.
 npx = (command, args...) -> run "npm", "exec", "--", command, ...args

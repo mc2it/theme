@@ -15,9 +15,8 @@ export build = ->
 
 # Deletes all generated files.
 export clean = ->
-	await rm join("lib", file), recursive: yes for file from await readdir "lib" when not file.endsWith ".d.ts"
+	await rm folder, force: yes, recursive: yes for folder from ["lib", "www/css"]
 	await rm join("var", file), recursive: yes for file from await readdir "var" when file isnt ".gitkeep"
-	await rm "www/css", force: yes, recursive: yes
 	await rm "www/fonts/material_symbols.woff2", force: yes
 
 # Performs the static analysis of source code.

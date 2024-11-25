@@ -42,7 +42,7 @@ try
 	# Run the requested command.
 	try
 		[command] = positionals
-		path = "../lib/cli/#{command}.js"
+		path = "./cli/#{command}.js"
 		await access join import.meta.dirname, path
 	catch
 		console.error "Unknown command \"#{command}\"."

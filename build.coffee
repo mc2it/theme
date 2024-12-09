@@ -1,7 +1,7 @@
 {spawn, spawnSync} = require "node:child_process"
 {cpSync, readdirSync, rmSync} = require "node:fs"
 {join} = require "node:path"
-pkg = require "../package.json"
+pkg = require "./package.json"
 
 task "assets", "Deploys the assets.", ->
 	fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files"

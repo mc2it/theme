@@ -1,8 +1,6 @@
 {spawn, spawnSync} = require "node:child_process"
-console = require "node:console"
 {cpSync, readdirSync, rmSync} = require "node:fs"
 {join} = require "node:path"
-{exit} = require "node:process"
 pkg = require "../package.json"
 
 task "assets", "Deploys the assets.", ->
@@ -45,9 +43,7 @@ npxAsync = (command, args...) -> runAsync "npm", "exec", "--", command, args...
 # Synchronously spawns a new process using the specified command.
 run = (command, args...) ->
 	{status} = spawnSync command, args, shell: on, stdio: "inherit"
-	unless status is 0
-		console.error "Command failed:", command, args...
-		exit status
+	throw Error [command, args...].join " " unless status is 0
 
 # Asynchronously spawns a new process using the specified command.
 runAsync = (command, args...) -> new Promise (resolve, reject) ->

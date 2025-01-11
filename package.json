@@ -30,7 +30,7 @@
 		"@fontsource-variable/material-symbols-rounded": "^5.1.4",
 		"@types/node": "^22.10.5",
 		"coffeescript": "^2.7.0",
-		"sass": "^1.83.1"
+		"sass-embedded": "^1.83.1"
 	},
 	"engines": {
 		"node": ">=22.0.0"
@@ -59,6 +59,9 @@
 		"theme",
 		"ui"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"start": "node bin/theme.js"
 	}

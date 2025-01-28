@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [11.0.0](https://github.com/mc2it/theme/compare/v10.1.0...v11.0.0)
+- Breaking change: ported the source code to [TypeScript](https://www.typescriptlang.org).
+- Breaking change: ported the [Sass](https://sass-lang.com) stylesheet to SCSS syntax.
+
 ## Version [10.1.0](https://github.com/mc2it/theme/compare/v10.0.1...v10.1.0)
 - Added the `copyAssetsSync()` function.
 

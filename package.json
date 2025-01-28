@@ -6,7 +6,7 @@
 	"name": "@mc2it/theme",
 	"repository": "mc2it/theme",
 	"type": "module",
-	"version": "10.1.0",
+	"version": "11.0.0",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",
@@ -26,20 +26,21 @@
 		"bootstrap": "^5.3.3"
 	},
 	"devDependencies": {
-		"@coffeelint/cli": "^5.2.11",
 		"@fontsource-variable/material-symbols-rounded": "^5.1.4",
+		"@types/eslint__js": "^8.42.3",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^22.10.10",
-		"coffeescript": "^2.7.0",
 		"gulp": "^5.0.0",
-		"sass-embedded": "^1.83.4"
+		"sass-embedded": "^1.83.4",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.22.0"
 	},
 	"engines": {
 		"node": ">=22.0.0"
 	},
 	"exports": {
 		".": {
-			"types": "./src/index.d.ts",
+			"types": "./lib/index.d.ts",
 			"sass": "./src/ui/index.scss",
 			"default": "./lib/index.js"
 		},

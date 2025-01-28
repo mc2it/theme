@@ -1,5 +1,5 @@
-@use "sass:map"
-@use "../config" as *
+@use "sass:map";
+@use "../config" as *;
 
 @each $color in map.keys(map.remove($colors, "black", "white"))
 	.bg-#{$color}

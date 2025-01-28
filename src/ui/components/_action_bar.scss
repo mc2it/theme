@@ -1,5 +1,5 @@
-@use "sass:map"
-@use "../config" as *
+@use "sass:map";
+@use "../config" as *;
 
 action-bar, .action-bar
 	background-color: var(--gray-100)

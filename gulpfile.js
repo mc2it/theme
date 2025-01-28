@@ -13,8 +13,8 @@ export async function assets() {
 /** Builds the project. */
 export async function build() {
 	await assets();
-	await npx("coffee", "--compile", "--no-header", "--output", "lib", "src");
-	await npx("sass", ...sassOptions({sourcemaps: false}), "src/ui/index.sass:www/css/main.css");
+	await npx("tsc", "--build", "src/tsconfig.json");
+	await npx("sass", ...sassOptions({sourcemaps: false}), "src/ui/index.scss:www/css/main.css");
 }
 
 /** Deletes all generated files. */
@@ -26,7 +26,8 @@ export async function clean() {
 
 /** Performs the static analysis of source code. */
 export async function lint() {
-	await npx("coffeelint", "--file=etc/coffeelint.json", "src");
+	await npx("tsc", "--build", "tsconfig.json", "--noEmit");
+	await npx("eslint", "--config=etc/eslint.js", "gulpfile.js", "bin", "src");
 }
 
 /** Publishes the package. */
@@ -39,8 +40,8 @@ export async function publish() {
 /** Watches for file changes. */
 export async function watch() {
 	await assets();
-	void npx("coffee", "--compile", "--map", "--no-header", "--output", "lib", "--watch", "src");
-	void npx("sass", ...sassOptions({sourcemaps: true}), "--watch", "src/ui/index.sass:www/css/main.css");
+	void npx("tsc", "--build", "src/tsconfig.json", "--preserveWatchOutput", "--sourceMap", "--watch");
+	void npx("sass", ...sassOptions({sourcemaps: true}), "--watch", "src/ui/index.scss:www/css/main.css");
 }
 
 /** The default task. */

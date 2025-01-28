@@ -56,7 +56,7 @@ export function assetPath(options: PathOptions = {}): string {
  */
 export async function copyAssets(output: string, options: CopyOptions = {}): Promise<void> {
 	const sources = ["css", "fonts", "img", "sass"];
-	let directories = sources.filter(source => (options as Record<string, boolean>)[source]);
+	let directories = sources.filter(source => options[source as keyof CopyOptions]);
 	if (!directories.length) directories = sources;
 
 	for (const directory of directories) {
@@ -73,7 +73,7 @@ export async function copyAssets(output: string, options: CopyOptions = {}): Pro
  */
 export function copyAssetsSync(output: string, options: CopyOptions = {}): void {
 	const sources = ["css", "fonts", "img", "sass"];
-	let directories = sources.filter(source => (options as Record<string, boolean>)[source]);
+	let directories = sources.filter(source => options[source as keyof CopyOptions]);
 	if (!directories.length) directories = sources;
 
 	for (const directory of directories) {

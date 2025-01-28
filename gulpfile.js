@@ -14,7 +14,7 @@ export async function assets() {
 export async function build() {
 	await assets();
 	await npx("tsc", "--build", "src/tsconfig.json");
-	await npx("sass", ...sassOptions({sourcemaps: false}), "src/ui/index.scss:www/css/main.css");
+	await npx("sass", ...sassOptions({sourcemaps: false}), "src/ui/index.scss:www/css/mc2it.css");
 }
 
 /** Deletes all generated files. */
@@ -41,7 +41,7 @@ export async function publish() {
 export async function watch() {
 	await assets();
 	void npx("tsc", "--build", "src/tsconfig.json", "--preserveWatchOutput", "--sourceMap", "--watch");
-	void npx("sass", ...sassOptions({sourcemaps: true}), "--watch", "src/ui/index.scss:www/css/main.css");
+	void npx("sass", ...sassOptions({sourcemaps: true}), "--watch", "src/ui/index.scss:www/css/mc2it.css");
 }
 
 /** The default task. */

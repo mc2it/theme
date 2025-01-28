@@ -1,14 +1,18 @@
 @use "sass:map";
 @use "../config" as *;
 
-.offcanvas
-	@media screen and (width >= map.get($grid-breakpoints, sm))
-		--offcanvas-width: 350px
+.offcanvas {
+	@media screen and (width >= map.get($grid-breakpoints, sm)) {
+		--offcanvas-width: 350px;
+	}
+}
 
-.offcanvas-header
-	background-color: var(--body-bg)
-	height: var(--navbar-height)
+.offcanvas-header {
+	background-color: var(--body-bg);
+	height: var(--navbar-height);
+}
 
-.offcanvas-title img
-	position: relative
-	top: 1px
+.offcanvas-title img {
+	position: relative;
+	top: 1px;
+}

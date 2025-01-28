@@ -1,8 +1,8 @@
-.dropdown-header
-	font-weight: 600
+.dropdown-header {
+	font-weight: 600;
+}
 
-.dropdown-item
-	.icon
-		transform: scale(1.1)
-	&.active .icon
-		font-variation-settings: "FILL" 1
+.dropdown-item {
+	.icon { transform: scale(1.1); }
+	&.active .icon { font-variation-settings: "FILL" 1; }
+}

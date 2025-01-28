@@ -41,6 +41,7 @@ article {
 		@include border-radius(var(--border-radius));
 		margin: map.get($spacers, 4) auto;
 		max-width: map.get($container-max-widths, xl);
+	}
 
 	> section {
 		padding: $spacer;

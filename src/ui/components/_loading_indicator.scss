@@ -1,25 +1,23 @@
-@keyframes loader-rotation
-	to
-		transform: rotate(360deg)
+@keyframes loader-rotation {
+	to { transform: rotate(360deg); }
+}
 
-@keyframes loader-stroke
-	0%
-		stroke-dasharray: 1, 150
-		stroke-dashoffset: 0
-	50%
-		stroke-dasharray: 90, 150
-		stroke-dashoffset: -35
-	100%
-		stroke-dasharray: 90, 150
-		stroke-dashoffset: -124
+@keyframes loader-stroke {
+	0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
+	50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+	100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
+}
 
-loading-indicator, .loading-indicator
-	svg
-		animation: 2s linear infinite loader-rotation
+loading-indicator, .loading-indicator {
+	svg {
+		animation: 2s linear infinite loader-rotation;
+	}
 
-	circle
-		animation: 1.5s ease-in-out infinite loader-stroke
-		fill: none
-		stroke: var(--white)
-		stroke-linecap: round
-		stroke-width: 5px
+	circle {
+		animation: 1.5s ease-in-out infinite loader-stroke;
+		fill: none;
+		stroke: var(--white);
+		stroke-linecap: round;
+		stroke-width: 5px;
+	}
+}

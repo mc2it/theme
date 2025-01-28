@@ -40,11 +40,11 @@
 	"exports": {
 		".": {
 			"types": "./src/index.d.ts",
-			"sass": "./src/ui/index.sass",
+			"sass": "./src/ui/index.scss",
 			"default": "./lib/index.js"
 		},
 		"./config": {
-			"sass": "./src/ui/_config.sass"
+			"sass": "./src/ui/_config.scss"
 		}
 	},
 	"files": [
@@ -63,8 +63,5 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	},
-	"scripts": {
-		"start": "node bin/theme.js"
 	}
 }

@@ -1,39 +1,48 @@
 @use "sass:map";
 @use "../config" as *;
 
-body
-	accent-color: var(--primary)
-	background-color: var(--gray-200)
-	overflow: hidden
+body {
+	accent-color: var(--primary);
+	background-color: var(--gray-200);
+	overflow: hidden;
 
-	[data-bs-theme="dark"] &
-		background-color: var(--secondary-bg-subtle)
+	[data-bs-theme="dark"] & {
+		background-color: var(--secondary-bg-subtle);
+	}
 
-	&.loading
-		cursor: progress
+	&.loading {
+		cursor: progress;
+	}
+}
 
-main
-	inset: var(--main-offset, var(--navbar-height)) 0 0 0
-	overflow: auto
-	position: absolute
+main {
+	inset: var(--main-offset, var(--navbar-height)) 0 0 0;
+	overflow: auto;
+	position: absolute;
 
-	@if $enable-smooth-scroll
-		@media (prefers-reduced-motion: no-preference)
-			scroll-behavior: smooth
+	@if $enable-smooth-scroll {
+		@media (prefers-reduced-motion: no-preference) {
+			scroll-behavior: smooth;
+		}
+	}
 
-	@media print
-		top: 0
+	@media print {
+		top: 0;
+	}
+}
 
-article
-	background-color: var(--body-bg)
-	box-shadow: var(--box-shadow-sm)
-	overflow: clip
-	width: 100%
+article {
+	background-color: var(--body-bg);
+	box-shadow: var(--box-shadow-sm);
+	overflow: clip;
+	width: 100%;
 
-	@media screen and (width >= map.get($grid-breakpoints, xl))
-		@include border-radius(var(--border-radius))
-		margin: map.get($spacers, 4) auto
-		max-width: map.get($container-max-widths, xl)
+	@media screen and (width >= map.get($grid-breakpoints, xl)) {
+		@include border-radius(var(--border-radius));
+		margin: map.get($spacers, 4) auto;
+		max-width: map.get($container-max-widths, xl);
 
-	> section
-		padding: $spacer
+	> section {
+		padding: $spacer;
+	}
+}

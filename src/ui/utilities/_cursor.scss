@@ -1,5 +1,4 @@
-.cursor
-	&-default
-		cursor: default !important
-	&-help
-		cursor: help !important
+.cursor {
+	&-default { cursor: default !important; }
+	&-help { cursor: help !important; }
+}

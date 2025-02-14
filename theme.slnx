@@ -1,0 +1,6 @@
+<Solution>
+	<Project Path="theme.esproj">
+		<Build />
+		<Deploy />
+	</Project>
+</Solution>

@@ -12,6 +12,7 @@
 *.mjs text
 *.ps1 text
 *.scss text diff=css
+*.slnx text
 *.sql text
 *.svg text
 *.ts text

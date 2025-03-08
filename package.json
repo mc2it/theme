@@ -26,13 +26,13 @@
 		"bootstrap": "^5.3.3"
 	},
 	"devDependencies": {
-		"@fontsource-variable/material-symbols-rounded": "^5.1.4",
+		"@fontsource-variable/material-symbols-rounded": "^5.2.5",
 		"@types/gulp": "^4.0.17",
-		"@types/node": "^22.13.5",
+		"@types/node": "^22.13.10",
 		"gulp": "^5.0.0",
 		"sass-embedded": "^1.85.1",
-		"typescript": "^5.7.3",
-		"typescript-eslint": "^8.25.0"
+		"typescript": "^5.8.2",
+		"typescript-eslint": "^8.26.0"
 	},
 	"engines": {
 		"node": ">=22.0.0"

@@ -76,7 +76,7 @@ function run(command, ...args) {
  * @returns {string[]} The flags to be passed to the Sass command line.
  */
 function sassOptions(options = {}) {
-	const flags = ["--pkg-importer=node", "--silence-deprecation=color-functions,global-builtin,import,mixed-decls"];
+	const flags = ["--pkg-importer=node", "--quiet-deps"];
 	flags.push(...options.sourcemaps ? ["--source-map-urls=absolute"] : ["--no-source-map", "--style=compressed"]);
 	return flags;
 }

@@ -2,6 +2,7 @@ import gulp from "gulp";
 import {spawn} from "node:child_process";
 import {cp, readdir, rm} from "node:fs/promises";
 import {join} from "node:path";
+import {env} from "node:process";
 import pkg from "./package.json" with {type: "json"};
 
 /** Deploys the assets. */
@@ -13,8 +14,8 @@ export async function assets() {
 /** Builds the project. */
 export async function build() {
 	await assets();
-	await npx("tsc", "--build", "src/tsconfig.json");
-	await npx("sass", ...sassOptions({sourcemaps: false}), "src/ui/index.scss:www/css/mc2it.css");
+	await npx("tsc", ...typeScriptArguments());
+	await npx("sass", ...sassArguments());
 }
 
 /** Deletes all generated files. */
@@ -22,6 +23,12 @@ export async function clean() {
 	for (const folder of ["lib", "www/css"]) await rm(folder, {force: true, recursive: true});
 	for (const file of await readdir("var")) if (file != ".gitkeep") await rm(join("var", file), {recursive: true});
 	await rm("www/fonts/material_symbols.woff2", {force: true});
+}
+
+/** Packages the project. */
+export async function dist() {
+	env.NODE_ENV = "production"
+	await build();
 }
 
 /** Performs the static analysis of source code. */
@@ -39,13 +46,14 @@ export async function publish() {
 
 /** Watches for file changes. */
 export async function watch() {
+	env.NODE_ENV = "development";
 	await assets();
-	void npx("tsc", "--build", "src/tsconfig.json", "--preserveWatchOutput", "--sourceMap", "--watch");
-	void npx("sass", ...sassOptions({sourcemaps: true}), "--watch", "src/ui/index.scss:www/css/mc2it.css");
+	void npx("tsc", ...typeScriptArguments({watch: true}));
+	void npx("sass", ...sassArguments({watch: true}));
 }
 
 /** The default task. */
-export default gulp.series(clean, build);
+export default gulp.series(clean, dist);
 
 /**
  * Executes a command from a local package.
@@ -71,12 +79,26 @@ function run(command, ...args) {
 }
 
 /**
- * Returns the Sass build options.
- * @param {{sourcemaps?: boolean}} options Value indicating whether to generate the source maps.
- * @returns {string[]} The flags to be passed to the Sass command line.
+ * Gets the Sass build arguments.
+ * @param {{watch?: boolean}} options Value indicating whether to enable file watching.
+ * @returns {string[]} The arguments to be passed to the Sass command line.
  */
-function sassOptions(options = {}) {
-	const flags = ["--pkg-importer=node", "--quiet-deps", "--silence-deprecation=import"];
-	flags.push(...options.sourcemaps ? ["--source-map-urls=absolute"] : ["--no-source-map", "--style=compressed"]);
-	return flags;
+function sassArguments(options = {}) {
+	const args = ["--pkg-importer=node", "--quiet-deps", "--silence-deprecation=import"];
+	args.push(...env.NODE_ENV == "production" ? ["--no-source-map", "--style=compressed"] : ["--source-map-urls=absolute"]);
+	if (options.watch) args.push("--watch");
+	args.push("src/ui/index.scss:www/css/mc2it.css");
+	return args;
+}
+
+/**
+ * Gets the TypeScript build arguments.
+ * @param {{watch?: boolean}} options Value indicating whether to enable file watching.
+ * @returns {string[]} The arguments to be passed to the TypeScript command line.
+ */
+function typeScriptArguments(options = {}) {
+	const args = ["--build", "src/tsconfig.json"];
+	if (env.NODE_ENV != "production") args.push("--sourceMap");
+	if (options.watch) args.push("--preserveWatchOutput", "--watch");
+	return args;
 }

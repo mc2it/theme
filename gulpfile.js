@@ -14,8 +14,8 @@ export async function assets() {
 /** Builds the project. */
 export async function build() {
 	await assets();
-	await npx("tsc", ...typeScriptArguments());
-	await npx("sass", ...sassArguments());
+	await run("npx", "tsc", ...typeScriptArguments());
+	await run("npx", "sass", ...sassArguments());
 }
 
 /** Deletes all generated files. */
@@ -33,13 +33,13 @@ export async function dist() {
 
 /** Performs the static analysis of source code. */
 export async function lint() {
-	await npx("tsc", "--build", "tsconfig.json", "--noEmit");
-	await npx("eslint", "--config=etc/eslint.js", "gulpfile.js", "bin", "src");
+	await run("npx", "tsc", "--build", "tsconfig.json", "--noEmit");
+	await run("npx", "eslint", "--config=etc/eslint.js", "gulpfile.js", "bin", "src");
 }
 
 /** Publishes the package. */
 export async function publish() {
-	await npx("gulp");
+	await run("npx", "gulp");
 	for (const registry of ["https://registry.npmjs.org", "https://npm.pkg.github.com"]) await run("npm", "publish", `--registry=${registry}`);
 	for (const action of [["tag"], ["push", "origin"]]) await run("git", ...action, `v${pkg.version}`);
 }
@@ -48,22 +48,12 @@ export async function publish() {
 export async function watch() {
 	env.NODE_ENV = "development";
 	await assets();
-	void npx("tsc", ...typeScriptArguments({watch: true}));
-	void npx("sass", ...sassArguments({watch: true}));
+	void run("npx", "tsc", ...typeScriptArguments({watch: true}));
+	void run("npx", "sass", ...sassArguments({watch: true}));
 }
 
 /** The default task. */
 export default gulp.series(clean, dist);
-
-/**
- * Executes a command from a local package.
- * @param {string} command The command to run.
- * @param {...string} args The command arguments.
- * @return {Promise<void>} Resolves when the command is terminated.
- */
-function npx(command, ...args) {
-	return run("npm", "exec", "--", command, ...args);
-}
 
 /**
  * Spawns a new process using the specified command.

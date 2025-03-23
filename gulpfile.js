@@ -1,6 +1,6 @@
 import gulp from "gulp";
 import {spawn} from "node:child_process";
-import {cp, readdir, rm} from "node:fs/promises";
+import {cp, glob, readdir, readFile, rm, writeFile} from "node:fs/promises";
 import {join} from "node:path";
 import {env} from "node:process";
 import pkg from "./package.json" with {type: "json"};
@@ -44,6 +44,12 @@ export async function publish() {
 	for (const action of [["tag"], ["push", "origin"]]) await run("git", ...action, `v${pkg.version}`);
 }
 
+/** Updates the version number in the sources. */
+export async function version() {
+	for await (const file of glob("*/*.esproj"))
+		await replaceInFile(file, /<Version>\d+(\.\d+){2}<\/Version>/, `<Version>${pkg.version}</Version>`);
+}
+
 /** Watches for file changes. */
 export async function watch() {
 	env.NODE_ENV = "development";
@@ -53,7 +59,18 @@ export async function watch() {
 }
 
 /** The default task. */
-export default gulp.series(clean, dist);
+export default gulp.series(clean, version, dist);
+
+/**
+ * Replaces the specified pattern in a given file.
+ * @param {string} file The path of the file to be processed.
+ * @param {RegExp} pattern The regular expression to find.
+ * @param {string} replacement The replacement text.
+ * @returns {Promise<void>} Resolves when the replacement has been completed.
+ */
+async function replaceInFile(file, pattern, replacement) {
+	await writeFile(file, (await readFile(file, "utf8")).replace(pattern, replacement));
+}
 
 /**
  * Spawns a new process using the specified command.

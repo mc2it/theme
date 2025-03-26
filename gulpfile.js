@@ -46,7 +46,7 @@ export async function publish() {
 
 /** Updates the version number in the sources. */
 export async function version() {
-	for await (const file of glob("*/*.esproj"))
+	for await (const file of glob("src/*/*.esproj"))
 		await replaceInFile(file, /<Version>\d+(\.\d+){2}<\/Version>/, `<Version>${pkg.version}</Version>`);
 }
 
@@ -104,7 +104,7 @@ function sassArguments(options = {}) {
  * @returns {string[]} The arguments to be passed to the TypeScript command line.
  */
 function typeScriptArguments(options = {}) {
-	const args = ["--build", "src/tsconfig.json"];
+	const args = ["--build", "src/cli/tsconfig.json"];
 	if (env.NODE_ENV != "production") args.push("--sourceMap");
 	if (options.watch) args.push("--preserveWatchOutput", "--watch");
 	return args;

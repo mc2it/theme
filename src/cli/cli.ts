@@ -3,6 +3,7 @@ import {access} from "node:fs/promises";
 import {join} from "node:path";
 import process from "node:process";
 import {parseArgs} from "node:util";
+import pkg from "../../package.json" with {type: "json"};
 
 // The usage information.
 const usage = `
@@ -32,8 +33,7 @@ try {
 
 	// Print the usage.
 	if (values.version) {
-		const {default: {version}} = await import("../package.json", {with: {type: "json"}});
-		console.log(version);
+		console.log(pkg.version);
 		process.exit();
 	}
 
@@ -44,7 +44,7 @@ try {
 
 	// Run the requested command.
 	const [command] = positionals;
-	const path = `./cli/${command}.js`;
+	const path = `./commands/${command}.js`;
 	try { await access(join(import.meta.dirname, path)); }
 	catch {
 		console.error(`Unknown command "${command}".`);

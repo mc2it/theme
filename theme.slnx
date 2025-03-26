@@ -22,7 +22,10 @@
 	<Folder Name="/etc/">
 		<File Path="etc/eslint.js" />
 	</Folder>
-	<Project Path="src/theme.esproj">
+	<Project Path="src/cli/cli.esproj">
+		<Build />
+	</Project>
+	<Project Path="src/ui/ui.esproj">
 		<Build />
 	</Project>
 </Solution>

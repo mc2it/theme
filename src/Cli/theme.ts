@@ -45,7 +45,7 @@ export type PathOptions = Partial<{
  * @returns The path to the theme assets.
  */
 export function assetPath(options: PathOptions = {}): string {
-	return join(import.meta.dirname, options.sass ? "../../src/ui" : "../../www");
+	return join(import.meta.dirname, options.sass ? "../../src/UI" : "../../www");
 }
 
 /**

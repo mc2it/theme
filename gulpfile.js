@@ -77,7 +77,7 @@ function sassArguments(options = {}) {
 	const args = ["--pkg-importer=node", "--quiet-deps", "--silence-deprecation=import"];
 	args.push(...env.NODE_ENV == "production" ? ["--no-source-map", "--style=compressed"] : ["--source-map-urls=absolute"]);
 	if (options.watch) args.push("--watch");
-	args.push("src/ui/index.scss:www/css/mc2it.css");
+	args.push("src/UI/index.scss:www/css/mc2it.css");
 	return args;
 }
 
@@ -87,7 +87,7 @@ function sassArguments(options = {}) {
  * @returns {string[]} The arguments to be passed to the TypeScript command line.
  */
 function typeScriptArguments(options = {}) {
-	const args = ["--build", "src/cli/tsconfig.json"];
+	const args = ["--build", "src/Cli/tsconfig.json"];
 	if (env.NODE_ENV != "production") args.push("--sourceMap");
 	if (options.watch) args.push("--preserveWatchOutput", "--watch");
 	return args;

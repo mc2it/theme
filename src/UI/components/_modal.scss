@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../config" as *;
+@use "../Configuration" as *;
 
 .modal {
 	--modal-footer-bg: var(--gray-100);

@@ -1,6 +1,6 @@
 import console from "node:console";
 import {parseArgs} from "node:util";
-import {assetPath} from "../theme.js";
+import {assetPath} from "../Theme.js";
 
 // The usage information.
 const usage = `

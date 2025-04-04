@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../config" as *;
+@use "../Configuration" as *;
 
 .offcanvas {
 	@media screen and (width >= map.get($grid-breakpoints, sm)) {

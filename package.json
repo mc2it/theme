@@ -13,7 +13,7 @@
 		"url": "https://www.mc2it.com"
 	},
 	"bin": {
-		"theme": "bin/theme.js"
+		"theme": "bin/Theme.js"
 	},
 	"contributors": [
 		{
@@ -39,12 +39,12 @@
 	},
 	"exports": {
 		".": {
-			"types": "./lib/cli/index.d.ts",
-			"sass": "./src/ui/index.scss",
-			"default": "./lib/cli/index.js"
+			"types": "./lib/Cli/index.d.ts",
+			"sass": "./src/UI/index.scss",
+			"default": "./lib/Cli/index.js"
 		},
 		"./config": {
-			"sass": "./src/ui/_config.scss"
+			"sass": "./src/UI/_Configuration.scss"
 		}
 	},
 	"files": [

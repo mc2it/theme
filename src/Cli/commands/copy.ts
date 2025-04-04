@@ -1,6 +1,6 @@
 import console from "node:console";
 import {parseArgs} from "node:util";
-import {copyAssets} from "../theme.js";
+import {copyAssets} from "../Theme.js";
 
 // The usage information.
 const usage = `

@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../config" as *;
+@use "../Configuration" as *;
 
 body {
 	accent-color: var(--primary);

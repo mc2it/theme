@@ -13,7 +13,7 @@
 		"url": "https://www.mc2it.com"
 	},
 	"bin": {
-		"theme": "bin/Theme.js"
+		"theme": "bin/Mc2it.Theme.js"
 	},
 	"contributors": [
 		{
@@ -23,14 +23,14 @@
 		}
 	],
 	"dependencies": {
-		"bootstrap": "^5.3.3"
+		"bootstrap": "^5.3.4"
 	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.2.8",
 		"@types/gulp": "^4.0.17",
-		"@types/node": "^22.13.17",
+		"@types/node": "^22.14.0",
 		"gulp": "^5.0.0",
-		"sass-embedded": "^1.86.1",
+		"sass-embedded": "^1.86.3",
 		"typescript": "^5.8.2",
 		"typescript-eslint": "^8.29.0"
 	},

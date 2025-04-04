@@ -44,7 +44,7 @@ try {
 
 	// Run the requested command.
 	const [command] = positionals;
-	const path = `./commands/${command}.js`;
+	const path = `./Commands/${command}.js`;
 	try { await access(join(import.meta.dirname, path)); }
 	catch {
 		console.error(`Unknown command "${command}".`);

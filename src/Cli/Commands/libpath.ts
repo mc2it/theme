@@ -10,7 +10,7 @@ Usage:
 	npx @mc2it/theme libpath [options]
 
 Options:
-	-s, --sass  Print the specific path of Sass files.
+	-s, --sass  Print the specific path of SCSS files.
 	-h, --help  Display this help.
 `;
 

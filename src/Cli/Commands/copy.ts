@@ -16,7 +16,7 @@ Options:
 	-c, --css    Copy only CSS files.
 	-f, --fonts  Copy only font files.
 	-i, --img    Copy only image files.
-	-s, --sass   Copy only Sass files.
+	-s, --sass   Copy only SCSS files.
 	-h, --help   Display this help.
 `;
 

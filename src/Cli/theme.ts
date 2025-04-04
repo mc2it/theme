@@ -23,7 +23,7 @@ export type CopyOptions = Partial<{
 	img: boolean;
 
 	/**
-	 * Value indicating whether to only copy the Sass files.
+	 * Value indicating whether to only copy the SCSS files.
 	 */
 	sass: boolean;
 }>;
@@ -34,7 +34,7 @@ export type CopyOptions = Partial<{
 export type PathOptions = Partial<{
 
 	/**
-	 * Value indicating whether to return the specific path of Sass files.
+	 * Value indicating whether to return the specific path of SCSS files.
 	 */
 	sass: boolean;
 }>;

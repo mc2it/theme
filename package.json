@@ -40,7 +40,7 @@
 	"exports": {
 		".": {
 			"types": "./lib/Cli/index.d.ts",
-			"sass": "./src/UI/index.scss",
+			"sass": "./src/UI/Main.scss",
 			"default": "./lib/Cli/index.js"
 		},
 		"./config": {

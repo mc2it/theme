@@ -20,7 +20,7 @@ export async function build() {
 
 /** Deletes all generated files. */
 export async function clean() {
-	for (const folder of ["lib", "www/css"]) await rm(folder, {force: true, recursive: true});
+	for (const folder of ["lib", "www/Styles"]) await rm(folder, {force: true, recursive: true});
 	for (const file of await readdir("var")) if (file != ".gitkeep") await rm(join("var", file), {recursive: true});
 	await rm("www/Fonts/MaterialSymbols.woff2", {force: true});
 }

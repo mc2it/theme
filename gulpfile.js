@@ -8,7 +8,7 @@ import pkg from "./package.json" with {type: "json"};
 /** Deploys the assets. */
 export async function assets() {
 	const fontsource = "node_modules/@fontsource-variable/material-symbols-rounded/files";
-	await cp(join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/fonts/material_symbols.woff2");
+	await cp(join(fontsource, "material-symbols-rounded-latin-fill-normal.woff2"), "www/Fonts/MaterialSymbols.woff2");
 }
 
 /** Builds the project. */
@@ -22,7 +22,7 @@ export async function build() {
 export async function clean() {
 	for (const folder of ["lib", "www/css"]) await rm(folder, {force: true, recursive: true});
 	for (const file of await readdir("var")) if (file != ".gitkeep") await rm(join("var", file), {recursive: true});
-	await rm("www/fonts/material_symbols.woff2", {force: true});
+	await rm("www/Fonts/MaterialSymbols.woff2", {force: true});
 }
 
 /** Packages the project. */
@@ -77,7 +77,7 @@ function sassArguments(options = {}) {
 	const args = ["--pkg-importer=node", "--quiet-deps", "--silence-deprecation=import"];
 	args.push(...env.NODE_ENV == "Production" ? ["--no-source-map", "--style=compressed"] : ["--source-map-urls=absolute"]);
 	if (options.watch) args.push("--watch");
-	args.push("src/UI/Main.scss:www/css/mc2it.css");
+	args.push("src/UI/Main.scss:www/Styles/Mc2it.css");
 	return args;
 }
 

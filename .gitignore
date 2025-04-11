@@ -6,5 +6,5 @@
 /npm-debug.log
 /obj/
 /var/
-/www/css/
-/www/fonts/material*.woff2
+/www/Fonts/MaterialSymbols.woff2
+/www/Styles/

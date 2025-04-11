@@ -43,7 +43,7 @@
 			"sass": "./src/UI/Main.scss",
 			"default": "./lib/Cli/index.js"
 		},
-		"./config": {
+		"./Configuration": {
 			"sass": "./src/UI/_Configuration.scss"
 		}
 	},

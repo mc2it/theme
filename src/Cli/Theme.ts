@@ -55,13 +55,16 @@ export function assetPath(options: PathOptions = {}): string {
  * @returns Resolves when the assets have been copied.
  */
 export async function copyAssets(output: string, options: CopyOptions = {}): Promise<void> {
-	const sources = ["css", "fonts", "img", "sass"];
-	let directories = sources.filter(source => options[source as keyof CopyOptions]);
-	if (!directories.length) directories = sources;
+	const sources = new Map([["css", "Styles"], ["fonts", "Fonts"], ["img", "Images"], ["sass", "UI"]]);
+	const keys = sources.keys().toArray();
 
-	for (const directory of directories) {
-		const input = directory == "sass" ? assetPath({sass: true}) : join(assetPath(), directory);
-		const target = directories.length == 1 ? output : join(output, directory);
+	let flags = keys.filter(source => options[source as keyof CopyOptions]);
+	if (!flags.length) flags = keys;
+
+	for (const flag of flags) {
+		const folder = sources.get(flag)!;
+		const input = flag == "sass" ? assetPath({sass: true}) : join(assetPath(), folder);
+		const target = flags.length == 1 ? output : join(output, folder);
 		await cp(input, target, {recursive: true});
 	}
 }
@@ -72,13 +75,16 @@ export async function copyAssets(output: string, options: CopyOptions = {}): Pro
  * @param options The copy options.
  */
 export function copyAssetsSync(output: string, options: CopyOptions = {}): void {
-	const sources = ["css", "fonts", "img", "sass"];
-	let directories = sources.filter(source => options[source as keyof CopyOptions]);
-	if (!directories.length) directories = sources;
+	const sources = new Map([["css", "Styles"], ["fonts", "Fonts"], ["img", "Images"], ["sass", "UI"]]);
+	const keys = sources.keys().toArray();
 
-	for (const directory of directories) {
-		const input = directory == "sass" ? assetPath({sass: true}) : join(assetPath(), directory);
-		const target = directories.length == 1 ? output : join(output, directory);
+	let flags = keys.filter(source => options[source as keyof CopyOptions]);
+	if (!flags.length) flags = keys;
+
+	for (const flag of flags) {
+		const folder = sources.get(flag)!;
+		const input = flag == "sass" ? assetPath({sass: true}) : join(assetPath(), folder);
+		const target = flags.length == 1 ? output : join(output, folder);
 		cpSync(input, target, {recursive: true});
 	}
 }

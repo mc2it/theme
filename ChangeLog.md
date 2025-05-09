@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [12.1.0](https://github.com/mc2it/theme/compare/v12.0.0...v12.1.0)
+- Added the `.table-variant` class.
+
 ## Version [12.0.0](https://github.com/mc2it/theme/compare/v11.2.0...v12.0.0)
 - Breaking change: use Pascal case as file naming convention.
 

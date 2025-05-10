@@ -51,5 +51,10 @@ $offcanvas-bg-color: $primary;
 $offcanvas-horizontal-width: 300px;
 $offcanvas-padding-y: $spacer * 0.5;
 
+// Toasts.
+$toast-background-color: var(--body-bg-rgb);
+$toast-header-background-color: var(--body-bg-rgb);
+
 // Tooltips.
 $tooltip-max-width: 250px;
+$tooltip-opacity: 1;

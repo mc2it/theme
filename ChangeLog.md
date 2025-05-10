@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [12.2.1](https://github.com/mc2it/theme/compare/v12.2.0...v12.2.1)
+- Fixed the background color of toasts.
+
 ## Version [12.2.0](https://github.com/mc2it/theme/compare/v12.1.0...v12.2.0)
 - Disabled the transparency of toasts and tooltips.
 

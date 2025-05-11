@@ -39,9 +39,9 @@
 	},
 	"exports": {
 		".": {
-			"types": "./lib/Cli/index.d.ts",
+			"types": "./lib/Cli/Main.d.ts",
 			"sass": "./src/UI/Main.scss",
-			"default": "./lib/Cli/index.js"
+			"default": "./lib/Cli/Main.js"
 		},
 		"./Configuration": {
 			"sass": "./src/UI/_Configuration.scss"

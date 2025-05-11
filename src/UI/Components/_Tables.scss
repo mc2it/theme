@@ -15,4 +15,9 @@
 		background-color: var(--body-bg);
 		&::after { --border-color: var(--gray-500); }
 	}
+
+	[data-bs-theme="dark"] & {
+		--table-border-color: var(--gray-700);
+		> thead.sticky-top::after { --border-color: var(--gray-700); }
+	}
 }

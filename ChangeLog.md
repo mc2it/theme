@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [12.2.1](https://github.com/mc2it/theme/compare/v12.2.1...v12.2.2)
+- Fixed the border color associated with the `.table-variant` class in dark mode.
+
 ## Version [12.2.1](https://github.com/mc2it/theme/compare/v12.2.0...v12.2.1)
 - Fixed the background color of toasts.
 

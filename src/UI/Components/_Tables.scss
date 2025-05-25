@@ -21,3 +21,19 @@
 		> thead.sticky-top::after { --border-color: var(--gray-700); }
 	}
 }
+
+@each $state in map.keys($theme-colors) {
+	.table-row-#{$state} {
+		> td { background-color: var(--#{$state}-bg-subtle); }
+		border-bottom-color: var(--gray-500);
+		[data-bs-theme="dark"] & { border-bottom-color: var(--gray-700); }
+	}
+}
+
+@each $state in map.keys($theme-colors) {
+	.table-cell-#{$state} {
+		background-color: var(--#{$state}-bg-subtle) !important;
+		border-bottom-color: var(--gray-500);
+		[data-bs-theme="dark"] & { border-bottom-color: var(--gray-700); }
+	}
+}

@@ -5,10 +5,10 @@
 	transform: scale(1.3);
 }
 
-@each $color in danger, info, success, warning {
-	.toast-header-#{$color} {
-		--toast-header-bg: var(--#{$color}-bg-subtle);
-		--toast-header-border-color: var(--#{$color}-border-subtle);
-		--toast-header-color: var(--#{$color}-text-emphasis);
+@each $state in map.keys($theme-colors) {
+	.toast-header-#{$state} {
+		--toast-header-bg: var(--#{$state}-bg-subtle);
+		--toast-header-border-color: var(--#{$state}-border-subtle);
+		--toast-header-color: var(--#{$state}-text-emphasis);
 	}
 }

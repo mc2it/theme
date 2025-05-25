@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../Configuration" as *;
+
 .table > thead.sticky-top::after {
 	border-bottom: var(--border-width) solid var(--border-color);
 	bottom: 0;

@@ -1,10 +1,10 @@
 # Changelog
 
-## Version [12.3.0](https://github.com/mc2it/theme/compare/v12.2.1...v12.3.0)
+## Version [12.3.0](https://github.com/mc2it/theme/compare/v12.2.2...v12.3.0)
 - Added the `.table-row-*` and `.table-cell-*` classes.
 - Removed the `.table-variant` class.
 
-## Version [12.2.1](https://github.com/mc2it/theme/compare/v12.2.1...v12.2.2)
+## Version [12.2.2](https://github.com/mc2it/theme/compare/v12.2.1...v12.2.2)
 - Fixed the border color associated with the `.table-variant` class in dark mode.
 
 ## Version [12.2.1](https://github.com/mc2it/theme/compare/v12.2.0...v12.2.1)

@@ -26,11 +26,11 @@
 		"bootstrap": "^5.3.6"
 	},
 	"devDependencies": {
-		"@fontsource-variable/material-symbols-rounded": "^5.2.10",
+		"@fontsource-variable/material-symbols-rounded": "^5.2.11",
 		"@types/gulp": "^4.0.17",
-		"@types/node": "^22.15.23",
-		"gulp": "^5.0.0",
-		"sass-embedded": "^1.89.0",
+		"@types/node": "^22.15.29",
+		"gulp": "^5.0.1",
+		"sass-embedded": "^1.89.1",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.33.0"
 	},

@@ -15,7 +15,7 @@ summary.accordion-button {
 }
 
 details.accordion-item:not([open]) > summary.accordion-button {
-	@include border-bottom-radius(var(--accordion-inner-border-radius));
+	@include border-radius(var(--accordion-inner-border-radius));
 	background-color: var(--accordion-btn-bg);
 	box-shadow: none;
 	color: var(--accordion-btn-color);

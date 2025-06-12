@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [12.4.0](https://github.com/mc2it/theme/compare/v12.3.0...v12.4.0)
+- Added the `.cursor-pointer` class.
+
 ## Version [12.3.0](https://github.com/mc2it/theme/compare/v12.2.2...v12.3.0)
 - Added the `.table-row-*` and `.table-cell-*` classes.
 - Removed the `.table-variant` class.

@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [12.5.0](https://github.com/mc2it/theme/compare/v12.4.0...v12.5.0)
+- Brightened up the contextual colors of tables in dark mode.
+
 ## Version [12.4.0](https://github.com/mc2it/theme/compare/v12.3.0...v12.4.0)
 - Added the `.cursor-pointer` class.
 

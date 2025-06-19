@@ -10,18 +10,26 @@
 	right: 0;
 }
 
-@each $state in map.keys($theme-colors) {
-	.table-row-#{$state} {
-		> td { background-color: var(--#{$state}-bg-subtle); }
+@each $color, $value in $theme-colors {
+	.table-row-#{$color} {
+		> td { background-color: var(--#{$color}-bg-subtle); }
 		border-bottom-color: var(--gray-500);
-		[data-bs-theme="dark"] & { border-bottom-color: var(--gray-700); }
+
+		[data-bs-theme="dark"] & {
+			> td { background-color: shade-color($value, 75%); }
+			border-bottom-color: var(--gray-700);
+		}
 	}
 }
 
-@each $state in map.keys($theme-colors) {
-	.table-cell-#{$state} {
-		background-color: var(--#{$state}-bg-subtle) !important;
+@each $color, $value in $theme-colors {
+	.table-cell-#{$color} {
+		background-color: var(--#{$color}-bg-subtle) !important;
 		border-bottom-color: var(--gray-500);
-		[data-bs-theme="dark"] & { border-bottom-color: var(--gray-700); }
+
+		[data-bs-theme="dark"] & {
+			background-color: shade-color($value, 75%) !important;
+			border-bottom-color: var(--gray-700);
+		}
 	}
 }

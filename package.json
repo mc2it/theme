@@ -6,7 +6,7 @@
 	"name": "@mc2it/theme",
 	"repository": "mc2it/theme",
 	"type": "module",
-	"version": "12.4.0",
+	"version": "12.5.0",
 	"author": {
 		"email": "dev@mc2it.com",
 		"name": "MC2IT",
@@ -23,7 +23,7 @@
 		}
 	],
 	"dependencies": {
-		"bootstrap": "^5.3.6"
+		"bootstrap": "^5.3.7"
 	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.2.13",

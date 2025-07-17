@@ -15,13 +15,6 @@
 	"bin": {
 		"theme": "bin/Mc2it.Theme.js"
 	},
-	"contributors": [
-		{
-			"email": "cedric@belin.io",
-			"name": "Cédric Belin",
-			"url": "https://belin.io"
-		}
-	],
 	"dependencies": {
 		"bootstrap": "^5.3.7"
 	},

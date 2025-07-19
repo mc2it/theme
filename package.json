@@ -21,7 +21,7 @@
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.2.16",
 		"@types/gulp": "^4.0.17",
-		"@types/node": "^24.0.14",
+		"@types/node": "^24.0.15",
 		"gulp": "^5.0.1",
 		"sass-embedded": "^1.89.2",
 		"typescript": "^5.8.3",

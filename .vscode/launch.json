@@ -3,11 +3,12 @@
 	"configurations": [
 		{
 			"name": "Program",
-			"preLaunchTask": "Debug",
+			"preLaunchTask": "Build",
 			"request": "launch",
 			"type": "node",
 			"program": "${workspaceFolder}/bin/Mc2it.Theme.js",
-			"args": ["${input:command}"]
+			"args": ["${input:command}"],
+			"env": {"NODE_ENV": "development"}
 		}
 	],
 	"inputs": [

@@ -27,7 +27,7 @@ export async function clean() {
 
 /** Packages the project. */
 export async function dist() {
-	env.NODE_ENV = "Production"
+	env.NODE_ENV = "production"
 	await build();
 }
 
@@ -46,7 +46,7 @@ export async function publish() {
 
 /** Watches for file changes. */
 export async function watch() {
-	env.NODE_ENV = "Development";
+	env.NODE_ENV = "development";
 	await assets();
 	void run(`npx tsc ${typeScriptArguments({watch: true})}`);
 	void run(`npx sass ${sassArguments({watch: true})}`);
@@ -74,7 +74,7 @@ function run(command) {
  */
 function sassArguments(options = {}) {
 	const args = ["--pkg-importer=node", "--quiet-deps", "--silence-deprecation=import"];
-	args.push(...env.NODE_ENV == "Production" ? ["--no-source-map", "--style=compressed"] : ["--source-map-urls=absolute"]);
+	args.push(...env.NODE_ENV == "production" ? ["--no-source-map", "--style=compressed"] : ["--source-map-urls=absolute"]);
 	if (options.watch) args.push("--watch");
 	args.push("src/UI/Main.scss:www/Styles/Mc2it.css");
 	return args.join(" ");
@@ -87,7 +87,7 @@ function sassArguments(options = {}) {
  */
 function typeScriptArguments(options = {}) {
 	const args = ["--build", "src/Cli/tsconfig.json"];
-	if (env.NODE_ENV != "Production") args.push("--sourceMap");
+	if (env.NODE_ENV != "production") args.push("--sourceMap");
 	if (options.watch) args.push("--preserveWatchOutput", "--watch");
 	return args.join(" ");
 }

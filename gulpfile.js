@@ -1,8 +1,10 @@
+import esbuild from "esbuild";
 import gulp from "gulp";
 import {spawn} from "node:child_process";
 import {cp, readdir, rm} from "node:fs/promises";
 import {join} from "node:path";
 import {env} from "node:process";
+import {esbuildOptions} from "./etc/ESBuild.js";
 import pkg from "./package.json" with {type: "json"};
 
 /** Deploys the assets. */
@@ -14,8 +16,8 @@ export async function assets() {
 /** Builds the project. */
 export async function build() {
 	await assets();
+	await esbuild.build(esbuildOptions());
 	await run(`npx tsc ${typeScriptArguments()}`);
-	await run(`npx sass ${sassArguments()}`);
 }
 
 /** Deletes all generated files. */
@@ -29,6 +31,8 @@ export async function clean() {
 export async function dist() {
 	env.NODE_ENV = "production"
 	await build();
+	env.NODE_ENV = "development"
+	await esbuild.build(esbuildOptions());
 }
 
 /** Performs the static analysis of source code. */
@@ -48,8 +52,8 @@ export async function publish() {
 export async function watch() {
 	env.NODE_ENV = "development";
 	await assets();
+	void (await esbuild.context(esbuildOptions())).watch();
 	void run(`npx tsc ${typeScriptArguments({watch: true})}`);
-	void run(`npx sass ${sassArguments({watch: true})}`);
 }
 
 /** The default task. */
@@ -65,19 +69,6 @@ function run(command) {
 		const process = spawn(command, {shell: true, stdio: "inherit"});
 		process.on("close", code => code ? reject(Error(command)) : resolve());
 	});
-}
-
-/**
- * Gets the Sass build arguments.
- * @param {{watch?: boolean}} options Value indicating whether to enable file watching.
- * @returns {string} The arguments to be passed to the Sass command line.
- */
-function sassArguments(options = {}) {
-	const args = ["--pkg-importer=node", "--quiet-deps", "--silence-deprecation=import"];
-	args.push(...env.NODE_ENV == "production" ? ["--no-source-map", "--style=compressed"] : ["--source-map-urls=absolute"]);
-	if (options.watch) args.push("--watch");
-	args.push("src/UI/Main.scss:www/Styles/Mc2it.css");
-	return args.join(" ");
 }
 
 /**

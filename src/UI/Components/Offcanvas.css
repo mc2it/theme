@@ -10,7 +10,10 @@
 	height: var(--navbar-height);
 }
 
-.offcanvas-title img {
-	position: relative;
-	top: 1px;
+.offcanvas-title {
+	font-weight: normal;
+	img {
+		position: relative;
+		top: 1px;
+	}
 }

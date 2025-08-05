@@ -11,15 +11,12 @@
 	"bin": {
 		"theme": "bin/Mc2it.Theme.js"
 	},
-	"dependencies": {
-		"bootstrap": "^5.3.7"
-	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.2.17",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^24.2.0",
+		"esbuild": "^0.25.8",
 		"gulp": "^5.0.1",
-		"sass-embedded": "^1.89.2",
 		"typescript": "^5.9.2",
 		"typescript-eslint": "^8.39.0"
 	},
@@ -27,14 +24,8 @@
 		"node": ">=24.0.0"
 	},
 	"exports": {
-		".": {
-			"types": "./lib/Cli/Main.d.ts",
-			"sass": "./src/UI/Main.scss",
-			"default": "./lib/Cli/Main.js"
-		},
-		"./Configuration": {
-			"sass": "./src/UI/_Configuration.scss"
-		}
+		"types": "./lib/Main.d.ts",
+		"default": "./lib/Main.js"
 	},
 	"files": [
 		"lib/",
@@ -50,6 +41,9 @@
 		"theme",
 		"ui"
 	],
+	"peerDependencies": {
+		"bootstrap": ">=5.3.0"
+	},
 	"publishConfig": {
 		"access": "public"
 	}

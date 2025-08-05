@@ -5,7 +5,7 @@
 		"declaration": true,
 		"declarationMap": true,
 		"noEmit": false,
-		"outDir": "../../lib",
+		"outDir": "../../lib/Cli",
 		"rootDir": "."
 	}
 }

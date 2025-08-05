@@ -10,7 +10,7 @@ export function esbuildOptions() {
 		bundle: true,
 		conditions: production ? [] : ["development"],
 		entryPoints: ["src/UI/Main.css"],
-		external: ["*.woff2"],
+		external: ["*.webp", "*.woff2"],
 		legalComments: "none",
 		minify: production,
 		outfile: `www/Styles/Mc2it.${production ? "min.css" : "css"}`,

@@ -30,5 +30,5 @@
 @import "Components/Offcanvas.css";
 @import "Components/Pagination.css";
 @import "Components/Tables.css";
-/* @import "Components/Toasts.css"; */
+@import "Components/Toasts.css";
 @import "Components/Tooltip.css";

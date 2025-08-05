@@ -1,0 +1,3 @@
+[data-bs-theme="dark"] {
+	.filter-invert { filter: invert(100%); }
+}

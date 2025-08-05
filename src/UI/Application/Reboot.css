@@ -1,0 +1,25 @@
+::backdrop {
+	--bs-backdrop-bg: var(--bs-black-rgb);
+	--bs-backdrop-opacity: 0.5;
+}
+
+::selection {
+	background-color: var(--bs-primary);
+	color: var(--bs-white);
+}
+
+a {
+	text-decoration: none;
+	&:not(.btn, .dropdown-item, .list-group-item-action, .nav-link) {
+		&:hover, &:focus { text-decoration: underline; }
+	}
+}
+
+menu {
+	margin: 0;
+	padding: 0;
+}
+
+optgroup {
+	font-style: normal;
+}

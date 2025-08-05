@@ -1,0 +1,23 @@
+body {
+	accent-color: var(--bs-primary);
+	background-color: var(--bs-gray-200);
+	overflow: hidden;
+	&.loading { cursor: progress; }
+	[data-bs-theme="dark"] & { background-color: var(--bs-secondary-bg-subtle); }
+}
+
+main {
+	inset: var(--main-offset, var(--navbar-height)) 0 0 0;
+	overflow: auto;
+	position: absolute;
+	@media print { top: 0; }
+	@media (prefers-reduced-motion: no-preference) { scroll-behavior: smooth; }
+}
+
+article {
+	background-color: var(--bs-body-bg);
+	box-shadow: var(--bs-box-shadow-sm);
+	overflow: clip;
+	width: 100%;
+	> section { padding: 1rem; }
+}

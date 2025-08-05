@@ -1,0 +1,11 @@
+.btn-primary {
+	--bs-btn-bg: var(--bs-primary);
+	--bs-btn-border-color: var(--bs-primary);
+	--bs-btn-active-bg: color-mix(in srgb, var(--bs-primary) 100%, var(--bs-black) 20%);
+	--bs-btn-active-border-color: color-mix(in srgb, var(--bs-primary) 100%, var(--bs-black) 25%);
+	--bs-btn-disabled-bg: var(--bs-primary);
+	--bs-btn-disabled-border-color: var(--bs-primary);
+	--bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary) 100%, var(--bs-black) 15%);
+	--bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary) 100%, var(--bs-black) 20%);
+	--bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+}

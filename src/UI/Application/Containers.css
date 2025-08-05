@@ -1,0 +1,39 @@
+.article-sm {
+	@media (width >= 576px) {
+		border-radius: var(--bs-border-radius);
+		margin: 1.5rem auto;
+		max-width: 540px;
+	}
+}
+
+.article-md {
+	@media (width >= 768px) {
+		border-radius: var(--bs-border-radius);
+		margin: 1.5rem auto;
+		max-width: 720px;
+	}
+}
+
+.article-lg {
+	@media (width >= 992px) {
+		border-radius: var(--bs-border-radius);
+		margin: 1.5rem auto;
+		max-width: 960px;
+	}
+}
+
+.article-xl {
+	@media (width >= 1200px) {
+		border-radius: var(--bs-border-radius);
+		margin: 1.5rem auto;
+		max-width: 1140px;
+	}
+}
+
+.article-xxl {
+	@media (width >= 1400px) {
+		border-radius: var(--bs-border-radius);
+		margin: 1.5rem auto;
+		max-width: 1320px;
+	}
+}

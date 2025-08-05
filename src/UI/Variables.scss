@@ -1,0 +1,11 @@
+// Modal.
+$modal-content-color: var(--body-color);
+$modal-footer-bg: $gray-100;
+
+// Toasts.
+$toast-background-color: rgba(var(--body-bg-rgb), 1);
+$toast-header-background-color: rgba(var(--body-bg-rgb), 1);
+
+// Tooltips.
+$tooltip-max-width: 250px;
+$tooltip-opacity: 1;

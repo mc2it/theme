@@ -1,0 +1,16 @@
+.offcanvas {
+	--bs-offcanvas-bg: var(--bs-primary);
+	--bs-offcanvas-padding-y: 0.5rem;
+	--bs-offcanvas-width: 300px;
+	@media (width >= 576px) { --bs-offcanvas-width: 350px; }
+}
+
+.offcanvas-header {
+	background-color: var(--bs-body-bg);
+	height: var(--navbar-height);
+}
+
+.offcanvas-title img {
+	position: relative;
+	top: 1px;
+}

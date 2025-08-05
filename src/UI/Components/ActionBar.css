@@ -1,0 +1,18 @@
+action-bar, .action-bar {
+	background-color: var(--bs-gray-100);
+	border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+	box-shadow: var(--bs-box-shadow-sm);
+	display: block;
+	inset: var(--navbar-height) 0 auto 0;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	position: fixed;
+	user-select: none;
+	z-index: 1029; /* $zindex-fixed - 1 */
+	@media print { display: none; }
+
+	[data-bs-theme="dark"] & {
+		background-color: var(--bs-gray-800);
+		border-bottom-color: var(--bs-black);
+	}
+}

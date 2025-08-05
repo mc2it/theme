@@ -2,19 +2,21 @@
 .form-select,
 .input-group-text {
 	&:not(:focus) {
-		border-bottom-color: var(--gray-500);
-		box-shadow: none;
-		[data-bs-theme="dark"] & { border-bottom-color: var(--gray-600); }
+		border-bottom-color: var(--bs-gray-500);
+		[data-bs-theme="dark"] & { border-bottom-color: var(--bs-gray-600); }
 	}
 }
 
 .form-switch .form-check-input {
 	cursor: pointer;
+	&:checked {
+		background-color: var(--bs-primary);
+		border-color: var(--bs-primary);
+	}
 }
 
 .remove-spin-button {
 	appearance: textfield;
-
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
 		appearance: none;

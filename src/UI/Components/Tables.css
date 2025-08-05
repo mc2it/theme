@@ -1,0 +1,19 @@
+.table-cell-danger {
+	background-color: var(--bs-danger-bg-subtle) !important;
+	border-bottom-color: var(--bs-gray-500);
+
+	[data-bs-theme="dark"] & {
+		background-color: color-mix(in srgb, var(--bs-danger) 75%, var(--bs-black) 100%) !important;
+		border-bottom-color: var(--bs-gray-700);
+	}
+}
+
+.table-row-danger {
+	> td { background-color: var(--bs-danger-bg-subtle); }
+	border-bottom-color: var(--bs-gray-500);
+
+	[data-bs-theme="dark"] & {
+		> td { background-color: color-mix(in srgb, var(--bs-danger) 100%, var(--bs-black) 75%); }
+		border-bottom-color: var(--bs-gray-700);
+	}
+}

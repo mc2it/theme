@@ -9,14 +9,11 @@
 }
 
 loading-indicator, .loading-indicator {
-	svg {
-		animation: 2s linear infinite loader-rotation;
-	}
-
+	svg { animation: 2s linear infinite loader-rotation; }
 	circle {
 		animation: 1.5s ease-in-out infinite loader-stroke;
 		fill: none;
-		stroke: var(--white);
+		stroke: var(--bs-white);
 		stroke-linecap: round;
 		stroke-width: 5px;
 	}

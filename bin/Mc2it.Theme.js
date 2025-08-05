@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import "../lib/Program.js";
+import "../lib/Cli/Program.js";

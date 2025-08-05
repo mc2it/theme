@@ -24,8 +24,8 @@
 		"node": ">=24.0.0"
 	},
 	"exports": {
-		"types": "./lib/Main.d.ts",
-		"default": "./lib/Main.js"
+		"types": "./lib/Cli/Main.d.ts",
+		"default": "./lib/Cli/Main.js"
 	},
 	"files": [
 		"lib/",

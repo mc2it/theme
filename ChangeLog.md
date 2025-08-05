@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.0.0](https://github.com/mc2it/theme/compare/v12.4.0...v13.0.0)
+- Breaking change: ported the [Sass](https://sass-lang.com) stylesheet to [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS).
+
 ## Version [12.5.0](https://github.com/mc2it/theme/compare/v12.4.0...v12.5.0)
 - Brightened up the theme colors of tables in dark mode.
 

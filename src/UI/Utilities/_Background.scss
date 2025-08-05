@@ -1,8 +1,0 @@
-@use "sass:map";
-@use "../Configuration" as *;
-
-@each $color in map.keys(map.remove($colors, "black", "white")) {
-	.bg-#{$color} {
-		background-color: var(--#{$color}) !important;
-	}
-}

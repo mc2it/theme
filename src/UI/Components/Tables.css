@@ -1,19 +1,48 @@
-.table-cell-danger {
-	background-color: var(--bs-danger-bg-subtle) !important;
+.table-cell, .table-row {
 	border-bottom-color: var(--bs-gray-500);
+	[data-bs-theme="dark"] & { border-bottom-color: var(--bs-gray-700); }
+}
 
-	[data-bs-theme="dark"] & {
-		background-color: color-mix(in srgb, var(--bs-danger) 75%, var(--bs-black) 100%) !important;
-		border-bottom-color: var(--bs-gray-700);
+.table-cell {
+	&.bg-danger {
+		background-color: var(--bs-danger-bg-subtle) !important;
+		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-danger) 30%, var(--bs-black) 100%) !important; }
+	}
+
+	&.bg-info {
+		background-color: var(--bs-info-bg-subtle) !important;
+		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-info) 30%, var(--bs-black) 100%) !important; }
+	}
+
+	&.bg-success {
+		background-color: var(--bs-success-bg-subtle) !important;
+		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-success) 30%, var(--bs-black) 100%) !important; }
+	}
+
+	&.bg-warning {
+		background-color: var(--bs-warning-bg-subtle) !important;
+		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-warning) 30%, var(--bs-black) 100%) !important; }
 	}
 }
 
-.table-row-danger {
-	> td { background-color: var(--bs-danger-bg-subtle); }
-	border-bottom-color: var(--bs-gray-500);
+.table-row {
+	&.bg-danger {
+		> td { background-color: var(--bs-danger-bg-subtle); }
+		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-danger) 30%, var(--bs-black) 100%); }
+	}
 
-	[data-bs-theme="dark"] & {
-		> td { background-color: color-mix(in srgb, var(--bs-danger) 100%, var(--bs-black) 75%); }
-		border-bottom-color: var(--bs-gray-700);
+	&.bg-info {
+		> td { background-color: var(--bs-info-bg-subtle); }
+		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-info) 30%, var(--bs-black) 100%); }
+	}
+
+	&.bg-success {
+		> td { background-color: var(--bs-success-bg-subtle); }
+		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-success) 30%, var(--bs-black) 100%); }
+	}
+
+	&.bg-warning {
+		> td { background-color: var(--bs-warning-bg-subtle); }
+		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-warning) 30%, var(--bs-black) 100%); }
 	}
 }

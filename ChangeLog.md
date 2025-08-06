@@ -1,8 +1,12 @@
 # Changelog
 
+## Version [13.1.0](https://github.com/mc2it/theme/compare/v13.0.0...v13.1.0)
+- Imported the [Bootstrap](https://getbootstrap.com) stylesheet into a cascade layer.
+- Removed all `!important` flags from the [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) rules.
+
 ## Version [13.0.0](https://github.com/mc2it/theme/compare/v12.5.0...v13.0.0)
 - Breaking change: ported the [Sass](https://sass-lang.com) stylesheet to [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS).
-- [Boostrap](https://getbootstrap.com) is now a peer dependency.
+- [Bootstrap](https://getbootstrap.com) is now a peer dependency.
 - Use [ESBuild](https://esbuild.github.io) to compile the stylesheet and the [TypeScript](https://www.typescriptlang.org) files.
 - Updated the package dependencies.
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.1.1](https://github.com/mc2it/theme/compare/v13.1.0...v13.1.1)
+- Fixed the command line interface, which was still referencing [Sass](https://sass-lang.com) assets.
+
 ## Version [13.1.0](https://github.com/mc2it/theme/compare/v13.0.0...v13.1.0)
 - Imported the [Bootstrap](https://getbootstrap.com) stylesheet into a cascade layer.
 - Removed all `!important` flags from the [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) rules.

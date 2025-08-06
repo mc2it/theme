@@ -7,7 +7,7 @@
 	"name": "@mc2it/theme",
 	"repository": "mc2it/theme",
 	"type": "module",
-	"version": "13.0.0",
+	"version": "13.1.0",
 	"bin": {
 		"theme": "bin/Mc2it.Theme.js"
 	},

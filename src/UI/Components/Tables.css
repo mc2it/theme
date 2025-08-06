@@ -4,44 +4,44 @@
 }
 
 .table-cell {
-	&.bg-danger {
+	&.table-cell-danger {
 		background-color: var(--bs-danger-bg-subtle) !important;
 		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-danger) 30%, var(--bs-black) 100%) !important; }
 	}
 
-	&.bg-info {
+	&.table-cell-info {
 		background-color: var(--bs-info-bg-subtle) !important;
 		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-info) 30%, var(--bs-black) 100%) !important; }
 	}
 
-	&.bg-success {
+	&.table-cell-success {
 		background-color: var(--bs-success-bg-subtle) !important;
 		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-success) 30%, var(--bs-black) 100%) !important; }
 	}
 
-	&.bg-warning {
+	&.table-cell-warning {
 		background-color: var(--bs-warning-bg-subtle) !important;
 		[data-bs-theme="dark"] & { background-color: color-mix(in srgb, var(--bs-warning) 30%, var(--bs-black) 100%) !important; }
 	}
 }
 
 .table-row {
-	&.bg-danger {
+	&.table-row-danger {
 		> td { background-color: var(--bs-danger-bg-subtle); }
 		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-danger) 30%, var(--bs-black) 100%); }
 	}
 
-	&.bg-info {
+	&.table-row-info {
 		> td { background-color: var(--bs-info-bg-subtle); }
 		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-info) 30%, var(--bs-black) 100%); }
 	}
 
-	&.bg-success {
+	&.table-row-success {
 		> td { background-color: var(--bs-success-bg-subtle); }
 		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-success) 30%, var(--bs-black) 100%); }
 	}
 
-	&.bg-warning {
+	&.table-row-warning {
 		> td { background-color: var(--bs-warning-bg-subtle); }
 		[data-bs-theme="dark"] & > td { background-color: color-mix(in srgb, var(--bs-warning) 30%, var(--bs-black) 100%); }
 	}

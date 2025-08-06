@@ -1,10 +1,10 @@
-.bg-blue { background-color: var(--bs-blue) !important; }
-.bg-cyan { background-color: var(--bs-cyan) !important; }
-.bg-green { background-color: var(--bs-green) !important; }
-.bg-indigo { background-color: var(--bs-indigo) !important; }
-.bg-orange { background-color: var(--bs-orange) !important; }
-.bg-pink { background-color: var(--bs-pink) !important; }
-.bg-purple { background-color: var(--bs-purple) !important; }
-.bg-red { background-color: var(--bs-red) !important; }
-.bg-teal { background-color: var(--bs-teal) !important; }
-.bg-yellow { background-color: var(--bs-yellow) !important; }
+.bg-blue { background-color: var(--bs-blue); }
+.bg-cyan { background-color: var(--bs-cyan); }
+.bg-green { background-color: var(--bs-green); }
+.bg-indigo { background-color: var(--bs-indigo); }
+.bg-orange { background-color: var(--bs-orange); }
+.bg-pink { background-color: var(--bs-pink); }
+.bg-purple { background-color: var(--bs-purple); }
+.bg-red { background-color: var(--bs-red); }
+.bg-teal { background-color: var(--bs-teal); }
+.bg-yellow { background-color: var(--bs-yellow); }

@@ -21,31 +21,14 @@ export type CopyOptions = Partial<{
 	 * Value indicating whether to only copy the image files.
 	 */
 	img: boolean;
-
-	/**
-	 * Value indicating whether to only copy the SCSS files.
-	 */
-	sass: boolean;
-}>;
-
-/**
- * Defines the options of the {@link assetPath} function.
- */
-export type PathOptions = Partial<{
-
-	/**
-	 * Value indicating whether to return the specific path of SCSS files.
-	 */
-	sass: boolean;
 }>;
 
 /**
  * Returns the path to the theme assets.
- * @param options The path options.
  * @returns The path to the theme assets.
  */
-export function assetPath(options: PathOptions = {}): string {
-	return join(import.meta.dirname, options.sass ? "../../src/UI" : "../../www");
+export function assetPath(): string {
+	return join(import.meta.dirname, "../../www");
 }
 
 /**
@@ -55,7 +38,7 @@ export function assetPath(options: PathOptions = {}): string {
  * @returns Resolves when the assets have been copied.
  */
 export async function copyAssets(output: string, options: CopyOptions = {}): Promise<void> {
-	const sources = new Map([["css", "Styles"], ["fonts", "Fonts"], ["img", "Images"], ["sass", "UI"]]);
+	const sources = new Map([["css", "Styles"], ["fonts", "Fonts"], ["img", "Images"]]);
 	const keys = sources.keys().toArray();
 
 	let flags = keys.filter(source => options[source as keyof CopyOptions]);
@@ -63,7 +46,7 @@ export async function copyAssets(output: string, options: CopyOptions = {}): Pro
 
 	for (const flag of flags) {
 		const folder = sources.get(flag)!;
-		const input = flag == "sass" ? assetPath({sass: true}) : join(assetPath(), folder);
+		const input = join(assetPath(), folder);
 		const target = flags.length == 1 ? output : join(output, folder);
 		await cp(input, target, {recursive: true});
 	}
@@ -75,7 +58,7 @@ export async function copyAssets(output: string, options: CopyOptions = {}): Pro
  * @param options The copy options.
  */
 export function copyAssetsSync(output: string, options: CopyOptions = {}): void {
-	const sources = new Map([["css", "Styles"], ["fonts", "Fonts"], ["img", "Images"], ["sass", "UI"]]);
+	const sources = new Map([["css", "Styles"], ["fonts", "Fonts"], ["img", "Images"]]);
 	const keys = sources.keys().toArray();
 
 	let flags = keys.filter(source => options[source as keyof CopyOptions]);
@@ -83,7 +66,7 @@ export function copyAssetsSync(output: string, options: CopyOptions = {}): void 
 
 	for (const flag of flags) {
 		const folder = sources.get(flag)!;
-		const input = flag == "sass" ? assetPath({sass: true}) : join(assetPath(), folder);
+		const input = join(assetPath(), folder);
 		const target = flags.length == 1 ? output : join(output, folder);
 		cpSync(input, target, {recursive: true});
 	}

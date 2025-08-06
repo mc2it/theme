@@ -18,7 +18,7 @@ Options:
 
 Commands:
 	copy [options] <directory>  Copy the theme assets to a given directory.
-	libpath [options]           Print the path to the theme assets.
+	libpath                     Print the path to the theme assets.
 `;
 
 // Start the application.

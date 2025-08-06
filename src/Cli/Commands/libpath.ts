@@ -10,7 +10,6 @@ Usage:
 	npx @mc2it/theme libpath [options]
 
 Options:
-	-s, --sass  Print the specific path of SCSS files.
 	-h, --help  Display this help.
 `;
 
@@ -21,9 +20,9 @@ Options:
  */
 export default function(args: string[]): Promise<void> {
 	const {values} = parseArgs({args, options: {
-		help: {short: "h", type: "boolean", default: false},
-		sass: {short: "s", type: "boolean", default: false}
+		help: {short: "h", type: "boolean", default: false}
 	}});
 
-	return Promise.resolve(console.log(values.help ? usage.trim().replaceAll("\t", "  ") : assetPath(values)));
+	console.log(values.help ? usage.trim().replaceAll("\t", "  ") : assetPath());
+	return Promise.resolve();
 }

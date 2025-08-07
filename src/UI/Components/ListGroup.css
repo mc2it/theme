@@ -1,0 +1,3 @@
+.list-group {
+	--bs-list-group-action-color: var(--bs-body-color);
+}

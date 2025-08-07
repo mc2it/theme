@@ -1,6 +1,6 @@
 # Changelog
 
-## Version [13.2/0](https://github.com/mc2it/theme/compare/v13.1.1...v13.2.0)
+## Version [13.2.0](https://github.com/mc2it/theme/compare/v13.1.1...v13.2.0)
 - Adjusted the styles of icons in alerts and card headers.
 
 ## Version [13.1.1](https://github.com/mc2it/theme/compare/v13.1.0...v13.1.1)

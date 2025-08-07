@@ -1,4 +1,5 @@
 .card-header .icon {
-	margin-inline-end: 0.25rem;
-	transform: scale(1.2);
+	font-weight: 300;
+	margin-inline-start: 0.5rem;
+	transform: scale(1.3);
 }

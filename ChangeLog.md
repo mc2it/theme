@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.3.0](https://github.com/mc2it/theme/compare/v13.2.1...v13.3.0)
+- Adjusted the styles of list group items.
+
 ## Version [13.2.1](https://github.com/mc2it/theme/compare/v13.2.0...v13.2.1)
 - Fixed the styles of icons in alerts and card headers.
 

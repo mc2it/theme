@@ -1,4 +1,5 @@
 :root {
+	--action-bar-height: 50px;
 	--bs-body-text-align: start;
 	--bs-font-monospace: "Consolas", ui-monospace, monospace;
 	--bs-font-sans-serif: "Segoe UI", ui-sans-serif, sans-serif;

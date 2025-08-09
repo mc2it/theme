@@ -7,9 +7,10 @@ body {
 }
 
 main {
-	inset: var(--main-offset, var(--navbar-height)) 0 0 0;
+	inset: var(--navbar-height) 0 0 0;
 	overflow: auto;
 	position: absolute;
+	&:has(action-bar, .action-bar) { top: calc(var(--navbar-height) + var(--action-bar-height)); }
 	@media print { top: 0; }
 	@media (prefers-reduced-motion: no-preference) { scroll-behavior: smooth; }
 }

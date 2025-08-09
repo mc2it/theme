@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [13.4.0](https://github.com/mc2it/theme/compare/v13.3.0...v13.4.0)
+- Freezed the height of the action bar.
+- The label of the theme dropdown is hidden when the navigation bar is expanded.
+
 ## Version [13.3.0](https://github.com/mc2it/theme/compare/v13.2.1...v13.3.0)
 - Adjusted the styles of list group items.
 

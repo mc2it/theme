@@ -1,0 +1,6 @@
+theme-dropdown, .theme-dropdown {
+	.dropdown-toggle > span {
+		display: none;
+		.offcanvas.show & { display: inline; }
+	}
+}

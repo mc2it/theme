@@ -33,6 +33,6 @@ export default async function(args: string[]): Promise<void> {
 	}});
 
 	if (values.help) return Promise.resolve(console.log(usage.trim().replaceAll("\t", "  ")));
-	if (!positionals.length) throw Error("You must provide the path of the output directory.");
+	if (!positionals.length) throw new Error("You must provide the path of the output directory.");
 	return await copyAssets(positionals[0], values);
 }

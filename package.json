@@ -12,7 +12,7 @@
 		"theme": "bin/Mc2it.Theme.js"
 	},
 	"devDependencies": {
-		"@fontsource-variable/material-symbols-rounded": "^5.2.18",
+		"@fontsource-variable/material-symbols-rounded": "^5.2.19",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^24.3.0",
 		"bootstrap": "^5.3.7",

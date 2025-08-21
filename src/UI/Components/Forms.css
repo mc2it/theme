@@ -15,10 +15,9 @@
 	}
 }
 
-.remove-spin-button {
-	appearance: textfield;
-	&::-webkit-inner-spin-button,
-	&::-webkit-outer-spin-button {
-		appearance: none;
+.was-validated {
+	.form-control, .form-select {
+		&:invalid { border-bottom-color: var(--bs-form-invalid-border-color); }
+		&:valid { border-bottom-color: var(--bs-form-valid-border-color); }
 	}
 }

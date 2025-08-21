@@ -1,3 +1,11 @@
+input[type="number"] {
+	appearance: textfield;
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		appearance: none;
+	}
+}
+
 .form-control,
 .form-select,
 .input-group-text {

@@ -1,13 +1,9 @@
 action-bar {
-	align-items: center;
 	background-color: var(--bs-gray-100);
 	border-bottom: var(--bs-border-width) solid var(--bs-border-color);
 	box-shadow: var(--bs-box-shadow-sm);
-	display: flex;
-	flex-wrap: nowrap;
 	height: var(--action-bar-height);
 	inset: var(--navbar-height) 0 auto 0;
-	justify-content: flex-start;
 	padding: 0.5rem 0;
 	position: fixed;
 	user-select: none;

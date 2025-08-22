@@ -1,4 +1,4 @@
-action-bar, .action-bar {
+action-bar {
 	align-items: center;
 	background-color: var(--bs-gray-100);
 	border-bottom: var(--bs-border-width) solid var(--bs-border-color);

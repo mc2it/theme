@@ -1,17 +1,17 @@
-@keyframes loader-rotation {
+@keyframes LoadingIndicatorRotation {
 	to { transform: rotate(360deg); }
 }
 
-@keyframes loader-stroke {
+@keyframes LoadingIndicatorStroke {
 	0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
 	50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
 	100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
 }
 
-loading-indicator, .loading-indicator {
-	svg { animation: 2s linear infinite loader-rotation; }
+loading-indicator {
+	svg { animation: 2s linear infinite LoadingIndicatorRotation; }
 	circle {
-		animation: 1.5s ease-in-out infinite loader-stroke;
+		animation: 1.5s ease-in-out infinite LoadingIndicatorStroke;
 		fill: none;
 		stroke: var(--bs-white);
 		stroke-linecap: round;

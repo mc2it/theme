@@ -29,9 +29,9 @@ export async function clean() {
 
 /** Packages the project. */
 export async function dist() {
-	env.NODE_ENV = "production"
+	env.NODE_ENV = "production";
 	await build();
-	env.NODE_ENV = "development"
+	env.NODE_ENV = "development";
 	await esbuild.build(esbuildOptions());
 }
 

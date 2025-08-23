@@ -1,7 +1,7 @@
 # Changelog
 
 ## Version [13.5.2](https://github.com/mc2it/theme/compare/v13.5.1...v13.5.2)
-- Fixed the styles of toast icons.
+- Fixed the styles of icons in toast headers.
 
 ## Version [13.5.1](https://github.com/mc2it/theme/compare/v13.5.0...v13.5.1)
 - Fixed the spacing of toasts.

@@ -31,3 +31,8 @@
 		--bs-toast-header-color: var(--bs-warning-text-emphasis);
 	}
 }
+
+toaster-item {
+	--bs-toast-spacing: 1rem;
+	display: block;
+}

@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.5.1](https://github.com/mc2it/theme/compare/v13.5.0...v13.5.1)
+- Fixed the spacing of toasts.
+
 ## Version [13.5.0](https://github.com/mc2it/theme/compare/v13.4.0...v13.5.0)
 - Fixed the bottom border of form controls when the `.was-validated` class is applied to the parent form.
 - Removed the `.remove-spin-button` class.

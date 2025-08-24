@@ -1,30 +1,5 @@
 :root {
 	--action-bar-height: 50px;
-	--bs-body-text-align: start;
-	--bs-font-monospace: "Consolas", ui-monospace, monospace;
-	--bs-font-sans-serif: "Segoe UI", ui-sans-serif, sans-serif;
-	--bs-heading-color: var(--bs-emphasis-color);
-	--bs-primary: #165898;
-	--bs-primary-rgb: 22, 88, 152;
-	--bs-root-font-size: 14px;
 	--navbar-height: 50px;
 	font-size: var(--bs-root-font-size);
-}
-
-:root, [data-bs-theme="light"] {
-	--bs-link-color: var(--bs-primary);
-	--bs-link-color-rgb: var(--bs-primary-rgb);
-	--bs-link-hover-color: color-mix(in srgb, var(--bs-link-color) 100%, var(--bs-black) 20%);
-	--bs-link-hover-color-rgb: 47, 73, 123;
-	/* TODO(accordion)
-	--bs-primary-bg-subtle: #e8eef5;
-	--bs-primary-text-emphasis: var(--bs-link-color); */
-}
-
-[data-bs-theme="dark"] {
-	--bs-link-color: rgb(from var(--bs-primary) calc(r * 2) calc(g * 2) calc(b * 2.5));
-	--bs-link-color-rgb: 128, 177, 255;
-	--bs-link-hover-color: color-mix(in srgb, var(--bs-link-color) 100%, var(--bs-white) 20%);
-	--bs-link-hover-color-rgb: 140, 190, 255;
-	/* TODO(accordion) --bs-primary-bg-subtle: #112437; */
 }

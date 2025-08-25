@@ -32,6 +32,7 @@
 @import "Components/Nav.css";
 @import "Components/Navbar.css";
 @import "Components/Offcanvas.css";
+@import "Components/OfflineIndicator.css";
 @import "Components/Pagination.css";
 @import "Components/Tables.css";
 @import "Components/ThemeDropdown.css";

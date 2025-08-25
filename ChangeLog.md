@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [13.7.0](https://github.com/mc2it/theme/compare/v13.6.0...v13.7.0)
+- Added styles for the `<offline-indicator>` component.
+- Updated the styles of the `<loading-indicator>` component.
+
 ## Version [13.6.0](https://github.com/mc2it/theme/compare/v13.5.2...v13.6.0)
 - Removed the modal styles for the `<dialog>` tag.
 

@@ -3,13 +3,22 @@
 	[data-bs-theme="dark"] & { --bs-modal-footer-bg: var(--bs-gray-800); }
 }
 
+.modal-content {
+	box-shadow: var(--bs-modal-box-shadow);
+}
+
 .modal-header {
 	background-color: var(--bs-modal-footer-bg);
 	user-select: none;
 }
 
-.modal-content {
-	box-shadow: var(--bs-modal-box-shadow);
+.modal-title {
+	font-size: 1.25rem;
+}
+
+.modal-body > .icon {
+	font-size: 2.5rem;
+	font-variation-settings: "FILL" 1;
 }
 
 .modal-footer {

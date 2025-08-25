@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.6.0](https://github.com/mc2it/theme/compare/v13.5.2...v13.6.0)
+- Removed the modal styles for the `<dialog>` tag.
+
 ## Version [13.5.2](https://github.com/mc2it/theme/compare/v13.5.1...v13.5.2)
 - Fixed the styles of icons in toast headers.
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.8.0](https://github.com/mc2it/theme/compare/v13.7.0...v13.8.0)
+- Added a `!important` flag to all utility classes.
+
 ## Version [13.7.0](https://github.com/mc2it/theme/compare/v13.6.0...v13.7.0)
 - Added styles for the `<offline-indicator>` component.
 - Added support for the `.htmx-request` class to the `<loading-indicator>` component.

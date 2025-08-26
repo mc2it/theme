@@ -15,7 +15,7 @@
 		"@fontsource-variable/material-symbols-rounded": "^5.2.19",
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^24.3.0",
-		"bootstrap": "^5.3.7",
+		"bootstrap": "^5.3.8",
 		"esbuild": "^0.25.9",
 		"gulp": "^5.0.1",
 		"typescript": "^5.9.2",

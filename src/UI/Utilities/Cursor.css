@@ -1,4 +1,4 @@
-.cursor-default { cursor: default; }
-.cursor-grab { cursor: grab; }
-.cursor-help { cursor: help; }
-.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default !important; }
+.cursor-grab { cursor: grab !important; }
+.cursor-help { cursor: help !important; }
+.cursor-pointer { cursor: pointer !important; }

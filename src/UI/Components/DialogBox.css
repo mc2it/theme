@@ -13,7 +13,7 @@
 }
 
 .modal-title {
-	font-size: calc(var(--bs-body-font-size)) * 1.25;
+	font-size: calc(var(--bs-body-font-size) * 1.25);
 }
 
 .modal-footer {

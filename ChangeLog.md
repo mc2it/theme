@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.8.1](https://github.com/mc2it/theme/compare/v13.8.0...v13.8.1)
+- Fixed the font size of the `<dialog-box>` component header.
+
 ## Version [13.8.0](https://github.com/mc2it/theme/compare/v13.7.0...v13.8.0)
 - Added a `!important` flag to all utility classes.
 

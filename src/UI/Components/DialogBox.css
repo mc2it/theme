@@ -19,5 +19,9 @@
 .modal-footer {
 	padding: calc(var(--bs-modal-padding) * 0.5) var(--bs-modal-padding);
 	user-select: none;
-	.btn { min-width: 5.5rem; }
+
+	.btn {
+		min-width: 5.5rem;
+		.icon { transform: scale(1.1); }
+	}
 }

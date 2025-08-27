@@ -13,11 +13,11 @@
 }
 
 .modal-title {
-	font-size: calc(var(--bs-body-font-size) * 1.25);
+	font-size: 1.25rem;
 }
 
 .modal-footer {
 	padding: calc(var(--bs-modal-padding) * 0.5) var(--bs-modal-padding);
 	user-select: none;
-	.btn { min-width: 75px; }
+	.btn { min-width: 5.5rem; }
 }

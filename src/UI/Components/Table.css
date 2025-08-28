@@ -1,3 +1,10 @@
+.table > thead.sticky-top::after {
+	border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+	content: "";
+	inset: 0;
+	position: absolute;
+}
+
 .table-cell, .table-row {
 	border-bottom-color: var(--bs-gray-500);
 	[data-bs-theme="dark"] & { border-bottom-color: var(--bs-gray-700); }

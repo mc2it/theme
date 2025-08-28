@@ -22,11 +22,11 @@
 /* @import "Components/Accordion.css"; */
 @import "Components/ActionBar.css";
 @import "Components/Alert.css";
-@import "Components/Buttons.css";
+@import "Components/Button.css";
 @import "Components/Card.css";
 @import "Components/DialogBox.css";
 @import "Components/Dropdown.css";
-@import "Components/Forms.css";
+@import "Components/Form.css";
 @import "Components/ListGroup.css";
 @import "Components/LoadingIndicator.css";
 @import "Components/Nav.css";
@@ -34,7 +34,7 @@
 @import "Components/Offcanvas.css";
 @import "Components/OfflineIndicator.css";
 @import "Components/Pagination.css";
-@import "Components/Tables.css";
+@import "Components/Table.css";
 @import "Components/ThemeDropdown.css";
 @import "Components/Toast.css";
 @import "Components/Tooltip.css";

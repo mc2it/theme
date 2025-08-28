@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.9.0](https://github.com/mc2it/theme/compare/v13.8.1...v13.9.0)
+- Added a bottom border to sticky table headers.
+
 ## Version [13.8.1](https://github.com/mc2it/theme/compare/v13.8.0...v13.8.1)
 - Fixed the font size of the `<dialog-box>` component header.
 

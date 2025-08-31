@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [13.10.0](https://github.com/mc2it/theme/compare/v13.9.0...v13.10.0)
+- Replaced the `.loading` class of the document `<body>` by a rule based on the visibility of the `<loading-indicator>` component.
+
 ## Version [13.9.0](https://github.com/mc2it/theme/compare/v13.8.1...v13.9.0)
 - Added a bottom border to sticky table headers.
 

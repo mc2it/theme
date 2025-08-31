@@ -17,6 +17,10 @@ loading-indicator {
 		opacity: 1;
 	}
 
+	body:has(&.htmx-request, &.show) {
+		cursor: progress;
+	}
+
 	svg { animation: 2s linear infinite LoadingIndicatorRotation; }
 	circle {
 		animation: 1.5s ease-in-out infinite LoadingIndicatorStroke;

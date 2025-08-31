@@ -2,7 +2,6 @@ body {
 	accent-color: var(--bs-primary);
 	background-color: var(--bs-gray-200);
 	overflow: hidden;
-	&.loading { cursor: progress; }
 	[data-bs-theme="dark"] & { background-color: var(--bs-secondary-bg-subtle); }
 }
 

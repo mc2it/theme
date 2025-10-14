@@ -1,7 +1,7 @@
 import console from "node:console";
 import {access} from "node:fs/promises";
 import {join} from "node:path";
-import process from "node:process";
+import {exit} from "node:process";
 import {parseArgs} from "node:util";
 import pkg from "../../package.json" with {type: "json"};
 
@@ -23,8 +23,6 @@ Commands:
 
 // Start the application.
 try {
-	process.title = "MC2IT Theme";
-
 	// Parse the command line arguments.
 	const {positionals, tokens, values} = parseArgs({allowPositionals: true, strict: false, tokens: true, options: {
 		help: {short: "h", type: "boolean", default: false},
@@ -34,12 +32,12 @@ try {
 	// Print the usage.
 	if (values.version) {
 		console.log(pkg.version);
-		process.exit();
+		exit(0);
 	}
 
 	if (!positionals.length || (values.help && !positionals.length)) {
 		console.log(usage.trim().replaceAll("\t", "  "));
-		process.exit();
+		exit(0);
 	}
 
 	// Run the requested command.
@@ -48,7 +46,7 @@ try {
 	try { await access(join(import.meta.dirname, path)); }
 	catch {
 		console.error(`Unknown command "${command}".`);
-		process.exit(400);
+		exit(400);
 	}
 
 	const {default: run} = await import(path) as {default: (args: string[]) => Promise<void>};
@@ -57,5 +55,5 @@ try {
 }
 catch (error) {
 	console.error(error instanceof Error ? error.message : error);
-	process.exit(500);
+	exit(500);
 }

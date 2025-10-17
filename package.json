@@ -13,9 +13,9 @@
 	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.2.26",
-		"@types/node": "^24.7.2",
+		"@types/node": "^24.8.1",
 		"bootstrap": "^5.3.8",
-		"esbuild": "^0.25.10",
+		"esbuild": "^0.25.11",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.46.1"
 	},

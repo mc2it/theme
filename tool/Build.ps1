@@ -1,4 +1,4 @@
-. $PSScriptRoot/Assets.ps1
+. "$PSScriptRoot/Assets.ps1"
 
 "Building the solution..."
 npx tsc --build src/Cli/tsconfig.json

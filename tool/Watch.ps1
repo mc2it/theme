@@ -1,4 +1,4 @@
-. "$PSScriptRoot/Assets.ps1"
+& "$PSScriptRoot/Assets.ps1"
 
 "Watching for file changes..."
 $esbuildCommand = "npx esbuild src/UI/Main.css --bundle --external:*.woff2 --legal-comments=none --outfile=www/Styles/Mc2it.css --sourcemap --watch"

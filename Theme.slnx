@@ -8,6 +8,7 @@
 		<File Path=".gitignore" />
 		<File Path="etc/ESLint.js" />
 		<File Path="package.json" />
+		<File Path="PSModules.psd1" />
 	</Folder>
 	<Folder Name="/Documentation/">
 		<File Path="Authors.txt" />
@@ -15,7 +16,11 @@
 		<File Path="License.md" />
 		<File Path="ReadMe.md" />
 	</Folder>
-	<Folder Name="/Tools/">
+	<Folder Name="/Scripts/">
+		<File Path="Invoke.ps1" />
+		<File Path="Start.ps1" />
+	</Folder>
+	<Folder Name="/Scripts/Tools/">
 		<File Path="tool/Assets.ps1" />
 		<File Path="tool/Build.ps1" />
 		<File Path="tool/Clean.ps1" />

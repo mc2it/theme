@@ -1,0 +1,37 @@
+<Solution>
+	<Folder Name="/Binaries/">
+		<File Path="bin/Mc2it.Theme.js" />
+	</Folder>
+	<Folder Name="/Configuration/">
+		<File Path=".editorconfig" />
+		<File Path=".gitattributes" />
+		<File Path=".gitignore" />
+		<File Path="etc/ESLint.js" />
+		<File Path="package.json" />
+	</Folder>
+	<Folder Name="/Documentation/">
+		<File Path="Authors.txt" />
+		<File Path="ChangeLog.md" />
+		<File Path="License.md" />
+		<File Path="ReadMe.md" />
+	</Folder>
+	<Folder Name="/Tools/">
+		<File Path="tool/Assets.ps1" />
+		<File Path="tool/Build.ps1" />
+		<File Path="tool/Clean.ps1" />
+		<File Path="tool/Default.ps1" />
+		<File Path="tool/Install.ps1" />
+		<File Path="tool/Lint.ps1" />
+		<File Path="tool/Publish.ps1" />
+		<File Path="tool/Update.ps1" />
+		<File Path="tool/Watch.ps1" />
+	</Folder>
+	<Project Path="src/Cli/Cli.esproj">
+		<Build />
+		<Deploy />
+	</Project>
+	<Project Path="src/UI/UI.esproj">
+		<Build />
+		<Deploy />
+	</Project>
+</Solution>

@@ -4,7 +4,6 @@
 /lib/
 /node_modules/
 /npm-debug.log
-/src/*/obj/
 /var/
 /www/Fonts/MaterialSymbols.woff2
 /www/Styles/

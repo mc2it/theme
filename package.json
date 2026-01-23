@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@fontsource-variable/material-symbols-rounded": "^5.2.32",
-		"@types/node": "^25.0.9",
+		"@types/node": "^25.0.10",
 		"bootstrap": "^5.3.8",
 		"esbuild": "^0.27.2",
 		"typescript": "^5.9.3",

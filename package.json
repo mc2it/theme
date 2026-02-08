@@ -12,8 +12,8 @@
 		"Theme": "bin/Mc2it.Theme.js"
 	},
 	"devDependencies": {
-		"@fontsource-variable/material-symbols-rounded": "^5.2.33",
-		"@types/node": "^25.2.1",
+		"@fontsource-variable/material-symbols-rounded": "^5.2.34",
+		"@types/node": "^25.2.2",
 		"bootstrap": "^5.3.8",
 		"esbuild": "^0.27.3",
 		"typescript": "^5.9.3",

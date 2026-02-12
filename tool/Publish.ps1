@@ -4,5 +4,6 @@
 $version = Get-Content package.json | ConvertFrom-Json | Select-Object -ExpandProperty version
 git tag "v$version"
 git push origin "v$version"
-npm publish --registry=https://registry.npmjs.org
+npm login
+npm publish
 npm publish --registry=https://npm.pkg.github.com

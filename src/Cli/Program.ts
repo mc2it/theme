@@ -54,6 +54,6 @@ try {
 	await run(process.argv.slice(index + 3));
 }
 catch (error) {
-	console.error(error instanceof Error ? error.message : error);
+	console.error(Error.isError(error) ? error.message : error);
 	exit(500);
 }

@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"@fontsource-variable/material-symbols-rounded": "^5.2.37",
+		"@fontsource-variable/material-symbols-rounded": "^5.2.38",
 		"@types/node": "^25.3.5",
 		"bootstrap": "^5.3.8",
 		"esbuild": "^0.27.3",
